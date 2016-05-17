@@ -46,6 +46,22 @@ int ox_isimg(const char *filename)
   return isimg;
 }
 
+int ox_isdoc(const char *filename)
+{
+  int isdoc = -1;
+
+  lua_getglobal(vars.L, "is_doc");
+  lua_pushstring(vars.L, filename);
+  if(lua_pcall(vars.L, 1, 1, 0) != 0) {
+    LOG_PRINT(LOG_WARNING, "lua is_doc() failed!");
+    return isdoc;
+  }
+  isdoc = (int)lua_tonumber(vars.L, -1);
+  lua_pop(vars.L, 1);
+
+  return isdoc;
+}
+
 int ox_isdir(const char *path)
 {
   struct stat st;

@@ -23201,3 +23201,470 @@
 2016/05/17 12:07:12:084134 [DEBUG] Connect to ssdb server Success
 2016/05/17 12:07:12:084190 [DEBUG] luaL_newstate alloc
 2016/05/17 12:07:12:084941 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 16:23:26:749463 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 16:23:26:749571 [DEBUG] Path[/home/d/my_project/ox/objs/img] is Not Existed!
+2016/05/17 16:23:26:749663 [DEBUG] Paths Init Finished.
+2016/05/17 16:23:26:749860 [DEBUG] Connect to ssdb server faile
+2016/05/17 16:24:32:831718 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 16:24:32:831851 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 16:24:32:831883 [DEBUG] Paths Init Finished.
+2016/05/17 16:24:32:831907 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 16:24:32:831930 [INFO] ox started
+2016/05/17 16:24:32:832161 [DEBUG] thr_args alloc
+2016/05/17 16:24:32:832243 [DEBUG] luaL_newstate alloc
+2016/05/17 16:24:32:833109 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 16:24:32:837316 [DEBUG] thr_args alloc
+2016/05/17 16:24:32:837386 [DEBUG] luaL_newstate alloc
+2016/05/17 16:24:32:838410 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 16:24:56:550216 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 16:24:56:550327 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 16:24:56:550362 [DEBUG] Paths Init Finished.
+2016/05/17 16:24:56:550393 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 16:24:56:550420 [INFO] ox started
+2016/05/17 16:24:56:550703 [DEBUG] thr_args alloc
+2016/05/17 16:24:56:550770 [DEBUG] luaL_newstate alloc
+2016/05/17 16:24:56:551723 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 16:24:56:555830 [DEBUG] thr_args alloc
+2016/05/17 16:24:56:555915 [DEBUG] luaL_newstate alloc
+2016/05/17 16:24:56:556739 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 16:30:49:196866 [DEBUG] Method: 2
+2016/05/17 16:30:49:197002 [DEBUG] evblen = 12223400
+2016/05/17 16:30:49:206418 [DEBUG] rmblen = 12223400
+2016/05/17 16:30:49:206547 [DEBUG] fileType[text] is Not Supported!
+2016/05/17 16:30:49:206581 [ERROR] 0.0.0.0 fail post type
+2016/05/17 16:30:49:206614 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 16:30:49:206655 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 16:30:49:206709 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 16:31:34:841877 [DEBUG] Method: 2
+2016/05/17 16:31:34:841997 [DEBUG] evblen = 12223400
+2016/05/17 16:31:34:848711 [DEBUG] rmblen = 12223400
+2016/05/17 16:31:34:848828 [DEBUG] fileType[text] is Not Supported!
+2016/05/17 16:31:34:848864 [ERROR] 0.0.0.0 fail post type
+2016/05/17 16:31:34:848895 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 16:31:34:848932 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 16:31:34:848985 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 16:32:06:107981 [DEBUG] Method: 2
+2016/05/17 16:32:06:108083 [DEBUG] evblen = 18
+2016/05/17 16:32:06:108136 [DEBUG] rmblen = 18
+2016/05/17 16:32:06:108196 [DEBUG] fileType[text] is Not Supported!
+2016/05/17 16:32:06:108239 [ERROR] 0.0.0.0 fail post type
+2016/05/17 16:32:06:108285 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 16:32:06:108337 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 16:32:06:108394 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 17:16:56:731417 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 17:16:56:731541 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 17:16:56:731572 [DEBUG] Paths Init Finished.
+2016/05/17 17:16:56:731600 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 17:16:56:731627 [INFO] ox started
+2016/05/17 17:16:56:731872 [DEBUG] thr_args alloc
+2016/05/17 17:16:56:731950 [DEBUG] luaL_newstate alloc
+2016/05/17 17:16:56:732786 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:16:56:737034 [DEBUG] thr_args alloc
+2016/05/17 17:16:56:737130 [DEBUG] luaL_newstate alloc
+2016/05/17 17:16:56:737938 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:17:04:535429 [DEBUG] Method: 2
+2016/05/17 17:17:04:535540 [DEBUG] evblen = 18
+2016/05/17 17:17:04:535590 [DEBUG] rmblen = 18
+2016/05/17 17:17:04:535663 [DEBUG] fileType[text] is Not Supported!
+2016/05/17 17:17:04:535706 [ERROR] 0.0.0.0 fail post type
+2016/05/17 17:17:04:535746 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 17:17:04:535811 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 17:17:04:535864 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 17:17:51:760636 [DEBUG] Method: 2
+2016/05/17 17:17:51:760719 [DEBUG] evblen = 18
+2016/05/17 17:17:51:760755 [DEBUG] rmblen = 18
+2016/05/17 17:17:51:760804 [DEBUG] Begin to save doc...
+2016/05/17 17:17:51:760841 [DEBUG] Begin to Caculate MD5...
+2016/05/17 17:17:51:760885 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:17:51:760915 [DEBUG] save_path: ./img/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:17:51:760949 [DEBUG] Path[./img/1569/736/c425c0d8e172368f6ca55ef5a8739977] is Not Existed!
+2016/05/17 17:17:51:761085 [DEBUG] save_path[./img/1569/736/c425c0d8e172368f6ca55ef5a8739977] Create Finish.
+2016/05/17 17:17:51:761136 [DEBUG] save_name-->: ./img/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:17:51:761180 [DEBUG] File[./img/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is Not Existed!
+2016/05/17 17:17:51:761218 [DEBUG] Start to Storage the New Image...
+2016/05/17 17:17:51:761298 [DEBUG] Image [./img/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] Write Successfully!
+2016/05/17 17:17:51:761348 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 17:17:51:761396 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 17:17:51:761451 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 17:18:39:739400 [DEBUG] Method: 2
+2016/05/17 17:18:39:739488 [DEBUG] evblen = 18
+2016/05/17 17:18:39:739523 [DEBUG] rmblen = 18
+2016/05/17 17:18:39:739568 [DEBUG] fileType[text] is Not Supported!
+2016/05/17 17:18:39:739597 [ERROR] 0.0.0.0 fail post type
+2016/05/17 17:18:39:739627 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 17:18:39:739660 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 17:18:39:739702 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 17:18:46:781769 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 17:18:46:781907 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 17:18:46:781944 [DEBUG] Paths Init Finished.
+2016/05/17 17:18:46:781988 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 17:18:46:782029 [INFO] ox started
+2016/05/17 17:18:46:782313 [DEBUG] thr_args alloc
+2016/05/17 17:18:46:782381 [DEBUG] luaL_newstate alloc
+2016/05/17 17:18:46:783248 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:18:46:787460 [DEBUG] thr_args alloc
+2016/05/17 17:18:46:787538 [DEBUG] luaL_newstate alloc
+2016/05/17 17:18:46:788361 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:18:49:145067 [DEBUG] Method: 2
+2016/05/17 17:18:49:145163 [DEBUG] evblen = 18
+2016/05/17 17:18:49:145201 [DEBUG] rmblen = 18
+2016/05/17 17:18:49:145255 [DEBUG] Begin to save doc...
+2016/05/17 17:18:49:145288 [DEBUG] Begin to Caculate MD5...
+2016/05/17 17:18:49:145319 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:18:49:145349 [DEBUG] save_path: ./img/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:18:49:145379 [DEBUG] Path[./img/1569/736/c425c0d8e172368f6ca55ef5a8739977] is A Dir.
+2016/05/17 17:18:49:145407 [DEBUG] save_name-->: ./img/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:18:49:145435 [DEBUG] File[./img/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is A File.
+2016/05/17 17:18:49:145462 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 17:18:49:145490 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 17:18:49:145531 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 17:18:49:145578 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 17:24:14:985705 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 17:24:14:985842 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 17:24:14:985874 [DEBUG] Paths Init Finished.
+2016/05/17 17:24:14:985900 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 17:24:14:985927 [INFO] ox started
+2016/05/17 17:24:14:986183 [DEBUG] thr_args alloc
+2016/05/17 17:24:14:986269 [DEBUG] luaL_newstate alloc
+2016/05/17 17:24:14:987111 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:24:14:991566 [DEBUG] thr_args alloc
+2016/05/17 17:24:14:991652 [DEBUG] luaL_newstate alloc
+2016/05/17 17:24:14:992451 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:24:24:040549 [DEBUG] Method: 2
+2016/05/17 17:24:24:040643 [DEBUG] evblen = 18
+2016/05/17 17:24:24:040679 [DEBUG] rmblen = 18
+2016/05/17 17:24:24:040732 [DEBUG] Begin to save doc...
+2016/05/17 17:24:24:040764 [DEBUG] Begin to Caculate MD5...
+2016/05/17 17:24:24:040804 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:24:24:040836 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:24:24:040871 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977] is Not Existed!
+2016/05/17 17:24:24:041031 [DEBUG] save_path[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977] Create Finish.
+2016/05/17 17:24:24:041066 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:24:24:041099 [DEBUG] File[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is Not Existed!
+2016/05/17 17:24:24:041127 [DEBUG] Start to Storage the New Image...
+2016/05/17 17:24:24:041185 [DEBUG] Image [/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] Write Successfully!
+2016/05/17 17:24:24:041221 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 17:24:24:041263 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 17:24:24:041309 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 17:40:47:733262 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 17:40:47:733384 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 17:40:47:733415 [DEBUG] Paths Init Finished.
+2016/05/17 17:40:47:733442 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 17:40:47:733468 [INFO] ox started
+2016/05/17 17:40:47:733734 [DEBUG] thr_args alloc
+2016/05/17 17:40:47:733810 [DEBUG] luaL_newstate alloc
+2016/05/17 17:40:47:734927 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:40:47:738889 [DEBUG] thr_args alloc
+2016/05/17 17:40:47:738966 [DEBUG] luaL_newstate alloc
+2016/05/17 17:40:47:739753 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 17:41:16:708131 [DEBUG] Method: 2
+2016/05/17 17:41:16:708229 [DEBUG] evblen = 18
+2016/05/17 17:41:16:708265 [DEBUG] rmblen = 18
+2016/05/17 17:41:16:708319 [DEBUG] Begin to save doc...
+2016/05/17 17:41:16:708351 [DEBUG] woh-->cbf7e500
+2016/05/17 17:41:16:708378 [DEBUG] Begin to Caculate MD5...
+2016/05/17 17:41:16:708410 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:41:16:708439 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:41:16:708469 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977] is A Dir.
+2016/05/17 17:41:16:708495 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 17:41:16:708524 [DEBUG] File[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is A File.
+2016/05/17 17:41:16:708549 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 17:41:16:708577 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 17:41:16:708617 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 17:41:16:708664 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 17:43:32:432879 [DEBUG] Method: 2
+2016/05/17 17:43:32:432971 [DEBUG] evblen = 19456
+2016/05/17 17:43:32:433015 [DEBUG] rmblen = 19456
+2016/05/17 17:43:32:433059 [DEBUG] Begin to save doc...
+2016/05/17 17:43:32:433089 [DEBUG] по-->cb77d500
+2016/05/17 17:43:32:433117 [DEBUG] Begin to Caculate MD5...
+2016/05/17 17:43:32:433212 [DEBUG] md5: 23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 17:43:32:433253 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 17:43:32:433290 [DEBUG] Path[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff] is Not Existed!
+2016/05/17 17:43:32:433426 [DEBUG] save_path[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff] Create Finish.
+2016/05/17 17:43:32:433461 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 17:43:32:433493 [DEBUG] File[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff] is Not Existed!
+2016/05/17 17:43:32:433520 [DEBUG] Start to Storage the New Image...
+2016/05/17 17:43:32:433594 [DEBUG] Image [/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff] Write Successfully!
+2016/05/17 17:43:32:433629 [INFO] 0.0.0.0 succ post pic:23e4e5e70fb6734fa8b2de16391a98ff size:19456
+2016/05/17 17:43:32:433665 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"23e4e5e70fb6734fa8b2de16391a98ff","size":19456}}
+2016/05/17 17:43:32:433707 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 18:25:15:860057 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 18:25:15:870015 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 18:25:15:870094 [DEBUG] Paths Init Finished.
+2016/05/17 18:25:15:870126 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 18:25:15:870154 [INFO] ox started
+2016/05/17 18:25:15:870471 [DEBUG] thr_args alloc
+2016/05/17 18:25:15:870542 [DEBUG] luaL_newstate alloc
+2016/05/17 18:25:15:871367 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 18:25:15:875711 [DEBUG] thr_args alloc
+2016/05/17 18:25:15:875835 [DEBUG] luaL_newstate alloc
+2016/05/17 18:25:15:876666 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 18:25:24:411089 [DEBUG] Method: 2
+2016/05/17 18:25:24:411189 [DEBUG] evblen = 19456
+2016/05/17 18:25:24:411234 [DEBUG] rmblen = 19456
+2016/05/17 18:25:24:411291 [DEBUG] Begin to save doc...
+2016/05/17 18:25:24:411909 [DEBUG] magic:--->(null)
+2016/05/17 18:25:24:411976 [DEBUG] Begin to Caculate MD5...
+2016/05/17 18:25:24:412095 [DEBUG] md5: 23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 18:25:24:412135 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 18:25:24:412167 [DEBUG] Path[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff] is A Dir.
+2016/05/17 18:25:24:412207 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 18:25:24:412261 [DEBUG] File[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff] is A File.
+2016/05/17 18:25:24:412297 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 18:25:24:412328 [INFO] 0.0.0.0 succ post pic:23e4e5e70fb6734fa8b2de16391a98ff size:19456
+2016/05/17 18:25:24:412370 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"23e4e5e70fb6734fa8b2de16391a98ff","size":19456}}
+2016/05/17 18:25:24:412418 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 18:25:36:715574 [DEBUG] Method: 2
+2016/05/17 18:25:36:715677 [DEBUG] evblen = 18
+2016/05/17 18:25:36:715714 [DEBUG] rmblen = 18
+2016/05/17 18:25:36:715759 [DEBUG] Begin to save doc...
+2016/05/17 18:25:36:715812 [DEBUG] magic:--->(null)
+2016/05/17 18:25:36:715861 [DEBUG] Begin to Caculate MD5...
+2016/05/17 18:25:36:715913 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:25:36:715965 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:25:36:716004 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977] is A Dir.
+2016/05/17 18:25:36:716033 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:25:36:716062 [DEBUG] File[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is A File.
+2016/05/17 18:25:36:716103 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 18:25:36:716131 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 18:25:36:716167 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 18:25:36:716211 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 18:44:24:687415 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 18:44:24:687541 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 18:44:24:687575 [DEBUG] Paths Init Finished.
+2016/05/17 18:44:24:687604 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 18:44:24:687633 [INFO] ox started
+2016/05/17 18:44:24:687904 [DEBUG] thr_args alloc
+2016/05/17 18:44:24:687986 [DEBUG] luaL_newstate alloc
+2016/05/17 18:44:24:688816 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 18:44:24:693135 [DEBUG] thr_args alloc
+2016/05/17 18:44:24:693253 [DEBUG] luaL_newstate alloc
+2016/05/17 18:44:24:694103 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 18:44:36:547127 [DEBUG] Method: 2
+2016/05/17 18:44:36:547225 [DEBUG] evblen = 18
+2016/05/17 18:44:36:547266 [DEBUG] rmblen = 18
+2016/05/17 18:44:36:547327 [DEBUG] Begin to save doc...
+2016/05/17 18:44:36:547540 [DEBUG] magic:--->cannot open (No such file or directory)
+2016/05/17 18:44:36:547604 [DEBUG] Begin to Caculate MD5...
+2016/05/17 18:44:36:547664 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:44:36:547716 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:44:36:547755 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977] is A Dir.
+2016/05/17 18:44:36:547785 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:44:36:547829 [DEBUG] File[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is A File.
+2016/05/17 18:44:36:547860 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 18:44:36:547891 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 18:44:36:547950 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 18:44:36:548003 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 18:45:17:674386 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 18:45:17:674506 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 18:45:17:674539 [DEBUG] Paths Init Finished.
+2016/05/17 18:45:17:674568 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 18:45:17:674610 [INFO] ox started
+2016/05/17 18:45:17:674962 [DEBUG] thr_args alloc
+2016/05/17 18:45:17:675032 [DEBUG] luaL_newstate alloc
+2016/05/17 18:45:17:675839 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 18:45:17:680087 [DEBUG] thr_args alloc
+2016/05/17 18:45:17:680156 [DEBUG] luaL_newstate alloc
+2016/05/17 18:45:17:680969 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 18:45:29:078611 [DEBUG] Method: 2
+2016/05/17 18:45:29:078715 [DEBUG] evblen = 18
+2016/05/17 18:45:29:078771 [DEBUG] rmblen = 18
+2016/05/17 18:45:29:078860 [DEBUG] Begin to save doc...
+2016/05/17 18:45:29:081273 [DEBUG] magic:--->text/plain
+2016/05/17 18:45:29:081414 [DEBUG] Begin to Caculate MD5...
+2016/05/17 18:45:29:081466 [DEBUG] md5: c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:45:29:081514 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:45:29:081563 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977] is A Dir.
+2016/05/17 18:45:29:081607 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977
+2016/05/17 18:45:29:081653 [DEBUG] File[/home/d/my_project/ox/objs/doc/1569/736/c425c0d8e172368f6ca55ef5a8739977/c425c0d8e172368f6ca55ef5a8739977] is A File.
+2016/05/17 18:45:29:081694 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 18:45:29:081752 [INFO] 0.0.0.0 succ post pic:c425c0d8e172368f6ca55ef5a8739977 size:18
+2016/05/17 18:45:29:081819 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"c425c0d8e172368f6ca55ef5a8739977","size":18}}
+2016/05/17 18:45:29:081888 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 18:45:38:415002 [DEBUG] Method: 2
+2016/05/17 18:45:38:415090 [DEBUG] evblen = 19456
+2016/05/17 18:45:38:415132 [DEBUG] rmblen = 19456
+2016/05/17 18:45:38:415176 [DEBUG] Begin to save doc...
+2016/05/17 18:45:38:415384 [DEBUG] magic:--->application/msword
+2016/05/17 18:45:38:415425 [DEBUG] Begin to Caculate MD5...
+2016/05/17 18:45:38:415522 [DEBUG] md5: 23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 18:45:38:415553 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 18:45:38:415583 [DEBUG] Path[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff] is A Dir.
+2016/05/17 18:45:38:415611 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff
+2016/05/17 18:45:38:415640 [DEBUG] File[/home/d/my_project/ox/objs/doc/287/626/23e4e5e70fb6734fa8b2de16391a98ff/23e4e5e70fb6734fa8b2de16391a98ff] is A File.
+2016/05/17 18:45:38:415667 [DEBUG] Check File Exist. Needn't Save.
+2016/05/17 18:45:38:415694 [INFO] 0.0.0.0 succ post pic:23e4e5e70fb6734fa8b2de16391a98ff size:19456
+2016/05/17 18:45:38:415729 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"23e4e5e70fb6734fa8b2de16391a98ff","size":19456}}
+2016/05/17 18:45:38:415772 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/17 19:04:08:270812 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:04:08:270948 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:04:08:270998 [DEBUG] Paths Init Finished.
+2016/05/17 19:04:08:271042 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:04:08:271085 [INFO] ox started
+2016/05/17 19:04:08:271420 [DEBUG] thr_args alloc
+2016/05/17 19:04:08:271487 [DEBUG] luaL_newstate alloc
+2016/05/17 19:04:08:272297 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:04:08:276527 [DEBUG] thr_args alloc
+2016/05/17 19:04:08:276632 [DEBUG] luaL_newstate alloc
+2016/05/17 19:04:08:277441 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:04:30:359826 [DEBUG] Method: 2
+2016/05/17 19:04:30:359929 [DEBUG] evblen = 19456
+2016/05/17 19:04:30:359973 [DEBUG] rmblen = 19456
+2016/05/17 19:04:30:360276 [DEBUG] fileType[text] is Not Supported!
+2016/05/17 19:04:30:360311 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:04:30:360346 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:04:30:360383 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:04:30:360429 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:04:36:441306 [DEBUG] Method: 2
+2016/05/17 19:04:36:441403 [DEBUG] evblen = 19456
+2016/05/17 19:04:36:441449 [DEBUG] rmblen = 19456
+2016/05/17 19:04:36:441707 [DEBUG] fileType[image] is Not Supported!
+2016/05/17 19:04:36:441742 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:04:36:441781 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:04:36:441845 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:04:36:441908 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:04:42:651244 [DEBUG] Method: 2
+2016/05/17 19:04:42:651354 [DEBUG] evblen = 19456
+2016/05/17 19:04:42:651396 [DEBUG] rmblen = 19456
+2016/05/17 19:04:42:651655 [DEBUG] fileType[image/jpg] is Not Supported!
+2016/05/17 19:04:42:651689 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:04:42:651719 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:04:42:651753 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:04:42:651803 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:04:49:710947 [DEBUG] Method: 2
+2016/05/17 19:04:49:711035 [DEBUG] evblen = 19456
+2016/05/17 19:04:49:711086 [DEBUG] rmblen = 19456
+2016/05/17 19:04:49:711346 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:04:49:711381 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:04:49:711428 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:04:49:711485 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:04:49:711551 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:05:31:674737 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:05:31:674868 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:05:31:674898 [DEBUG] Paths Init Finished.
+2016/05/17 19:05:31:674926 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:05:31:674952 [INFO] ox started
+2016/05/17 19:05:31:675219 [DEBUG] thr_args alloc
+2016/05/17 19:05:31:675306 [DEBUG] luaL_newstate alloc
+2016/05/17 19:05:31:676304 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:05:31:680375 [DEBUG] thr_args alloc
+2016/05/17 19:05:31:680445 [DEBUG] luaL_newstate alloc
+2016/05/17 19:05:31:681241 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:05:36:962976 [DEBUG] Method: 2
+2016/05/17 19:05:36:963076 [DEBUG] evblen = 19456
+2016/05/17 19:05:36:963123 [DEBUG] rmblen = 19456
+2016/05/17 19:05:36:963417 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:05:36:963450 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:05:36:963482 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:05:36:963519 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:05:36:963564 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:05:56:849864 [DEBUG] Method: 2
+2016/05/17 19:05:56:849954 [DEBUG] evblen = 25827
+2016/05/17 19:05:56:850004 [DEBUG] rmblen = 25827
+2016/05/17 19:05:56:850864 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:05:56:850904 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:05:56:850935 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:05:56:850968 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:05:56:851012 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:06:43:981005 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:06:43:981128 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:06:43:981159 [DEBUG] Paths Init Finished.
+2016/05/17 19:06:43:981186 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:06:43:981213 [INFO] ox started
+2016/05/17 19:06:43:981480 [DEBUG] thr_args alloc
+2016/05/17 19:06:43:981561 [DEBUG] luaL_newstate alloc
+2016/05/17 19:06:43:982405 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:06:43:986632 [DEBUG] thr_args alloc
+2016/05/17 19:06:43:986715 [DEBUG] luaL_newstate alloc
+2016/05/17 19:06:43:987537 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:06:53:676596 [DEBUG] Method: 2
+2016/05/17 19:06:53:676707 [DEBUG] evblen = 25827
+2016/05/17 19:06:53:676776 [DEBUG] rmblen = 25827
+2016/05/17 19:06:53:677836 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:06:53:677876 [DEBUG] fileType[] is Not Supported!
+2016/05/17 19:06:53:677911 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:06:53:677948 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:06:53:677987 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:06:53:678031 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:10:33:817479 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:10:33:817604 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:10:33:817636 [DEBUG] Paths Init Finished.
+2016/05/17 19:10:33:817665 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:10:33:817692 [INFO] ox started
+2016/05/17 19:10:33:817972 [DEBUG] thr_args alloc
+2016/05/17 19:10:33:818042 [DEBUG] luaL_newstate alloc
+2016/05/17 19:10:33:819005 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:10:33:823057 [DEBUG] thr_args alloc
+2016/05/17 19:10:33:823138 [DEBUG] luaL_newstate alloc
+2016/05/17 19:10:33:823982 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:10:42:794545 [DEBUG] Method: 2
+2016/05/17 19:10:42:794634 [DEBUG] evblen = 25827
+2016/05/17 19:10:42:794682 [DEBUG] rmblen = 25827
+2016/05/17 19:10:42:795457 [DEBUG] magic------------------->image/jpeg
+2016/05/17 19:10:42:795544 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:10:42:795570 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:10:42:795596 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:10:42:795625 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:10:42:795662 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:11:06:491941 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:11:06:492080 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:11:06:492114 [DEBUG] Paths Init Finished.
+2016/05/17 19:11:06:492143 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:11:06:492174 [INFO] ox started
+2016/05/17 19:11:06:492454 [DEBUG] thr_args alloc
+2016/05/17 19:11:06:492539 [DEBUG] luaL_newstate alloc
+2016/05/17 19:11:06:493378 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:11:06:497534 [DEBUG] thr_args alloc
+2016/05/17 19:11:06:497597 [DEBUG] luaL_newstate alloc
+2016/05/17 19:11:06:498382 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:11:16:214222 [DEBUG] Method: 2
+2016/05/17 19:11:16:214316 [DEBUG] evblen = 25827
+2016/05/17 19:11:16:214371 [DEBUG] rmblen = 25827
+2016/05/17 19:11:16:215101 [DEBUG] magic------------------->image/jpeg!
+2016/05/17 19:11:16:215204 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:11:16:215238 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:11:16:215279 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:11:16:215322 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:11:16:215371 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:11:51:012667 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:11:51:014182 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:11:51:014251 [DEBUG] Paths Init Finished.
+2016/05/17 19:11:51:014289 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:11:51:014318 [INFO] ox started
+2016/05/17 19:11:51:014566 [DEBUG] thr_args alloc
+2016/05/17 19:11:51:014634 [DEBUG] luaL_newstate alloc
+2016/05/17 19:11:51:015501 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:11:51:019846 [DEBUG] thr_args alloc
+2016/05/17 19:11:51:019956 [DEBUG] luaL_newstate alloc
+2016/05/17 19:11:51:020839 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:11:58:873084 [DEBUG] Method: 2
+2016/05/17 19:11:58:873180 [DEBUG] evblen = 25827
+2016/05/17 19:11:58:873230 [DEBUG] rmblen = 25827
+2016/05/17 19:11:58:874096 [DEBUG] magic------------------->image/jpeg!
+2016/05/17 19:11:58:874810 [DEBUG] magi22222222c------------------->image/jpeg!
+2016/05/17 19:11:58:874912 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:11:58:874946 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:11:58:874979 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:11:58:875018 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:11:58:875066 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/17 19:12:59:558568 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/17 19:12:59:558736 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/17 19:12:59:558781 [DEBUG] Paths Init Finished.
+2016/05/17 19:12:59:558833 [DEBUG] Begin to Start Httpd Server...
+2016/05/17 19:12:59:558875 [INFO] ox started
+2016/05/17 19:12:59:559521 [DEBUG] thr_args alloc
+2016/05/17 19:12:59:559668 [DEBUG] luaL_newstate alloc
+2016/05/17 19:12:59:560948 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:12:59:569519 [DEBUG] thr_args alloc
+2016/05/17 19:12:59:570042 [DEBUG] luaL_newstate alloc
+2016/05/17 19:12:59:571228 [DEBUG] ox_lua: ox using lua script.
+2016/05/17 19:13:08:959484 [DEBUG] Method: 2
+2016/05/17 19:13:08:959578 [DEBUG] evblen = 25827
+2016/05/17 19:13:08:959627 [DEBUG] rmblen = 25827
+2016/05/17 19:13:08:960522 [DEBUG] magi22222222c------------------->image/jpeg!
+2016/05/17 19:13:08:960630 [DEBUG] fileType[jpg] is Not Supported!
+2016/05/17 19:13:08:960664 [ERROR] 0.0.0.0 fail post type
+2016/05/17 19:13:08:960696 [DEBUG] post_error_list[1]: File type not support.
+2016/05/17 19:13:08:960733 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/17 19:13:08:960780 [DEBUG] ============ox_cbs_post() ERROR!===============

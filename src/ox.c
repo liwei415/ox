@@ -18,6 +18,8 @@ static void vars_init(void)
   ox_strlcpy(vars.version, OX_VERSION, sizeof(vars.version));
   ox_strlcpy(vars.log_path, "./ox.log", sizeof(vars.log_path));
   ox_strlcpy(vars.img_path, "./img", sizeof(vars.img_path));
+  ox_strlcpy(vars.doc_path, "./doc", sizeof(vars.doc_path));
+  ox_strlcpy(vars.mov_path, "./mov", sizeof(vars.mov_path));
   ox_strlcpy(vars.format, "none", sizeof(vars.format));
   ox_strlcpy(vars.cache_ip, "127.0.0.1", sizeof(vars.cache_ip));
   ox_strlcpy(vars.root_path, "./index.html", sizeof(vars.root_path));
@@ -28,7 +30,9 @@ static void vars_init(void)
   vars.etag = 0;
   vars.cache_on = 0;
   vars.cache_port = 11211;
-  vars.max_size = 10485760;
+  vars.max_size_img = 10485760;
+  vars.max_size_doc = 10485760;
+  vars.max_size_mov = 10485760;
   vars.script_on = 0;
   vars.script_name[0] = '\0';
   vars.disable_args = 0;
@@ -226,15 +230,39 @@ static int load_conf(const char *conf)
   }
   lua_pop(L, 1);
 
-  lua_getglobal(L, "max_size");
+  lua_getglobal(L, "max_size_img");
   if(lua_isnumber(L, -1)) {
-    vars.max_size = (int)lua_tonumber(L, -1);
+    vars.max_size_img = (int)lua_tonumber(L, -1);
+  }
+  lua_pop(L, 1);
+
+  lua_getglobal(L, "max_size_doc");
+  if(lua_isnumber(L, -1)) {
+    vars.max_size_doc = (int)lua_tonumber(L, -1);
+  }
+  lua_pop(L, 1);
+
+  lua_getglobal(L, "max_size_mov");
+  if(lua_isnumber(L, -1)) {
+    vars.max_size_mov = (int)lua_tonumber(L, -1);
   }
   lua_pop(L, 1);
 
   lua_getglobal(L, "img_path");
   if(lua_isstring(L, -1)) {
     ox_strlcpy(vars.img_path, lua_tostring(L, -1), sizeof(vars.img_path));
+  }
+  lua_pop(L, 1);
+
+  lua_getglobal(L, "doc_path");
+  if(lua_isstring(L, -1)) {
+    ox_strlcpy(vars.doc_path, lua_tostring(L, -1), sizeof(vars.doc_path));
+  }
+  lua_pop(L, 1);
+
+  lua_getglobal(L, "mov_path");
+  if(lua_isstring(L, -1)) {
+    ox_strlcpy(vars.mov_path, lua_tostring(L, -1), sizeof(vars.mov_path));
   }
   lua_pop(L, 1);
 
@@ -384,8 +412,8 @@ int main()
   evhtp_set_cb(htp, "/image", ox_cbs_image, NULL);
 
   // doc
-  evhtp_set_cb(htp, "/doc/", ox_cbs_index, NULL);
-  evhtp_set_cb(htp, "/doc", ox_cbs_index, NULL);
+  evhtp_set_cb(htp, "/doc/", ox_cbs_doc, NULL);
+  evhtp_set_cb(htp, "/doc", ox_cbs_doc, NULL);
 
   // video
   evhtp_set_cb(htp, "/video/", ox_cbs_index, NULL);

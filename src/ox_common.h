@@ -6,6 +6,7 @@
 #include <libmemcached/memcached.h>
 #include <hiredis/hiredis.h>
 #include <lualib.h>
+#include <magic.h>
 #include <evhtp/evhtp.h>
 #include "multipart-parser/multipart_parser.h"
 
@@ -111,10 +112,14 @@ struct ox_vars_s {
   char ssdb_ip[128];
   int ssdb_port;
   char img_path[512];
+  char doc_path[512];
+  char mov_path[512];
   int cache_on;
   char cache_ip[128];
   int cache_port;
-  int max_size;
+  int max_size_img;
+  int max_size_doc;
+  int max_size_mov;
   ox_cbs_headers_conf_t *headers;
   ox_access_conf_t *up_access;
   ox_access_conf_t *down_access;

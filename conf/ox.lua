@@ -84,14 +84,21 @@ mode = 3
 --save_new value: 0.don't save any 1.save all 2.only save types in lua script
 --新文件是否存储，0为不存储，1为全都存储，2为只存储lua脚本产生的新图
 save_new = 2
---上传图片大小限制，默认5MB
-max_size = 10*1024*1024
---允许上传图片类型列表
-allowed_type = {'jpeg', 'jpg', 'png', 'gif', 'webp'}
+--上传大小限制，默认5MB
+max_size_img = 100*1024*1024
+max_size_doc = 100*1024*1024
+max_size_mov = 100*1024*1024
+
+--允许上传类型列表
+allowed_type_img = {'jpeg', 'jpg', 'png', 'gif', 'webp'}
+allowed_type_doc = {'doc', 'txt', 'pdf'}
+allowed_type_mov = {'mov'}
 
 --mode[1]: local disk mode
 --本地存储时的存储路径
 img_path = pwd .. '/img'
+doc_path = pwd .. '/doc'
+mov_path = pwd .. '/mov'
 
 --mode[3]: ssdb mode
 --SSDB服务器IP
@@ -103,7 +110,29 @@ ssdb_port = 8888
 --部分与配置有关的函数在lua中实现，对性能影响不大
 function is_img(type_name)
     local found = -1
-    for _, allowed in pairs(allowed_type) do
+    for _, allowed in pairs(allowed_type_img) do
+        if string.lower(type_name) == allowed then
+            found = 1
+            break
+        end
+    end
+    return found
+end
+
+function is_doc(type_name)
+    local found = -1
+    for _, allowed in pairs(allowed_type_doc) do
+        if string.lower(type_name) == allowed then
+            found = 1
+            break
+        end
+    end
+    return found
+end
+
+function is_mov(type_name)
+    local found = -1
+    for _, allowed in pairs(allowed_type_mov) do
         if string.lower(type_name) == allowed then
             found = 1
             break

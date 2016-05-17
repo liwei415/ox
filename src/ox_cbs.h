@@ -5,10 +5,12 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <magic.h>
 
 #include "cjson/cJSON.h"
 #include "ox_utils.h"
 #include "ox_db.h"
+#include "ox_doc.h"
 #include "ox_img.h"
 #include "ox_string.h"
 #include "ox_access.h"
@@ -31,6 +33,6 @@ int ox_cbs_on_header_value(multipart_parser* p, const char *at, size_t length);
 int ox_cbs_on_chunk_data(multipart_parser* p, const char *at, size_t length);
 void ox_cbs_index(evhtp_request_t *req, void *arg);
 void ox_cbs_image(evhtp_request_t *req, void *arg);
-void ox_cbs_add_info(MagickWand *im, evhtp_request_t *req);
+void ox_cbs_doc(evhtp_request_t *req, void *arg);
 
 #endif

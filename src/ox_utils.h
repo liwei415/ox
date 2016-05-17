@@ -18,6 +18,7 @@
 int ox_file_type(const char *filename, char *type);
 int ox_isfile(const char *filename);
 int ox_isimg(const char *filename);
+int ox_isdoc(const char *filename);
 int ox_isdir(const char *path);
 int ox_mkdir(const char *path);
 int ox_mkdirs(const char *dir);
