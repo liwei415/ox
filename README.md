@@ -1,6 +1,4 @@
 ## Overview
-***
-
 OX is a image/file/video server, written by pure C.
 
 ## Required Dependencies
@@ -17,5 +15,5 @@ OX is a image/file/video server, written by pure C.
 3. run with "./ox"
 
 ## Test
-Upload: curl -H "Content-Type:jpeg" --data-binary @xx.jpg "http://127.0.0.1:xxx/image"
-View: http://127.0.0.1:xxx/image/(md5)?w=0&h=0&g=0&x=0&y=0&r=0&q=85&f=jpg
+* Upload: curl -H "Content-Type:jpeg" --data-binary @xx.jpg "http://127.0.0.1:xxx/image"
+* View: http://127.0.0.1:xxx/image/(md5)?w=0&h=0&g=0&x=0&y=0&r=0&q=85&f=jpg
