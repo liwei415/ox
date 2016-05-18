@@ -31,8 +31,8 @@ etag = 1
 --download_rule = 'allow all'
 
 --cache config
---是否启用memcached缓存---------------------------------------------------->1
-cache = 1
+--是否启用memcached
+cache = 0
 --缓存服务器IP
 memc_ip = '127.0.0.1'
 --缓存服务器端口
@@ -80,7 +80,7 @@ quality = 75
 --value 2 is for memcached protocol storage like beansdb;
 --value 3 is for redis protocol storage like SSDB.
 --存储后端类型，1为本地存储, 3为redis协议后端如SSDB
-mode = 3
+mode = 1
 --save_new value: 0.don't save any 1.save all 2.only save types in lua script
 --新文件是否存储，0为不存储，1为全都存储，2为只存储lua脚本产生的新图
 save_new = 2
@@ -90,9 +90,9 @@ max_size_doc = 100*1024*1024
 max_size_mov = 100*1024*1024
 
 --允许上传类型列表
-allowed_type_img = {'jpeg', 'jpg', 'png', 'gif', 'webp'}
-allowed_type_doc = {'doc', 'txt', 'pdf'}
-allowed_type_mov = {'mov'}
+allowed_type_img = {'image/jpeg', 'image/jpg', 'image/png', 'image/gif'}
+allowed_type_doc = {'text/plain', 'application/msword', 'application/pdf'}
+allowed_type_mov = {'video/mp4'}
 
 --mode[1]: local disk mode
 --本地存储时的存储路径

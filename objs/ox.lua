@@ -91,8 +91,8 @@ max_size_mov = 100*1024*1024
 
 --允许上传类型列表
 allowed_type_img = {'image/jpeg', 'image/jpg', 'image/png', 'image/gif'}
-allowed_type_doc = {'doc', 'txt', 'pdf', 'text'}
-allowed_type_mov = {'mov'}
+allowed_type_doc = {'text/plain', 'application/msword', 'application/pdf'}
+allowed_type_mov = {'video/mp4'}
 
 --mode[1]: local disk mode
 --本地存储时的存储路径

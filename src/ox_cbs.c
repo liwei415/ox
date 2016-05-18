@@ -282,24 +282,28 @@ int _jreturn(evhtp_request_t *req, int err_no, const char *md5sum, int post_size
 int _binary_parse(evhtp_request_t *req, const char *content_type, const char *address, const char *buff, int post_size)
 {
 
-  // 查看文件头
+  int err_no = 0;
+
+  // libmagic 检测文件头
   magic_t magic_cookie;
-  magic_cookie=magic_open(MAGIC_MIME_TYPE);
-  if(magic_cookie  == NULL){
+  magic_cookie = magic_open(MAGIC_MIME_TYPE);
+  if(magic_cookie == NULL){
     printf("error creating magic cookie\n");
     return 1;
   }
   magic_load(magic_cookie, NULL);
+
+  //做错误标记err_no = 1
   const char *ctype = magic_buffer(magic_cookie, buff, post_size);
-  LOG_PRINT(LOG_DEBUG, "magic------------------->%s!", ctype);
+  if(ox_isimg(ctype) != 1) {
+    err_no = 1;
+  }
+
   magic_close(magic_cookie);
 
-
-  int err_no = 0;
-  if(ox_isimg(ctype) != 1) {
-    LOG_PRINT(LOG_DEBUG, "fileType[%s] is Not Supported!", content_type);
+  if (err_no == 1) {
+    LOG_PRINT(LOG_DEBUG, "fileType[%s] is Not Supported!", ctype);
     LOG_PRINT(LOG_ERROR, "%s fail post type", address);
-    err_no = 1;
     goto done;
   }
 
