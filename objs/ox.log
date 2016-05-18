@@ -23755,3 +23755,1167 @@
 2016/05/18 13:13:43:021771 [DEBUG] post_error_list[1]: File type not support.
 2016/05/18 13:13:43:021807 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
 2016/05/18 13:13:43:021848 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 14:13:05:928159 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 14:13:05:928281 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 14:13:05:928313 [DEBUG] Paths Init Finished.
+2016/05/18 14:13:05:928338 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 14:13:05:928363 [INFO] ox started
+2016/05/18 14:13:05:928612 [DEBUG] thr_args alloc
+2016/05/18 14:13:05:928678 [DEBUG] luaL_newstate alloc
+2016/05/18 14:13:05:933744 [DEBUG] thr_args alloc
+2016/05/18 14:13:05:933812 [DEBUG] luaL_newstate alloc
+2016/05/18 14:13:05:941988 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 14:13:05:941999 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 14:17:37:889412 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 14:17:37:889547 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 14:17:37:889578 [DEBUG] Paths Init Finished.
+2016/05/18 14:17:37:889605 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 14:17:37:889631 [INFO] ox started
+2016/05/18 14:17:37:889904 [DEBUG] thr_args alloc
+2016/05/18 14:17:37:889970 [DEBUG] luaL_newstate alloc
+2016/05/18 14:17:37:890860 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 14:17:37:894953 [DEBUG] thr_args alloc
+2016/05/18 14:17:37:895024 [DEBUG] luaL_newstate alloc
+2016/05/18 14:17:37:895839 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 14:17:44:327295 [DEBUG] Method: 2
+2016/05/18 14:17:44:327399 [DEBUG] evblen = 25827
+2016/05/18 14:17:44:327462 [DEBUG] rmblen = 25827
+2016/05/18 14:17:44:333467 [DEBUG] Begin to Save Image...
+2016/05/18 14:17:44:333528 [DEBUG] Begin to Caculate MD5...
+2016/05/18 14:17:44:333660 [DEBUG] md5: 26a824a7647ebe0d4815ea0ae4d135fa
+2016/05/18 14:17:44:333700 [DEBUG] save_path: /home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa
+2016/05/18 14:17:44:333731 [DEBUG] Path[/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa] is A Dir.
+2016/05/18 14:17:44:333768 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa/0*0
+2016/05/18 14:17:44:333844 [DEBUG] File[/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa/0*0] is A File.
+2016/05/18 14:17:44:333878 [DEBUG] Check File Exist. Needn't Save.
+2016/05/18 14:17:44:333908 [INFO] 0.0.0.0 succ post pic:26a824a7647ebe0d4815ea0ae4d135fa size:25827
+2016/05/18 14:17:44:333951 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"26a824a7647ebe0d4815ea0ae4d135fa","size":25827}}
+2016/05/18 14:17:44:334001 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/18 14:17:49:834924 [DEBUG] Method: 2
+2016/05/18 14:17:49:835016 [DEBUG] evblen = 25827
+2016/05/18 14:17:49:835062 [DEBUG] rmblen = 25827
+2016/05/18 14:17:49:835991 [DEBUG] fileType[] is Not Supported!
+2016/05/18 14:17:49:836030 [ERROR] 0.0.0.0 fail post type
+2016/05/18 14:17:49:836059 [DEBUG] post_error_list[1]: File type not support.
+2016/05/18 14:17:49:836093 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/18 14:17:49:836136 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 14:18:01:614999 [DEBUG] Method: 2
+2016/05/18 14:18:01:615088 [DEBUG] evblen = 8
+2016/05/18 14:18:01:615120 [DEBUG] rmblen = 8
+2016/05/18 14:18:01:621117 [DEBUG] Begin to save doc...
+2016/05/18 14:18:01:621188 [DEBUG] Begin to Caculate MD5...
+2016/05/18 14:18:01:621220 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 14:18:01:621252 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 14:18:01:621289 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is Not Existed!
+2016/05/18 14:18:01:621458 [DEBUG] save_path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] Create Finish.
+2016/05/18 14:18:01:621498 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 14:18:01:621531 [DEBUG] File[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d] is Not Existed!
+2016/05/18 14:18:01:621559 [DEBUG] Start to Storage the New Image...
+2016/05/18 14:18:01:621621 [DEBUG] Image [/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d] Write Successfully!
+2016/05/18 14:18:01:621655 [INFO] 0.0.0.0 succ post pic:a24caa7b7482fa835c6b14b8cf5c173d size:8
+2016/05/18 14:18:01:621691 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"a24caa7b7482fa835c6b14b8cf5c173d","size":8}}
+2016/05/18 14:18:01:621741 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/18 14:18:06:451038 [DEBUG] Method: 2
+2016/05/18 14:18:06:451126 [DEBUG] evblen = 19456
+2016/05/18 14:18:06:451165 [DEBUG] rmblen = 19456
+2016/05/18 14:18:06:451415 [DEBUG] fileType[] is Not Supported!
+2016/05/18 14:18:06:451462 [ERROR] 0.0.0.0 fail post type
+2016/05/18 14:18:06:451493 [DEBUG] post_error_list[1]: File type not support.
+2016/05/18 14:18:06:451529 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/18 14:18:06:451571 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 14:19:36:035114 [DEBUG] Method: 0
+2016/05/18 14:19:36:035223 [DEBUG] Got a GET request for </image/fab438b5ae4d4a6f528d3565a7cc260a>
+2016/05/18 14:19:36:035256 [DEBUG] md5 of request is <fab438b5ae4d4a6f528d3565a7cc260a>
+2016/05/18 14:19:36:035288 [DEBUG] fmt = jpg
+2016/05/18 14:19:36:035316 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 14:19:36:035347 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/2005/540/fab438b5ae4d4a6f528d3565a7cc260a
+2016/05/18 14:19:36:061089 [DEBUG] Path[/home/d/my_project/ox/objs/img/2005/540/fab438b5ae4d4a6f528d3565a7cc260a] is Not Existed!
+2016/05/18 14:19:36:061203 [DEBUG] Image fab438b5ae4d4a6f528d3565a7cc260a is not existed!
+2016/05/18 14:19:36:061254 [DEBUG] OX Requset Get Image[MD5: fab438b5ae4d4a6f528d3565a7cc260a] Failed!
+2016/05/18 14:19:36:061290 [ERROR] 0.0.0.0 fail pic:fab438b5ae4d4a6f528d3565a7cc260a w:0 h:0 p:1 g:0 x:0 y:0 r:0 q:85 f:jpg
+2016/05/18 14:19:36:061344 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 14:19:48:677354 [DEBUG] Method: 0
+2016/05/18 14:19:48:677477 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 14:19:48:677532 [DEBUG] md5 of request is <4caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 14:19:48:677580 [DEBUG] Url is Not a OX Request.
+2016/05/18 14:19:48:677628 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 14:19:48:677678 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 14:20:21:839639 [DEBUG] Method: 0
+2016/05/18 14:20:21:839739 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 14:20:21:839771 [DEBUG] md5 of request is <4caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 14:20:21:839800 [DEBUG] Url is Not a OX Request.
+2016/05/18 14:20:21:839826 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 14:20:21:839866 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 14:23:01:638656 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 14:23:01:638782 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 14:23:01:638813 [DEBUG] Paths Init Finished.
+2016/05/18 14:23:01:638840 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 14:23:01:638867 [INFO] ox started
+2016/05/18 14:23:01:639107 [DEBUG] thr_args alloc
+2016/05/18 14:23:01:639180 [DEBUG] luaL_newstate alloc
+2016/05/18 14:23:01:640262 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 14:23:01:644225 [DEBUG] thr_args alloc
+2016/05/18 14:23:01:644296 [DEBUG] luaL_newstate alloc
+2016/05/18 14:23:01:645097 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 14:23:08:110003 [DEBUG] Method: 0
+2016/05/18 14:23:08:110114 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 14:23:08:110147 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 14:23:08:110185 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 14:23:08:110235 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 14:23:08:110292 [DEBUG] Path[/home/d/my_project/ox/objs/img/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is Not Existed!
+2016/05/18 14:23:08:110334 [DEBUG] Image a24caa7b7482fa835c6b14b8cf5c173d is not existed!
+2016/05/18 14:23:08:110362 [DEBUG] OX Requset Get Image[MD5: a24caa7b7482fa835c6b14b8cf5c173d] Failed!
+2016/05/18 14:23:08:110388 [ERROR] 0.0.0.0 fail pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 14:23:08:110449 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 15:11:51:290632 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 15:11:51:290760 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 15:11:51:290811 [DEBUG] Paths Init Finished.
+2016/05/18 15:11:51:290853 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 15:11:51:290895 [INFO] ox started
+2016/05/18 15:11:51:291189 [DEBUG] thr_args alloc
+2016/05/18 15:11:51:291256 [DEBUG] luaL_newstate alloc
+2016/05/18 15:11:51:292100 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 15:11:51:296311 [DEBUG] thr_args alloc
+2016/05/18 15:11:51:296408 [DEBUG] luaL_newstate alloc
+2016/05/18 15:11:51:297399 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 15:12:15:066599 [DEBUG] Method: 0
+2016/05/18 15:12:15:066720 [DEBUG] Got a GET request for </image/a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:12:15:066768 [DEBUG] md5 of request is <a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:12:15:066824 [DEBUG] fmt = jpg
+2016/05/18 15:12:15:066868 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 15:12:15:066911 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73
+2016/05/18 15:12:15:066951 [DEBUG] Path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] is Not Existed!
+2016/05/18 15:12:15:066981 [DEBUG] Image a317a703e68b76782cc14ec125849f73 is not existed!
+2016/05/18 15:12:15:067008 [DEBUG] OX Requset Get Image[MD5: a317a703e68b76782cc14ec125849f73] Failed!
+2016/05/18 15:12:15:067035 [ERROR] 0.0.0.0 fail pic:a317a703e68b76782cc14ec125849f73 w:0 h:0 p:1 g:0 x:0 y:0 r:0 q:85 f:jpg
+2016/05/18 15:12:15:067092 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 15:12:52:611737 [DEBUG] Method: 2
+2016/05/18 15:12:52:611858 [DEBUG] evblen = 401782
+2016/05/18 15:12:52:612203 [DEBUG] rmblen = 401782
+2016/05/18 15:12:52:613554 [DEBUG] Begin to Save Image...
+2016/05/18 15:12:52:613597 [DEBUG] Begin to Caculate MD5...
+2016/05/18 15:12:52:615012 [DEBUG] md5: a317a703e68b76782cc14ec125849f73
+2016/05/18 15:12:52:615061 [DEBUG] save_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73
+2016/05/18 15:12:52:615089 [DEBUG] Path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] is Not Existed!
+2016/05/18 15:12:52:615213 [DEBUG] save_path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] Create Finish.
+2016/05/18 15:12:52:615240 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0
+2016/05/18 15:12:52:615266 [DEBUG] File[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0] is Not Existed!
+2016/05/18 15:12:52:615287 [DEBUG] Start to Storage the New Image...
+2016/05/18 15:12:52:615721 [DEBUG] Image [/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0] Write Successfully!
+2016/05/18 15:12:52:615768 [INFO] 0.0.0.0 succ post pic:a317a703e68b76782cc14ec125849f73 size:401782
+2016/05/18 15:12:52:615812 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"a317a703e68b76782cc14ec125849f73","size":401782}}
+2016/05/18 15:12:52:615863 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/18 15:13:03:528862 [DEBUG] Method: 0
+2016/05/18 15:13:03:528988 [DEBUG] Got a GET request for </image/a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:13:03:529045 [DEBUG] md5 of request is <a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:13:03:529096 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 15:13:03:529149 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73
+2016/05/18 15:13:03:529203 [DEBUG] Path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] is A Dir.
+2016/05/18 15:13:03:529260 [DEBUG] key: a317a703e68b76782cc14ec125849f73:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 15:13:03:529308 [DEBUG] Start to Find the Image...
+2016/05/18 15:13:03:529358 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0
+2016/05/18 15:13:03:529408 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/05/18 15:13:03:543708 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/05/18 15:13:03:586478 [DEBUG] image size = 401782
+2016/05/18 15:13:03:588149 [DEBUG] wi_set_quality(im, 75)
+2016/05/18 15:13:03:588202 [DEBUG] wi_set_format(im, jpg)
+2016/05/18 15:13:03:589286 [DEBUG] convert(im, req) 1
+2016/05/18 15:13:03:592981 [DEBUG] Image[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg] is Not Existed. Begin to Save it.
+2016/05/18 15:13:03:593067 [DEBUG] Start to Storage the New Image...
+2016/05/18 15:13:03:593151 [DEBUG] Image [/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg] Write Successfully!
+2016/05/18 15:13:03:593186 [DEBUG] Begin to Caculate MD5...
+2016/05/18 15:13:03:593254 [DEBUG] md5: 582e91b3903787ff095c649c7033bfcf
+2016/05/18 15:13:03:593281 [DEBUG] If-None-Match: (null)
+2016/05/18 15:13:03:593491 [DEBUG] get buffer length: 11616
+2016/05/18 15:13:03:595598 [DEBUG] Got the File!
+2016/05/18 15:13:03:595758 [DEBUG] headers: 1
+2016/05/18 15:13:03:595816 [INFO] 0.0.0.0 succ pic:a317a703e68b76782cc14ec125849f73 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:11616
+2016/05/18 15:13:03:595851 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 15:14:39:812795 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 15:14:39:812916 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 15:14:39:812948 [DEBUG] Paths Init Finished.
+2016/05/18 15:14:39:812976 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 15:14:39:813003 [INFO] ox started
+2016/05/18 15:14:39:813272 [DEBUG] thr_args alloc
+2016/05/18 15:14:39:813338 [DEBUG] luaL_newstate alloc
+2016/05/18 15:14:39:814143 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 15:14:39:818343 [DEBUG] thr_args alloc
+2016/05/18 15:14:39:818440 [DEBUG] luaL_newstate alloc
+2016/05/18 15:14:39:819256 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 15:14:45:249850 [DEBUG] Method: 0
+2016/05/18 15:14:45:249991 [DEBUG] Got a GET request for </image/a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:14:45:250054 [DEBUG] md5 of request is <a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:14:45:250116 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 15:14:45:250179 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73
+2016/05/18 15:14:45:250236 [DEBUG] Path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] is A Dir.
+2016/05/18 15:14:45:250302 [DEBUG] key: a317a703e68b76782cc14ec125849f73:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 15:14:45:250357 [DEBUG] Start to Find the Image...
+2016/05/18 15:14:45:250407 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0
+2016/05/18 15:14:45:250474 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/05/18 15:14:45:250542 [DEBUG] img_size = 11616
+2016/05/18 15:14:45:250610 [DEBUG] Image [/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/05/18 15:14:45:250664 [DEBUG] Begin to Caculate MD5...
+2016/05/18 15:14:45:250759 [DEBUG] md5: 582e91b3903787ff095c649c7033bfcf
+2016/05/18 15:14:45:250814 [DEBUG] If-None-Match: 582e91b3903787ff095c649c7033bfcf
+2016/05/18 15:14:45:250869 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 15:14:45:250915 [INFO] 0.0.0.0 succ 304 pic:a317a703e68b76782cc14ec125849f73 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 15:15:08:268127 [DEBUG] Method: 0
+2016/05/18 15:15:08:268247 [DEBUG] Got a GET request for </image/a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:15:08:268310 [DEBUG] md5 of request is <a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:15:08:268364 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 15:15:08:268422 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73
+2016/05/18 15:15:08:268494 [DEBUG] Path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] is A Dir.
+2016/05/18 15:15:08:268555 [DEBUG] key: a317a703e68b76782cc14ec125849f73:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 15:15:08:268604 [DEBUG] Start to Find the Image...
+2016/05/18 15:15:08:268648 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0
+2016/05/18 15:15:08:268699 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/05/18 15:15:08:268775 [DEBUG] img_size = 11616
+2016/05/18 15:15:08:268831 [DEBUG] Image [/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/05/18 15:15:08:268881 [DEBUG] Begin to Caculate MD5...
+2016/05/18 15:15:08:268974 [DEBUG] md5: 582e91b3903787ff095c649c7033bfcf
+2016/05/18 15:15:08:269021 [DEBUG] If-None-Match: 582e91b3903787ff095c649c7033bfcf
+2016/05/18 15:15:08:269069 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 15:15:08:269116 [INFO] 0.0.0.0 succ 304 pic:a317a703e68b76782cc14ec125849f73 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 15:15:31:170286 [DEBUG] Method: 0
+2016/05/18 15:15:31:170402 [DEBUG] Got a GET request for </image/a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:15:31:170475 [DEBUG] md5 of request is <a317a703e68b76782cc14ec125849f73>
+2016/05/18 15:15:31:170530 [DEBUG] fmt = gif
+2016/05/18 15:15:31:170581 [DEBUG] ox_img_get() start processing ox request...
+2016/05/18 15:15:31:170631 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73
+2016/05/18 15:15:31:170682 [DEBUG] Path[/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73] is A Dir.
+2016/05/18 15:15:31:170738 [DEBUG] key: a317a703e68b76782cc14ec125849f73:0:0:1:0:-1:-1:0:75:gif
+2016/05/18 15:15:31:170786 [DEBUG] Start to Find the Image...
+2016/05/18 15:15:31:170835 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0
+2016/05/18 15:15:31:170885 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.gif
+2016/05/18 15:15:31:171195 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/05/18 15:15:31:215123 [DEBUG] image size = 401782
+2016/05/18 15:15:31:216494 [DEBUG] wi_set_quality(im, 75)
+2016/05/18 15:15:31:216549 [DEBUG] wi_set_format(im, gif)
+2016/05/18 15:15:31:216594 [DEBUG] convert(im, req) 1
+2016/05/18 15:15:31:217517 [DEBUG] Image [/home/d/my_project/ox/objs/img/1304/979/a317a703e68b76782cc14ec125849f73/0*0_p1_g0_-1*-1_r0_q75.gif] Needn't to Storage.
+2016/05/18 15:15:31:217556 [DEBUG] Begin to Caculate MD5...
+2016/05/18 15:15:31:217639 [DEBUG] md5: 0967b28ba2ef339878606c849221336d
+2016/05/18 15:15:31:217669 [DEBUG] If-None-Match: (null)
+2016/05/18 15:15:31:218678 [DEBUG] get buffer length: 15995
+2016/05/18 15:15:31:220559 [DEBUG] ---------------------------->h: application/octet-stream
+2016/05/18 15:15:31:220618 [DEBUG] Got the File!
+2016/05/18 15:15:31:220714 [DEBUG] headers: 1
+2016/05/18 15:15:31:220770 [INFO] 0.0.0.0 succ pic:a317a703e68b76782cc14ec125849f73 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:gif size:15995
+2016/05/18 15:15:31:220803 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:03:50:725833 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:03:50:725957 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:03:50:725989 [DEBUG] Paths Init Finished.
+2016/05/18 16:03:50:726018 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:03:50:726044 [INFO] ox started
+2016/05/18 16:03:50:726311 [DEBUG] thr_args alloc
+2016/05/18 16:03:50:726399 [DEBUG] luaL_newstate alloc
+2016/05/18 16:03:50:727293 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:03:50:731828 [DEBUG] thr_args alloc
+2016/05/18 16:03:50:731933 [DEBUG] luaL_newstate alloc
+2016/05/18 16:03:50:732790 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:04:06:231411 [DEBUG] Method: 0
+2016/05/18 16:04:06:231542 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:04:06:231592 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:04:06:231640 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:04:06:231689 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:04:06:231735 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:04:06:231777 [DEBUG] Start to Find the Image...
+2016/05/18 16:04:06:231833 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:04:06:231884 [DEBUG] doc_size = 8
+2016/05/18 16:04:06:275146 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:04:06:275259 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:04:06:275292 [DEBUG] If-None-Match: (null)
+2016/05/18 16:04:06:275337 [DEBUG] get buffer length: 8
+2016/05/18 16:04:06:275365 [DEBUG] Got the File!
+2016/05/18 16:04:06:275392 [DEBUG] headers: 1
+2016/05/18 16:04:06:275461 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:06:29:985875 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:06:29:985999 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:06:29:986030 [DEBUG] Paths Init Finished.
+2016/05/18 16:06:29:986057 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:06:29:986083 [INFO] ox started
+2016/05/18 16:06:29:986356 [DEBUG] thr_args alloc
+2016/05/18 16:06:29:986423 [DEBUG] luaL_newstate alloc
+2016/05/18 16:06:29:987240 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:06:29:991511 [DEBUG] thr_args alloc
+2016/05/18 16:06:29:991581 [DEBUG] luaL_newstate alloc
+2016/05/18 16:06:29:992369 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:06:43:436266 [DEBUG] Method: 0
+2016/05/18 16:06:43:436369 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:06:43:436402 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:06:43:436446 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:06:43:436483 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:06:43:436515 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:06:43:436543 [DEBUG] Start to Find the Image...
+2016/05/18 16:06:43:436571 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:06:43:436604 [DEBUG] doc_size = 8
+2016/05/18 16:06:43:436635 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:06:43:436665 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:06:43:436693 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:06:43:436722 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:08:39:084016 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:08:39:084142 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:08:39:084174 [DEBUG] Paths Init Finished.
+2016/05/18 16:08:39:084201 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:08:39:084243 [INFO] ox started
+2016/05/18 16:08:39:084548 [DEBUG] thr_args alloc
+2016/05/18 16:08:39:084633 [DEBUG] luaL_newstate alloc
+2016/05/18 16:08:39:085516 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:08:39:089755 [DEBUG] thr_args alloc
+2016/05/18 16:08:39:089867 [DEBUG] luaL_newstate alloc
+2016/05/18 16:08:39:090710 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:08:53:160260 [DEBUG] Method: 0
+2016/05/18 16:08:53:160392 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:08:53:160455 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:08:53:160508 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:08:53:160562 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:08:53:160598 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:08:53:160643 [DEBUG] Start to Find the Image...
+2016/05/18 16:08:53:160689 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:08:53:160734 [DEBUG] doc_size = 8
+2016/05/18 16:08:53:160764 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:08:53:160796 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:08:53:160824 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:08:53:160872 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:09:24:367675 [DEBUG] Method: 0
+2016/05/18 16:09:24:367781 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:24:367814 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:24:367844 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:09:24:367873 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:367904 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:09:24:367931 [DEBUG] Start to Find the Image...
+2016/05/18 16:09:24:367957 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:367989 [DEBUG] doc_size = 8
+2016/05/18 16:09:24:368019 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:09:24:368048 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:368076 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:368104 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:09:24:875894 [DEBUG] Method: 0
+2016/05/18 16:09:24:876001 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:24:876037 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:24:876067 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:09:24:876097 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:876129 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:09:24:876157 [DEBUG] Start to Find the Image...
+2016/05/18 16:09:24:876184 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:876215 [DEBUG] doc_size = 8
+2016/05/18 16:09:24:876245 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:09:24:876275 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:876303 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:24:876332 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:09:25:371824 [DEBUG] Method: 0
+2016/05/18 16:09:25:371925 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:371957 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:371985 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:09:25:372015 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:372048 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:09:25:372076 [DEBUG] Start to Find the Image...
+2016/05/18 16:09:25:372102 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:372132 [DEBUG] doc_size = 8
+2016/05/18 16:09:25:372163 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:09:25:372193 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:372221 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:372250 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:09:25:592326 [DEBUG] Method: 0
+2016/05/18 16:09:25:592435 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:592472 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:592510 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:09:25:592559 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:592613 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:09:25:592662 [DEBUG] Start to Find the Image...
+2016/05/18 16:09:25:592739 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:592793 [DEBUG] doc_size = 8
+2016/05/18 16:09:25:592841 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:09:25:592873 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:592910 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:592960 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:09:25:785573 [DEBUG] Method: 0
+2016/05/18 16:09:25:785700 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:785752 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:785795 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:09:25:785839 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:785884 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:09:25:785925 [DEBUG] Start to Find the Image...
+2016/05/18 16:09:25:785968 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:786017 [DEBUG] doc_size = 8
+2016/05/18 16:09:25:786064 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:09:25:786097 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:786125 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:786153 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:09:25:963320 [DEBUG] Method: 0
+2016/05/18 16:09:25:963439 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:963487 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:09:25:963535 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:09:25:963585 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:963624 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:09:25:963663 [DEBUG] Start to Find the Image...
+2016/05/18 16:09:25:963711 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:963764 [DEBUG] doc_size = 8
+2016/05/18 16:09:25:963814 [DEBUG] Begin to Caculate MD5...
+2016/05/18 16:09:25:963861 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:963907 [DEBUG] If-None-Match: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:09:25:963956 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 16:10:22:333822 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:10:22:333987 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:10:22:334040 [DEBUG] Paths Init Finished.
+2016/05/18 16:10:22:334090 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:10:22:334138 [INFO] ox started
+2016/05/18 16:10:22:334499 [DEBUG] thr_args alloc
+2016/05/18 16:10:22:334581 [DEBUG] luaL_newstate alloc
+2016/05/18 16:10:22:335396 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:10:22:339609 [DEBUG] thr_args alloc
+2016/05/18 16:10:22:339690 [DEBUG] luaL_newstate alloc
+2016/05/18 16:10:22:340500 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:10:34:427770 [DEBUG] Method: 0
+2016/05/18 16:10:34:427886 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:10:34:427933 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:10:34:427982 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:10:34:428033 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:10:34:428079 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:10:34:428121 [DEBUG] Start to Find the Image...
+2016/05/18 16:10:34:428164 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:10:34:428226 [DEBUG] doc_size = 8
+2016/05/18 16:10:34:428275 [DEBUG] get buffer length: 8
+2016/05/18 16:10:34:428314 [DEBUG] Got the File!
+2016/05/18 16:10:34:428356 [DEBUG] headers: 1
+2016/05/18 16:10:34:428415 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:13:16:349050 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:13:16:349172 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:13:16:349203 [DEBUG] Paths Init Finished.
+2016/05/18 16:13:16:349229 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:13:16:349268 [INFO] ox started
+2016/05/18 16:13:16:349595 [DEBUG] thr_args alloc
+2016/05/18 16:13:16:349664 [DEBUG] luaL_newstate alloc
+2016/05/18 16:13:16:350475 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:13:16:354626 [DEBUG] thr_args alloc
+2016/05/18 16:13:16:354684 [DEBUG] luaL_newstate alloc
+2016/05/18 16:13:16:355449 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:13:23:742635 [DEBUG] Method: 0
+2016/05/18 16:13:23:742763 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:13:23:742802 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:13:23:742834 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:13:23:742867 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:13:23:742899 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:13:23:742927 [DEBUG] Start to Find the Image...
+2016/05/18 16:13:23:742954 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:13:23:742988 [DEBUG] doc_size = 8
+2016/05/18 16:13:23:743026 [DEBUG] get buffer length: 8
+2016/05/18 16:13:23:743054 [DEBUG] Got the File!
+2016/05/18 16:13:23:743082 [DEBUG] headers: 1
+2016/05/18 16:13:23:743124 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:29:52:825269 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:29:52:825393 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:29:52:825424 [DEBUG] Paths Init Finished.
+2016/05/18 16:29:52:825462 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:29:52:825488 [INFO] ox started
+2016/05/18 16:29:52:825735 [DEBUG] thr_args alloc
+2016/05/18 16:29:52:825808 [DEBUG] luaL_newstate alloc
+2016/05/18 16:29:52:826633 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:29:52:830849 [DEBUG] thr_args alloc
+2016/05/18 16:29:52:830954 [DEBUG] luaL_newstate alloc
+2016/05/18 16:29:52:831843 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:29:58:878982 [DEBUG] Method: 0
+2016/05/18 16:29:58:879106 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:29:58:879154 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:29:58:879202 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:29:58:879252 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:29:58:879300 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:29:58:879341 [DEBUG] Start to Find the Image...
+2016/05/18 16:29:58:879384 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:29:58:879450 [DEBUG] doc_size = 8
+2016/05/18 16:29:58:879505 [DEBUG] get buffer length: 8
+2016/05/18 16:29:58:879544 [DEBUG] Got the File!
+2016/05/18 16:29:58:879588 [DEBUG] headers: 1
+2016/05/18 16:29:58:879646 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:30:12:502527 [DEBUG] Method: 0
+2016/05/18 16:30:12:502654 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:30:12:502713 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:30:12:502767 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:30:12:502838 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:30:12:502892 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:30:12:502940 [DEBUG] Start to Find the Image...
+2016/05/18 16:30:12:502988 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:30:12:503041 [DEBUG] doc_size = 8
+2016/05/18 16:30:12:503094 [DEBUG] get buffer length: 8
+2016/05/18 16:30:12:503143 [DEBUG] Got the File!
+2016/05/18 16:30:12:503194 [DEBUG] fname = attachment; filename=attachm
+2016/05/18 16:30:12:503242 [DEBUG] headers: 1
+2016/05/18 16:30:12:503308 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:30:59:755469 [DEBUG] Method: 0
+2016/05/18 16:30:59:755601 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:30:59:755653 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:30:59:755699 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:30:59:755745 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:30:59:755796 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:30:59:755842 [DEBUG] Start to Find the Image...
+2016/05/18 16:30:59:755887 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:30:59:755936 [DEBUG] doc_size = 8
+2016/05/18 16:30:59:755985 [DEBUG] get buffer length: 8
+2016/05/18 16:30:59:756028 [DEBUG] Got the File!
+2016/05/18 16:30:59:756076 [DEBUG] headers: 1
+2016/05/18 16:30:59:756122 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:31:04:659560 [DEBUG] Method: 0
+2016/05/18 16:31:04:659693 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:31:04:659754 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:31:04:659810 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:31:04:659868 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:31:04:659927 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:31:04:659977 [DEBUG] Start to Find the Image...
+2016/05/18 16:31:04:660023 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:31:04:660074 [DEBUG] doc_size = 8
+2016/05/18 16:31:04:660124 [DEBUG] get buffer length: 8
+2016/05/18 16:31:04:660162 [DEBUG] Got the File!
+2016/05/18 16:31:04:660193 [DEBUG] fname = attachment; filename=attachm
+2016/05/18 16:31:04:660222 [DEBUG] headers: 1
+2016/05/18 16:31:04:660262 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:31:09:579227 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:31:09:579353 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:31:09:579385 [DEBUG] Paths Init Finished.
+2016/05/18 16:31:09:579412 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:31:09:579455 [INFO] ox started
+2016/05/18 16:31:09:579748 [DEBUG] thr_args alloc
+2016/05/18 16:31:09:579833 [DEBUG] luaL_newstate alloc
+2016/05/18 16:31:09:580667 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:31:09:584846 [DEBUG] thr_args alloc
+2016/05/18 16:31:09:584947 [DEBUG] luaL_newstate alloc
+2016/05/18 16:31:09:585786 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:31:11:723912 [DEBUG] Method: 0
+2016/05/18 16:31:11:724055 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:31:11:724112 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:31:11:724165 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:31:11:724219 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:31:11:724292 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:31:11:724338 [DEBUG] Start to Find the Image...
+2016/05/18 16:31:11:724383 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:31:11:724448 [DEBUG] doc_size = 8
+2016/05/18 16:31:11:724511 [DEBUG] get buffer length: 8
+2016/05/18 16:31:11:724558 [DEBUG] Got the File!
+2016/05/18 16:31:11:724603 [DEBUG] fname = 123.doc
+2016/05/18 16:31:11:724651 [DEBUG] fname = attachment; filename=attachm
+2016/05/18 16:31:11:724695 [DEBUG] headers: 1
+2016/05/18 16:31:11:724762 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:31:54:169206 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:31:54:169326 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:31:54:169357 [DEBUG] Paths Init Finished.
+2016/05/18 16:31:54:169383 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:31:54:169421 [INFO] ox started
+2016/05/18 16:31:54:169770 [DEBUG] thr_args alloc
+2016/05/18 16:31:54:169838 [DEBUG] luaL_newstate alloc
+2016/05/18 16:31:54:170647 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:31:54:174973 [DEBUG] thr_args alloc
+2016/05/18 16:31:54:175082 [DEBUG] luaL_newstate alloc
+2016/05/18 16:31:54:175899 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:31:57:991969 [DEBUG] Method: 0
+2016/05/18 16:31:57:992097 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:31:57:992147 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:31:57:992181 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:31:57:992214 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:31:57:992246 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:31:57:992273 [DEBUG] Start to Find the Image...
+2016/05/18 16:31:57:992312 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:31:57:992372 [DEBUG] doc_size = 8
+2016/05/18 16:31:57:992418 [DEBUG] get buffer length: 8
+2016/05/18 16:31:57:992461 [DEBUG] Got the File!
+2016/05/18 16:31:57:992491 [DEBUG] fname = 123.doc
+2016/05/18 16:31:57:992520 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 16:31:57:992548 [DEBUG] headers: 1
+2016/05/18 16:31:57:992592 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:46:17:058205 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:46:17:058335 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:46:17:058369 [DEBUG] Paths Init Finished.
+2016/05/18 16:46:17:058397 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:46:17:058422 [INFO] ox started
+2016/05/18 16:46:17:058722 [DEBUG] thr_args alloc
+2016/05/18 16:46:17:058789 [DEBUG] luaL_newstate alloc
+2016/05/18 16:46:17:059721 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:46:17:063786 [DEBUG] thr_args alloc
+2016/05/18 16:46:17:063867 [DEBUG] luaL_newstate alloc
+2016/05/18 16:46:17:064693 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:46:21:312881 [DEBUG] Method: 0
+2016/05/18 16:46:21:312994 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:46:21:313042 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:46:21:313096 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:46:21:313150 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:46:21:313202 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:46:21:313249 [DEBUG] Start to Find the Image...
+2016/05/18 16:46:21:313295 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:46:21:313366 [DEBUG] doc_size = 8
+2016/05/18 16:46:21:313440 [DEBUG] get buffer length: 8
+2016/05/18 16:46:21:313493 [DEBUG] Got the File!
+2016/05/18 16:46:21:313544 [DEBUG] headers: 1
+2016/05/18 16:46:21:313617 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:46:30:581982 [DEBUG] Method: 0
+2016/05/18 16:46:30:582112 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:46:30:582171 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:46:30:582229 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:46:30:582284 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:46:30:582339 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:46:30:582388 [DEBUG] Start to Find the Image...
+2016/05/18 16:46:30:582444 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:46:30:582502 [DEBUG] doc_size = 8
+2016/05/18 16:46:30:582554 [DEBUG] get buffer length: 8
+2016/05/18 16:46:30:582601 [DEBUG] Got the File!
+2016/05/18 16:46:30:582651 [DEBUG] headers: 1
+2016/05/18 16:46:30:582716 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:46:41:690957 [DEBUG] Method: 0
+2016/05/18 16:46:41:691061 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:46:41:691088 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:46:41:691114 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:46:41:691138 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:46:41:691160 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:46:41:691180 [DEBUG] Start to Find the Image...
+2016/05/18 16:46:41:691200 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:46:41:691222 [DEBUG] doc_size = 8
+2016/05/18 16:46:41:691246 [DEBUG] get buffer length: 8
+2016/05/18 16:46:41:691266 [DEBUG] Got the File!
+2016/05/18 16:46:41:691286 [DEBUG] headers: 1
+2016/05/18 16:46:41:691318 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:47:57:637218 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:47:57:637337 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:47:57:637368 [DEBUG] Paths Init Finished.
+2016/05/18 16:47:57:637395 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:47:57:637422 [INFO] ox started
+2016/05/18 16:47:57:637677 [DEBUG] thr_args alloc
+2016/05/18 16:47:57:637738 [DEBUG] luaL_newstate alloc
+2016/05/18 16:47:57:638763 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:47:57:642771 [DEBUG] thr_args alloc
+2016/05/18 16:47:57:642854 [DEBUG] luaL_newstate alloc
+2016/05/18 16:47:57:643972 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:48:13:733664 [DEBUG] Method: 0
+2016/05/18 16:48:13:733797 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:48:13:733852 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:48:13:733902 [DEBUG] ------------------>fname = 123.txt
+2016/05/18 16:48:13:733935 [DEBUG] fname = attachment; filename=123.txt
+2016/05/18 16:48:13:733969 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:48:13:734002 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:48:13:734034 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:48:13:734062 [DEBUG] Start to Find the Image...
+2016/05/18 16:48:13:734089 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:48:13:734121 [DEBUG] doc_size = 8
+2016/05/18 16:48:13:734161 [DEBUG] get buffer length: 8
+2016/05/18 16:48:13:734203 [DEBUG] Got the File!
+2016/05/18 16:48:13:734233 [DEBUG] headers: 1
+2016/05/18 16:48:13:734277 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:48:20:996027 [DEBUG] Method: 0
+2016/05/18 16:48:20:996153 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:48:20:996211 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 16:48:20:996263 [DEBUG] ------------------>fname = 123.doc
+2016/05/18 16:48:20:996307 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 16:48:20:996340 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 16:48:20:996370 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:48:20:996399 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d] is A Dir.
+2016/05/18 16:48:20:996424 [DEBUG] Start to Find the Image...
+2016/05/18 16:48:20:996459 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/1298/1621/a24caa7b7482fa835c6b14b8cf5c173d/a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 16:48:20:996489 [DEBUG] doc_size = 8
+2016/05/18 16:48:20:996521 [DEBUG] get buffer length: 8
+2016/05/18 16:48:20:996546 [DEBUG] Got the File!
+2016/05/18 16:48:20:996572 [DEBUG] headers: 1
+2016/05/18 16:48:20:996609 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 16:49:17:919837 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:49:17:919963 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:49:17:919994 [DEBUG] Paths Init Finished.
+2016/05/18 16:49:17:922749 [DEBUG] Connect to ssdb server faile
+2016/05/18 16:49:39:742698 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 16:49:39:742818 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 16:49:39:742850 [DEBUG] Paths Init Finished.
+2016/05/18 16:49:39:743065 [DEBUG] Connect to ssdb server Success
+2016/05/18 16:49:39:743107 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 16:49:39:743137 [INFO] ox started
+2016/05/18 16:49:39:743475 [DEBUG] thr_args alloc
+2016/05/18 16:49:39:743626 [DEBUG] Connect to ssdb server Success
+2016/05/18 16:49:39:743695 [DEBUG] luaL_newstate alloc
+2016/05/18 16:49:39:744523 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 16:49:39:748529 [DEBUG] thr_args alloc
+2016/05/18 16:49:39:748737 [DEBUG] Connect to ssdb server Success
+2016/05/18 16:49:39:748807 [DEBUG] luaL_newstate alloc
+2016/05/18 16:49:39:749662 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 17:02:43:344096 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 17:02:43:344264 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 17:02:43:344319 [DEBUG] Paths Init Finished.
+2016/05/18 17:02:43:344567 [DEBUG] Connect to ssdb server Success
+2016/05/18 17:02:43:344611 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 17:02:43:344640 [INFO] ox started
+2016/05/18 17:02:43:344890 [DEBUG] thr_args alloc
+2016/05/18 17:02:43:345050 [DEBUG] Connect to ssdb server Success
+2016/05/18 17:02:43:345129 [DEBUG] luaL_newstate alloc
+2016/05/18 17:02:43:346147 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 17:02:43:349968 [DEBUG] thr_args alloc
+2016/05/18 17:02:43:350143 [DEBUG] Connect to ssdb server Success
+2016/05/18 17:02:43:350201 [DEBUG] luaL_newstate alloc
+2016/05/18 17:02:43:351104 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 17:02:48:927037 [DEBUG] Method: 0
+2016/05/18 17:02:48:927158 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:02:48:927198 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:02:48:927236 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:02:48:927739 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d is not exist!
+2016/05/18 17:02:48:927802 [DEBUG] Image [a24caa7b7482fa835c6b14b8cf5c173d] is not existed.
+2016/05/18 17:02:48:927834 [DEBUG] OX Requset Get Doc[MD5: a24caa7b7482fa835c6b14b8cf5c173d] Failed!
+2016/05/18 17:02:48:927893 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:02:56:666617 [DEBUG] Method: 0
+2016/05/18 17:02:56:666740 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:02:56:666795 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:02:56:666848 [DEBUG] fname = 123.doc
+2016/05/18 17:02:56:666901 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 17:02:56:666953 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:02:56:667264 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d is not exist!
+2016/05/18 17:02:56:667320 [DEBUG] Image [a24caa7b7482fa835c6b14b8cf5c173d] is not existed.
+2016/05/18 17:02:56:667366 [DEBUG] OX Requset Get Doc[MD5: a24caa7b7482fa835c6b14b8cf5c173d] Failed!
+2016/05/18 17:02:56:667446 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:02:58:376617 [DEBUG] Method: 0
+2016/05/18 17:02:58:376716 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:02:58:376749 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:02:58:376779 [DEBUG] fname = 123.doc
+2016/05/18 17:02:58:376808 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 17:02:58:376840 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:02:58:377099 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d is not exist!
+2016/05/18 17:02:58:377141 [DEBUG] Image [a24caa7b7482fa835c6b14b8cf5c173d] is not existed.
+2016/05/18 17:02:58:377171 [DEBUG] OX Requset Get Doc[MD5: a24caa7b7482fa835c6b14b8cf5c173d] Failed!
+2016/05/18 17:02:58:377216 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:03:01:592588 [DEBUG] Method: 0
+2016/05/18 17:03:01:592708 [DEBUG] Got a GET request for </image/a317a703e68b76782cc14ec125849f73>
+2016/05/18 17:03:01:592764 [DEBUG] md5 of request is <a317a703e68b76782cc14ec125849f73>
+2016/05/18 17:03:01:592817 [DEBUG] fmt = gif
+2016/05/18 17:03:01:592864 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:01:593193 [DEBUG] key: a317a703e68b76782cc14ec125849f73 is not exist!
+2016/05/18 17:03:01:593255 [DEBUG] Image [a317a703e68b76782cc14ec125849f73] is not existed.
+2016/05/18 17:03:01:593306 [DEBUG] OX Requset Get Image[MD5: a317a703e68b76782cc14ec125849f73] Failed!
+2016/05/18 17:03:01:593354 [ERROR] 0.0.0.0 fail pic:a317a703e68b76782cc14ec125849f73 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:gif
+2016/05/18 17:03:01:593432 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:03:27:293603 [DEBUG] Method: 2
+2016/05/18 17:03:27:293718 [DEBUG] evblen = 25827
+2016/05/18 17:03:27:293796 [DEBUG] rmblen = 25827
+2016/05/18 17:03:27:294898 [DEBUG] Begin to Save Image...
+2016/05/18 17:03:27:294951 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:27:295082 [DEBUG] md5: 26a824a7647ebe0d4815ea0ae4d135fa
+2016/05/18 17:03:27:295408 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:27:295481 [DEBUG] File Exist, Needn't Save.
+2016/05/18 17:03:27:295535 [INFO] 0.0.0.0 succ post pic:26a824a7647ebe0d4815ea0ae4d135fa size:25827
+2016/05/18 17:03:27:295604 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"26a824a7647ebe0d4815ea0ae4d135fa","size":25827}}
+2016/05/18 17:03:27:295668 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/18 17:03:36:389552 [DEBUG] Method: 0
+2016/05/18 17:03:36:389659 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:36:389710 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:36:389756 [DEBUG] fmt = gif
+2016/05/18 17:03:36:389798 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:36:390150 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:36:390219 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:gif
+2016/05/18 17:03:36:390261 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:36:390511 [DEBUG] Failed to execute get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:gif] from ssdb.
+2016/05/18 17:03:36:391223 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa] from ssdb. length = [25827].
+2016/05/18 17:03:36:396086 [DEBUG] wi_set_quality(im, 75)
+2016/05/18 17:03:36:396152 [DEBUG] wi_set_format(im, gif)
+2016/05/18 17:03:36:396432 [DEBUG] convert(im, req) 1
+2016/05/18 17:03:36:880514 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:36:881039 [DEBUG] md5: aa6916b6b6160df70eba16b4be5772bd
+2016/05/18 17:03:36:881081 [DEBUG] If-None-Match: (null)
+2016/05/18 17:03:36:881174 [DEBUG] Image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:gif] Needn't to Storage.
+2016/05/18 17:03:36:881451 [DEBUG] get buffer length: 125625
+2016/05/18 17:03:36:881489 [DEBUG] Got the File!
+2016/05/18 17:03:36:881517 [DEBUG] headers: 1
+2016/05/18 17:03:36:881563 [INFO] 0.0.0.0 succ pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:gif size:125625
+2016/05/18 17:03:36:881595 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:03:40:094292 [DEBUG] Method: 0
+2016/05/18 17:03:40:094403 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:094465 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:094515 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:094883 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:094957 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:095001 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:095326 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:095375 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:095419 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:095559 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:095599 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:095642 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:095683 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:592674 [DEBUG] Method: 0
+2016/05/18 17:03:40:592779 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:592825 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:592875 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:593192 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:593260 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:593311 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:593543 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:593587 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:593628 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:593774 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:593824 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:593869 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:593914 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:632972 [DEBUG] Method: 0
+2016/05/18 17:03:40:633078 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:633113 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:633143 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:633377 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:633432 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:633466 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:633691 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:633730 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:633776 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:633898 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:633929 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:633959 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:633987 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:751332 [DEBUG] Method: 0
+2016/05/18 17:03:40:763617 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:763684 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:763717 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:763982 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:764048 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:764081 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:764293 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:764354 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:764387 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:764518 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:764555 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:764585 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:764613 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:832088 [DEBUG] Method: 0
+2016/05/18 17:03:40:832185 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:832218 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:832252 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:832582 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:832651 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:832700 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:832951 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:833013 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:833064 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:833206 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:833244 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:833292 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:833339 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:892229 [DEBUG] Method: 0
+2016/05/18 17:03:40:892328 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:892363 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:892394 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:892595 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:892643 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:892672 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:892856 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:892900 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:892931 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:893047 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:893077 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:893105 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:893146 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:930280 [DEBUG] Method: 0
+2016/05/18 17:03:40:930384 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:930444 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:930493 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:930783 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:930861 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:930904 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:931128 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:931195 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:931246 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:931389 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:931437 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:931488 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:931537 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:40:951023 [DEBUG] Method: 0
+2016/05/18 17:03:40:951127 [DEBUG] Got a GET request for </image/26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:951179 [DEBUG] md5 of request is <26a824a7647ebe0d4815ea0ae4d135fa>
+2016/05/18 17:03:40:951226 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:03:40:951474 [DEBUG] ssdb key 26a824a7647ebe0d4815ea0ae4d135fa exist 1
+2016/05/18 17:03:40:951540 [DEBUG] key: 26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:03:40:951591 [DEBUG] Start to Find the Image...
+2016/05/18 17:03:40:951812 [DEBUG] Succeed to get [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from ssdb. length = [25231].
+2016/05/18 17:03:40:951863 [DEBUG] Get image [26a824a7647ebe0d4815ea0ae4d135fa:0:0:1:0:-1:-1:0:75:jpg] from backend db succ.
+2016/05/18 17:03:40:951906 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:03:40:952033 [DEBUG] md5: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:952073 [DEBUG] If-None-Match: e86d862b8075e8df9ae76ca917cf82fe
+2016/05/18 17:03:40:952114 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/05/18 17:03:40:952154 [INFO] 0.0.0.0 succ 304 pic:26a824a7647ebe0d4815ea0ae4d135fa w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/05/18 17:03:58:473049 [DEBUG] Method: 2
+2016/05/18 17:03:58:473148 [DEBUG] evblen = 19456
+2016/05/18 17:03:58:473198 [DEBUG] rmblen = 19456
+2016/05/18 17:03:58:475792 [DEBUG] fileType[] is Not Supported!
+2016/05/18 17:03:58:475853 [ERROR] 0.0.0.0 fail post type
+2016/05/18 17:03:58:475880 [DEBUG] post_error_list[1]: File type not support.
+2016/05/18 17:03:58:475922 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/18 17:03:58:475991 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 17:04:04:450518 [DEBUG] Method: 2
+2016/05/18 17:04:04:450602 [DEBUG] evblen = 19456
+2016/05/18 17:04:04:450632 [DEBUG] rmblen = 19456
+2016/05/18 17:04:04:450816 [DEBUG] fileType[] is Not Supported!
+2016/05/18 17:04:04:450852 [ERROR] 0.0.0.0 fail post type
+2016/05/18 17:04:04:450876 [DEBUG] post_error_list[1]: File type not support.
+2016/05/18 17:04:04:450904 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/18 17:04:04:450938 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 17:04:34:257613 [DEBUG] Method: 2
+2016/05/18 17:04:34:257746 [DEBUG] evblen = 401782
+2016/05/18 17:04:34:257975 [DEBUG] rmblen = 401782
+2016/05/18 17:04:34:258824 [DEBUG] fileType[0] is Not Supported!
+2016/05/18 17:04:34:258861 [ERROR] 0.0.0.0 fail post type
+2016/05/18 17:04:34:258884 [DEBUG] post_error_list[1]: File type not support.
+2016/05/18 17:04:34:258923 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/18 17:04:34:258963 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 17:04:53:778453 [DEBUG] Method: 2
+2016/05/18 17:04:53:778544 [DEBUG] evblen = 8
+2016/05/18 17:04:53:778578 [DEBUG] rmblen = 8
+2016/05/18 17:04:53:780665 [DEBUG] Begin to save doc...
+2016/05/18 17:04:53:780715 [DEBUG] Begin to Caculate MD5...
+2016/05/18 17:04:53:780747 [DEBUG] md5: a24caa7b7482fa835c6b14b8cf5c173d
+2016/05/18 17:04:53:781034 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d is not exist!
+2016/05/18 17:04:53:781093 [DEBUG] ox_db_exist not found. Begin to Save File.
+2016/05/18 17:04:53:781472 [DEBUG] Succeed to save [a24caa7b7482fa835c6b14b8cf5c173d] to ssdb. length = [8].
+2016/05/18 17:04:53:781533 [DEBUG] save_doc_db succ.
+2016/05/18 17:04:53:781565 [INFO] 0.0.0.0 succ post pic:a24caa7b7482fa835c6b14b8cf5c173d size:8
+2016/05/18 17:04:53:781603 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"a24caa7b7482fa835c6b14b8cf5c173d","size":8}}
+2016/05/18 17:04:53:781654 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/18 17:05:11:797537 [DEBUG] Method: 0
+2016/05/18 17:05:11:797652 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:11:797697 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:11:797738 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:11:797912 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:11:809205 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:11:809303 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:11:809650 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:11:809944 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:11:814170 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:11:814246 [DEBUG] get buffer length: 0
+2016/05/18 17:05:11:814285 [DEBUG] Got the File!
+2016/05/18 17:05:11:814321 [DEBUG] headers: 1
+2016/05/18 17:05:11:814370 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:11:814403 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:41:710721 [DEBUG] Method: 0
+2016/05/18 17:05:41:710828 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:41:710874 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:41:710922 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:41:711130 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:41:711183 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:41:711213 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:41:711378 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:41:711588 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:41:711735 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:41:711781 [DEBUG] get buffer length: 0
+2016/05/18 17:05:41:711829 [DEBUG] Got the File!
+2016/05/18 17:05:41:711880 [DEBUG] headers: 1
+2016/05/18 17:05:41:711950 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:41:712001 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:098762 [DEBUG] Method: 0
+2016/05/18 17:05:42:098895 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:098957 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:099014 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:099252 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:099326 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:099398 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:099604 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:099846 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:100018 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:100084 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:100136 [DEBUG] Got the File!
+2016/05/18 17:05:42:100189 [DEBUG] headers: 1
+2016/05/18 17:05:42:100259 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:100315 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:227553 [DEBUG] Method: 0
+2016/05/18 17:05:42:227677 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:227720 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:227754 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:227938 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:227987 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:228017 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:228139 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:228279 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:228396 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:228449 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:228484 [DEBUG] Got the File!
+2016/05/18 17:05:42:228513 [DEBUG] headers: 1
+2016/05/18 17:05:42:228556 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:228593 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:273052 [DEBUG] Method: 0
+2016/05/18 17:05:42:273149 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:273205 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:273259 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:273520 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:273593 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:273646 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:273860 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:274091 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:274258 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:274321 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:274373 [DEBUG] Got the File!
+2016/05/18 17:05:42:274435 [DEBUG] headers: 1
+2016/05/18 17:05:42:274505 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:274560 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:318392 [DEBUG] Method: 0
+2016/05/18 17:05:42:318519 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:318576 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:318628 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:318854 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:318904 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:318932 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:319099 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:319299 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:319446 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:319495 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:319525 [DEBUG] Got the File!
+2016/05/18 17:05:42:319577 [DEBUG] headers: 1
+2016/05/18 17:05:42:319647 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:319698 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:350590 [DEBUG] Method: 0
+2016/05/18 17:05:42:350694 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:350729 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:350760 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:350938 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:350985 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:351015 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:351143 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:351290 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:351416 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:351487 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:351534 [DEBUG] Got the File!
+2016/05/18 17:05:42:351580 [DEBUG] headers: 1
+2016/05/18 17:05:42:351642 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:351690 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:378073 [DEBUG] Method: 0
+2016/05/18 17:05:42:378172 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:378206 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:378240 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:378403 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:378450 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:378474 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:378585 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:378768 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:378893 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:378928 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:378952 [DEBUG] Got the File!
+2016/05/18 17:05:42:378975 [DEBUG] headers: 1
+2016/05/18 17:05:42:379011 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:379036 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:403306 [DEBUG] Method: 0
+2016/05/18 17:05:42:403419 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:403480 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:403546 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:403771 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:403821 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:403849 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:404016 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:404179 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:404315 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:404370 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:404416 [DEBUG] Got the File!
+2016/05/18 17:05:42:404480 [DEBUG] headers: 1
+2016/05/18 17:05:42:404544 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:404585 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:429374 [DEBUG] Method: 0
+2016/05/18 17:05:42:429506 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:429563 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:429628 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:429823 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:429890 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:429940 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:430106 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:430278 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:430450 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:430514 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:430564 [DEBUG] Got the File!
+2016/05/18 17:05:42:430612 [DEBUG] headers: 1
+2016/05/18 17:05:42:430681 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:430732 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:451769 [DEBUG] Method: 0
+2016/05/18 17:05:42:451877 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:451930 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:451976 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:452181 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:452248 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:452288 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:452436 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:452608 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:452741 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:452791 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:452831 [DEBUG] Got the File!
+2016/05/18 17:05:42:452873 [DEBUG] headers: 1
+2016/05/18 17:05:42:452931 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:452973 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:593562 [DEBUG] Method: 0
+2016/05/18 17:05:42:593686 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:593743 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:593795 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:594006 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:594077 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:594123 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:594290 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:594513 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:594678 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:594734 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:594789 [DEBUG] Got the File!
+2016/05/18 17:05:42:594844 [DEBUG] headers: 1
+2016/05/18 17:05:42:594917 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:594972 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:42:664883 [DEBUG] Method: 0
+2016/05/18 17:05:42:664995 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:665032 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:42:665063 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:42:665254 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:42:665303 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:42:665334 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:42:665463 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:42:665689 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:42:665834 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:42:665879 [DEBUG] get buffer length: 0
+2016/05/18 17:05:42:665910 [DEBUG] Got the File!
+2016/05/18 17:05:42:665940 [DEBUG] headers: 1
+2016/05/18 17:05:42:665985 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:42:666017 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:43:729165 [DEBUG] Method: 0
+2016/05/18 17:05:43:729295 [DEBUG] Got a GET request for </image/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:43:729355 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:43:729412 [DEBUG] _ox_db_get_mode() start processing ox request...
+2016/05/18 17:05:43:729696 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:43:729768 [DEBUG] key: a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg
+2016/05/18 17:05:43:729821 [DEBUG] Start to Find the Image...
+2016/05/18 17:05:43:730008 [DEBUG] Failed to execute get [a24caa7b7482fa835c6b14b8cf5c173d:0:0:1:0:-1:-1:0:75:jpg] from ssdb.
+2016/05/18 17:05:43:730181 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:43:730344 [DEBUG] Webimg Read Blob Failed!
+2016/05/18 17:05:43:730405 [DEBUG] get buffer length: 0
+2016/05/18 17:05:43:730467 [DEBUG] Got the File!
+2016/05/18 17:05:43:730516 [DEBUG] headers: 1
+2016/05/18 17:05:43:730579 [INFO] 0.0.0.0 succ pic:a24caa7b7482fa835c6b14b8cf5c173d w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:0
+2016/05/18 17:05:43:730632 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:48:066565 [DEBUG] Method: 0
+2016/05/18 17:05:48:066680 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:48:066722 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:48:066755 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:05:48:066957 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:48:067020 [DEBUG] Start to Find the Doc...
+2016/05/18 17:05:48:067161 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:48:067203 [DEBUG] Get doc [a24caa7b7482fa835c6b14b8cf5c173d] from backend db succ.
+2016/05/18 17:05:48:067251 [DEBUG] get buffer length: 8
+2016/05/18 17:05:48:067293 [DEBUG] Got the File!
+2016/05/18 17:05:48:067341 [DEBUG] headers: 1
+2016/05/18 17:05:48:067387 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:05:52:495831 [DEBUG] Method: 0
+2016/05/18 17:05:52:495950 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:05:52:496010 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:05:52:496063 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:05:52:496114 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:05:52:496186 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:05:56:873114 [DEBUG] Method: 0
+2016/05/18 17:05:56:873234 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:56:873284 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:05:56:873334 [DEBUG] fname = doc
+2016/05/18 17:05:56:873377 [DEBUG] fname = attachment; filename=doc
+2016/05/18 17:05:56:873437 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:05:56:873646 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:05:56:873693 [DEBUG] Start to Find the Doc...
+2016/05/18 17:05:56:873814 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:05:56:873872 [DEBUG] Get doc [a24caa7b7482fa835c6b14b8cf5c173d] from backend db succ.
+2016/05/18 17:05:56:873915 [DEBUG] get buffer length: 8
+2016/05/18 17:05:56:873945 [DEBUG] Got the File!
+2016/05/18 17:05:56:873978 [DEBUG] headers: 1
+2016/05/18 17:05:56:874053 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:06:06:022353 [DEBUG] Method: 0
+2016/05/18 17:06:06:022500 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:06:06:022563 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:06:06:022619 [DEBUG] fname = aaa.doc
+2016/05/18 17:06:06:022674 [DEBUG] fname = attachment; filename=aaa.doc
+2016/05/18 17:06:06:022728 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:06:06:022948 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:06:06:023023 [DEBUG] Start to Find the Doc...
+2016/05/18 17:06:06:023166 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:06:06:023223 [DEBUG] Get doc [a24caa7b7482fa835c6b14b8cf5c173d] from backend db succ.
+2016/05/18 17:06:06:023272 [DEBUG] get buffer length: 8
+2016/05/18 17:06:06:023314 [DEBUG] Got the File!
+2016/05/18 17:06:06:023361 [DEBUG] headers: 1
+2016/05/18 17:06:06:023418 [DEBUG] ============ox_cbs_get() DONE!===============

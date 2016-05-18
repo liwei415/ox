@@ -287,18 +287,16 @@ int _binary_parse(evhtp_request_t *req, const char *content_type, const char *ad
   // libmagic 检测文件头
   magic_t magic_cookie;
   magic_cookie = magic_open(MAGIC_MIME_TYPE);
-  if(magic_cookie == NULL){
-    printf("error creating magic cookie\n");
-    return 1;
+  if (magic_cookie == NULL) {
+    goto done;
   }
   magic_load(magic_cookie, NULL);
 
   //做错误标记err_no = 1
   const char *ctype = magic_buffer(magic_cookie, buff, post_size);
-  if(ox_isimg(ctype) != 1) {
+  if (ox_isimg(ctype) != 1) {
     err_no = 1;
   }
-
   magic_close(magic_cookie);
 
   if (err_no == 1) {
@@ -328,10 +326,25 @@ done:
 int _binary_parse_doc(evhtp_request_t *req, const char *content_type, const char *address, const char *buff, int post_size)
 {
   int err_no = 0;
-  if(ox_isdoc(content_type) != 1) {
-    LOG_PRINT(LOG_DEBUG, "fileType[%s] is Not Supported!", content_type);
-    LOG_PRINT(LOG_ERROR, "%s fail post type", address);
+
+  // libmagic 检测文件头
+  magic_t magic_cookie;
+  magic_cookie = magic_open(MAGIC_MIME_TYPE);
+  if (magic_cookie == NULL) {
+    goto done;
+  }
+  magic_load(magic_cookie, NULL);
+
+  //做错误标记err_no = 1
+  const char *ctype = magic_buffer(magic_cookie, buff, post_size);
+  if (ox_isdoc(ctype) != 1) {
     err_no = 1;
+  }
+  magic_close(magic_cookie);
+
+  if (err_no == 1) {
+    LOG_PRINT(LOG_DEBUG, "fileType[%s] is Not Supported!", ctype);
+    LOG_PRINT(LOG_ERROR, "%s fail post type", address);
     goto done;
   }
 
@@ -356,7 +369,8 @@ done:
 int _multipart_parse(evhtp_request_t *req, const char *content_type, const char *address, const char *buff, int post_size)
 {
   int err_no = 0;
-  char *boundary = NULL, *boundary_end = NULL;
+  char *boundary = NULL;
+  char *boundary_end = NULL;
   char *boundaryPattern = NULL;
   int boundary_len = 0;
   mp_arg_t *mp_arg = NULL;
@@ -1040,6 +1054,7 @@ void _doc_get(evhtp_request_t *req)
   char *fmt = NULL;
   char *type = NULL;
   char *buff = NULL;
+  char *fname = NULL;
   size_t len;
   ox_req_t *ox_req = NULL;
 
@@ -1075,8 +1090,8 @@ void _doc_get(evhtp_request_t *req)
 
   // 获得uri并解析
   const char *uri = req->uri->path->full;
-  if((strlen(uri) == 6 || strlen(uri) == 7) &&
-     uri[0]=='/' && uri[1]=='i' && uri[2]=='m' && uri[3]=='a' && uri[4]=='g' && uri[5]=='e') {
+  if((strlen(uri) == 4 || strlen(uri) == 5) &&
+     uri[0]=='/' && uri[1]=='d' && uri[2]=='o' && uri[3]=='c') {
     LOG_PRINT(LOG_DEBUG, "Root Request.");
     int fd = -1;
     struct stat st;
@@ -1131,7 +1146,7 @@ void _doc_get(evhtp_request_t *req)
     goto err;
   }
   if(uri[0] == '/'){
-    ox_strlcpy(md5, uri+1+5+1, md5_len);//这里处理URL
+    ox_strlcpy(md5, uri+1+3+1, md5_len);//这里处理URL
   }
   else {
     ox_strlcpy(md5, uri, md5_len);
@@ -1142,135 +1157,44 @@ void _doc_get(evhtp_request_t *req)
     LOG_PRINT(LOG_INFO, "%s refuse url illegal", address);
     goto err;
   }
-  /* This holds the content we're sending. */
 
   evthr_t *thread = _get_request_thr(req);
   thr_arg_t *thr_arg = (thr_arg_t *)evthr_get_aux(thread);
 
-  int width, height, proportion, gray, x, y, rotate, quality, sv;
-  width = 0;
-  height = 0;
-  proportion = 1;
-  gray = 0;
-  x = -1;
-  y = -1;
-  rotate = 0;
-  quality = 0;
-  sv = 0;
-
+  // 如果请求带有文件名，则返回文件名，否则不返回
   evhtp_kvs_t *params;
   params = req->uri->query;
   if(params != NULL) {
-    if(vars.disable_args != 1) {
-      const char *str_w = evhtp_kv_find(params, "w");
-      width = (str_w) ? atoi(str_w) : 0;
-
-      const char *str_h = evhtp_kv_find(params, "h");
-      height = (str_h) ? atoi(str_h) : 0;
-
-      const char *str_p = evhtp_kv_find(params, "p");
-      proportion = (str_p) ? atoi(str_p) : 1;
-
-      const char *str_g = evhtp_kv_find(params, "g");
-      gray = (str_g) ? atoi(str_g) : 0;
-
-      const char *str_x = evhtp_kv_find(params, "x");
-      x = (str_x) ? atoi(str_x) : -1;
-
-      const char *str_y = evhtp_kv_find(params, "y");
-      y = (str_y) ? atoi(str_y) : -1;
-
-      if(x != -1 || y != -1) {
-        proportion = 1;
+    const char *str_n = evhtp_kv_find(params, "n");
+    LOG_PRINT(LOG_DEBUG, "fname = %s", str_n);
+    if(str_n) {
+      size_t nlen = strlen(str_n) + 21 + 1 + 1;
+      fname = (char *)calloc(nlen, sizeof(char)+1);
+      if(fname != NULL) {
+        snprintf(fname, nlen - 1, "attachment; filename=%s", str_n);
       }
-
-      const char *str_r = evhtp_kv_find(params, "r");
-      rotate = (str_r) ? atoi(str_r) : 0;
-
-      const char *str_q = evhtp_kv_find(params, "q");
-      quality = (str_q) ? atoi(str_q) : 0;
-
-      const char *str_f = evhtp_kv_find(params, "f");
-      if(str_f) {
-        size_t fmt_len = strlen(str_f) + 1;
-        fmt = (char *)malloc(fmt_len);
-        if(fmt != NULL) {
-          ox_strlcpy(fmt, str_f, fmt_len);
-        }
-        LOG_PRINT(LOG_DEBUG, "fmt = %s", fmt);
-      }
-    }
-
-    if(vars.disable_type != 1) {
-      const char *str_t = evhtp_kv_find(params, "t");
-      if(str_t) {
-        size_t type_len = strlen(str_t) + 1;
-        type = (char *)malloc(type_len);
-        if(type != NULL) {
-          ox_strlcpy(type, str_t, type_len);
-        }
-        LOG_PRINT(LOG_DEBUG, "type = %s", type);
-      }
+      LOG_PRINT(LOG_DEBUG, "fname = %s", fname);
     }
   }
-  else {
-    sv = 1;
-  }
 
-  quality = (quality != 0 ? quality : vars.quality);
-  ox_req = (ox_req_t *)malloc(sizeof(ox_req_t));
-  if(ox_req == NULL) {
-    LOG_PRINT(LOG_DEBUG, "ox_req malloc failed!");
-    LOG_PRINT(LOG_ERROR, "%s fail malloc", address);
-    goto err;
-  }
-
+  ox_req = (ox_req_t *)calloc(sizeof(ox_req_t), sizeof(ox_req_t));
   ox_req->md5 = md5;
-  ox_req->type = type;
-  ox_req->width = width;
-  ox_req->height = height;
-  ox_req->proportion = proportion;
-  ox_req->gray = gray;
-  ox_req->x = x;
-  ox_req->y = y;
-  ox_req->rotate = rotate;
-  ox_req->quality = quality;
-  ox_req->fmt = (fmt != NULL ? fmt : vars.format);
-  ox_req->sv = sv;
   ox_req->thr_arg = thr_arg;
+  ox_req->fname = fname;
 
-  int get_img_rst = -1;
+  int get_doc_rst = -1;
 
   // storage setting
   if (vars.mode == 1) {
-    get_img_rst = ox_img_get(ox_req, req); //filesystem
+    get_doc_rst = ox_doc_get(ox_req, req);
   }
   else {
-    get_img_rst = ox_db_get_mode(ox_req, req); //db
+    get_doc_rst = ox_db_get_doc_mode(ox_req, req);
   }
 
-  if(get_img_rst == -1) {
-    LOG_PRINT(LOG_DEBUG, "OX Requset Get Image[MD5: %s] Failed!", ox_req->md5);
-    if(type) {
-      LOG_PRINT(LOG_ERROR, "%s fail pic:%s t:%s", address, md5, type);
-    }
-    else {
-      LOG_PRINT(LOG_ERROR, "%s fail pic:%s w:%d h:%d p:%d g:%d x:%d y:%d r:%d q:%d f:%s",
-                address, md5, width, height, proportion, gray, x, y, rotate, quality, ox_req->fmt);
-    }
+  if(get_doc_rst == -1) {
+    LOG_PRINT(LOG_DEBUG, "OX Requset Get Doc[MD5: %s] Failed!", md5);
     goto err;
-  }
-  if(get_img_rst == 2) {
-    LOG_PRINT(LOG_DEBUG, "Etag Matched Return 304 EVHTP_RES_NOTMOD.");
-    if(type) {
-      LOG_PRINT(LOG_INFO, "%s succ 304 pic:%s t:%s", address, md5, type);
-    }
-    else {
-      LOG_PRINT(LOG_INFO, "%s succ 304 pic:%s w:%d h:%d p:%d g:%d x:%d y:%d r:%d q:%d f:%s",
-                address, md5, width, height, proportion, gray, x, y, rotate, quality, ox_req->fmt);
-    }
-    evhtp_send_reply(req, EVHTP_RES_NOTMOD);
-    goto done;
   }
 
   len = evbuffer_get_length(req->buffer_out);
@@ -1278,17 +1202,13 @@ void _doc_get(evhtp_request_t *req)
 
   LOG_PRINT(LOG_DEBUG, "Got the File!");
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
-  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpeg", 0, 0));
+  //todo libmagic处理mime
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "application/octet-stream", 0, 0));
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Disposition", fname, 0, 0));
+
   ox_headers_add(req, vars.headers);
   evhtp_send_reply(req, EVHTP_RES_OK);
-  if (type) {
-    LOG_PRINT(LOG_INFO, "%s succ pic:%s t:%s size:%d", address, md5, type, len);
-  }
-  else {
-    LOG_PRINT(LOG_INFO, "%s succ pic:%s w:%d h:%d p:%d g:%d x:%d y:%d r:%d q:%d f:%s size:%d",
-              address, md5, width, height, proportion, gray, x, y, rotate, quality, ox_req->fmt,
-              len);
-  }
+
   LOG_PRINT(LOG_DEBUG, "============ox_cbs_get() DONE!===============");
   goto done;
 
@@ -1311,8 +1231,8 @@ void _doc_get(evhtp_request_t *req)
   free(fmt);
   free(md5);
   free(type);
-  free(ox_req);
   free(buff);
+  free(fname);
 }
 
 void ox_cbs_doc(evhtp_request_t *req, void *arg)

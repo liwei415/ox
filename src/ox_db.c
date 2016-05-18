@@ -163,6 +163,34 @@ int ox_db_get_mode(ox_req_t *req, evhtp_request_t *request)
   return result;
 }
 
+int ox_db_get_doc_mode(ox_req_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+  char rsp_cache_key[CACHE_KEY_SIZE];
+  char *buff = NULL;
+  char *orig_buff = NULL;
+  size_t doc_size;
+
+  LOG_PRINT(LOG_DEBUG, "_ox_db_get_doc_mode() start processing ox request...");
+  if(_db_exist(req->thr_arg, req->md5) == -1) {
+    LOG_PRINT(LOG_DEBUG, "Image [%s] is not existed.", req->md5);
+    goto err;
+  }
+  ox_strlcpy(rsp_cache_key, req->md5, CACHE_KEY_SIZE);
+
+  LOG_PRINT(LOG_DEBUG, "Start to Find the Doc...");
+  if(ox_db_get(req->thr_arg, rsp_cache_key, &buff, &doc_size) == 1) {
+    LOG_PRINT(LOG_DEBUG, "Get doc [%s] from backend db succ.", rsp_cache_key);
+  }
+  result = evbuffer_add(request->buffer_out, buff, doc_size);
+
+ err:
+  free(buff);
+  free(orig_buff);
+
+  return result;
+}
+
 int _ssdb_get(redisContext* c, const char *cache_key, char **buff, size_t *len)
 {
   if(c == NULL) {

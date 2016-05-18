@@ -21,6 +21,6 @@
 
 int ox_doc_save(thr_arg_t *thr_arg, const char *buff, const int len, char *md5);
 int ox_doc_new(const char *buff, const size_t len, const char *save_name);
-//int ox_doc_get(ox_req_t *req, evhtp_request_t *request);
+int ox_doc_get(ox_req_t *req, evhtp_request_t *request);
 
 #endif

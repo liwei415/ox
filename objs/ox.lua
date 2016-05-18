@@ -80,7 +80,7 @@ quality = 75
 --value 2 is for memcached protocol storage like beansdb;
 --value 3 is for redis protocol storage like SSDB.
 --存储后端类型，1为本地存储, 3为redis协议后端如SSDB
-mode = 1
+mode = 3
 --save_new value: 0.don't save any 1.save all 2.only save types in lua script
 --新文件是否存储，0为不存储，1为全都存储，2为只存储lua脚本产生的新图
 save_new = 2
@@ -91,7 +91,7 @@ max_size_mov = 100*1024*1024
 
 --允许上传类型列表
 allowed_type_img = {'image/jpeg', 'image/jpg', 'image/png', 'image/gif'}
-allowed_type_doc = {'text/plain', 'application/msword', 'application/pdf'}
+allowed_type_doc = {'text/plain', 'application/pdf'}
 allowed_type_mov = {'video/mp4'}
 
 --mode[1]: local disk mode

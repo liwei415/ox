@@ -121,3 +121,70 @@ done:
   }
   return result;
 }
+
+
+int ox_doc_get(ox_req_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+  int fd = -1;
+  struct stat f_stat;
+  char *buff = NULL;
+  size_t len = 0;
+
+  LOG_PRINT(LOG_DEBUG, "ox_doc_get() start processing ox request...");
+
+  int lvl1 = ox_strhash(req->md5);
+  int lvl2 = ox_strhash(req->md5 + 3);
+
+  char whole_path[512];
+  snprintf(whole_path, 512, "%s/%d/%d/%s", vars.doc_path, lvl1, lvl2, req->md5);
+  LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
+
+  if(ox_isdir(whole_path) == -1) {
+    LOG_PRINT(LOG_DEBUG, "Image %s is not existed!", req->md5);
+    goto err;
+  }
+
+  LOG_PRINT(LOG_DEBUG, "Start to Find the Image...");
+
+  char rsp_path[512];
+  snprintf(rsp_path, 512, "%s/%s", whole_path, req->md5);
+  LOG_PRINT(LOG_DEBUG, "Got the rsp_path: %s", rsp_path);
+
+  if((fd = open(rsp_path, O_RDONLY)) != -1) {
+
+    fstat(fd, &f_stat);
+    size_t rlen = 0;
+    len = f_stat.st_size;
+    if(len <= 0) {
+      LOG_PRINT(LOG_DEBUG, "File[%s] is Empty.", rsp_path);
+      goto err;
+    }
+    if((buff = (char *)malloc(len)) == NULL) {
+      LOG_PRINT(LOG_DEBUG, "buff Malloc Failed!");
+      goto err;
+    }
+    LOG_PRINT(LOG_DEBUG, "doc_size = %d", len);
+    if((rlen = read(fd, buff, len)) == -1) {
+      LOG_PRINT(LOG_DEBUG, "File[%s] Read Failed: %s", rsp_path, strerror(errno));
+      goto err;
+    }
+    else if(rlen < len) {
+      LOG_PRINT(LOG_DEBUG, "File[%s] Read Not Compeletly.", rsp_path);
+      goto err;
+    }
+  }
+
+  result = evbuffer_add(request->buffer_out, buff, len);
+  if(result != -1) {
+    result = 1;
+  }
+
+ err:
+  if(fd != -1) {
+    close(fd);
+  }
+  free(buff);
+
+  return result;
+}

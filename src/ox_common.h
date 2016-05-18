@@ -44,6 +44,7 @@ struct ox_req_s {
   int quality;
   char *fmt;
   int sv;
+  char *fname;
   thr_arg_t *thr_arg;
 };
 
