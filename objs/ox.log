@@ -24919,3 +24919,267 @@
 2016/05/18 17:06:06:023314 [DEBUG] Got the File!
 2016/05/18 17:06:06:023361 [DEBUG] headers: 1
 2016/05/18 17:06:06:023418 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:21:32:337682 [DEBUG] Method: 0
+2016/05/18 17:21:32:337805 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:32:337867 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:32:337921 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:32:337973 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:32:338047 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:32:836625 [DEBUG] Method: 0
+2016/05/18 17:21:32:836746 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:32:836792 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:32:836825 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:32:836854 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:32:836899 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:32:992045 [DEBUG] Method: 0
+2016/05/18 17:21:32:992158 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:32:992215 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:32:992270 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:32:992319 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:32:992385 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:049814 [DEBUG] Method: 0
+2016/05/18 17:21:33:049988 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:050033 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:050080 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:050118 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:050187 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:099467 [DEBUG] Method: 0
+2016/05/18 17:21:33:099563 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:099599 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:099629 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:099657 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:099704 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:124444 [DEBUG] Method: 0
+2016/05/18 17:21:33:124566 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:124609 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:124644 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:124667 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:124709 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:141119 [DEBUG] Method: 0
+2016/05/18 17:21:33:141237 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:141281 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:141322 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:141361 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:141441 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:164927 [DEBUG] Method: 0
+2016/05/18 17:21:33:165029 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:165084 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:165130 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:165171 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:165234 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:192604 [DEBUG] Method: 0
+2016/05/18 17:21:33:192699 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:192728 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:192754 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:192779 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:192820 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:220387 [DEBUG] Method: 0
+2016/05/18 17:21:33:220502 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:220555 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:220607 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:220654 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:220726 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:379235 [DEBUG] Method: 0
+2016/05/18 17:21:33:379362 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:379438 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:379494 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:379545 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:379612 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:455680 [DEBUG] Method: 0
+2016/05/18 17:21:33:455765 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:455801 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:455832 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:455859 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:455905 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:515080 [DEBUG] Method: 0
+2016/05/18 17:21:33:515174 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:515208 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:515239 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:515268 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:515315 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:33:539872 [DEBUG] Method: 0
+2016/05/18 17:21:33:539971 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:540008 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:33:540045 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:33:540086 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:33:540156 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:34:410362 [DEBUG] Method: 0
+2016/05/18 17:21:34:410479 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:34:410531 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:34:410576 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:34:410619 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:34:410681 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:36:654041 [DEBUG] Method: 0
+2016/05/18 17:21:36:654153 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:36:654194 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:21:36:654245 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:21:36:654296 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:21:36:654359 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:21:55:651768 [DEBUG] Method: 0
+2016/05/18 17:21:55:651860 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:21:55:651896 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:21:55:651927 [DEBUG] fname = 123.doc
+2016/05/18 17:21:55:651957 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 17:21:55:651986 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:21:55:652158 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:21:55:652199 [DEBUG] Start to Find the Doc...
+2016/05/18 17:21:55:652342 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:21:55:652385 [DEBUG] Get doc [a24caa7b7482fa835c6b14b8cf5c173d] from backend db succ.
+2016/05/18 17:21:55:652423 [DEBUG] get buffer length: 8
+2016/05/18 17:21:55:652462 [DEBUG] Got the File!
+2016/05/18 17:21:55:652492 [DEBUG] headers: 1
+2016/05/18 17:21:55:652534 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:22:01:038939 [DEBUG] Method: 0
+2016/05/18 17:22:01:039064 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:22:01:039121 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d.doc>
+2016/05/18 17:22:01:039172 [DEBUG] Url is Not a OX Request.
+2016/05/18 17:22:01:039220 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 17:22:01:039288 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 17:22:14:697856 [DEBUG] Method: 0
+2016/05/18 17:22:14:697965 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:22:14:698006 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:22:14:698049 [DEBUG] fname = 123.doc
+2016/05/18 17:22:14:698099 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 17:22:14:698151 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:22:14:698461 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:22:14:698529 [DEBUG] Start to Find the Doc...
+2016/05/18 17:22:14:698664 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:22:14:698702 [DEBUG] Get doc [a24caa7b7482fa835c6b14b8cf5c173d] from backend db succ.
+2016/05/18 17:22:14:698735 [DEBUG] get buffer length: 8
+2016/05/18 17:22:14:698764 [DEBUG] Got the File!
+2016/05/18 17:22:14:698794 [DEBUG] headers: 1
+2016/05/18 17:22:14:698839 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 17:22:18:143294 [DEBUG] Method: 0
+2016/05/18 17:22:18:143410 [DEBUG] Got a GET request for </doc/a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:22:18:143458 [DEBUG] md5 of request is <a24caa7b7482fa835c6b14b8cf5c173d>
+2016/05/18 17:22:18:143485 [DEBUG] fname = 123.doc
+2016/05/18 17:22:18:143509 [DEBUG] fname = attachment; filename=123.doc
+2016/05/18 17:22:18:143533 [DEBUG] _ox_db_get_doc_mode() start processing ox request...
+2016/05/18 17:22:18:143682 [DEBUG] ssdb key a24caa7b7482fa835c6b14b8cf5c173d exist 1
+2016/05/18 17:22:18:143716 [DEBUG] Start to Find the Doc...
+2016/05/18 17:22:18:143812 [DEBUG] Succeed to get [a24caa7b7482fa835c6b14b8cf5c173d] from ssdb. length = [8].
+2016/05/18 17:22:18:143843 [DEBUG] Get doc [a24caa7b7482fa835c6b14b8cf5c173d] from backend db succ.
+2016/05/18 17:22:18:143869 [DEBUG] get buffer length: 8
+2016/05/18 17:22:18:143891 [DEBUG] Got the File!
+2016/05/18 17:22:18:143916 [DEBUG] headers: 1
+2016/05/18 17:22:18:143951 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/05/18 18:18:12:504297 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 18:18:12:504419 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 18:18:12:504478 [DEBUG] Paths Init Finished.
+2016/05/18 18:18:12:504512 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 18:18:12:504540 [INFO] ox started
+2016/05/18 18:18:12:504791 [DEBUG] thr_args alloc
+2016/05/18 18:18:12:504863 [DEBUG] luaL_newstate alloc
+2016/05/18 18:18:12:505700 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:18:12:509890 [DEBUG] thr_args alloc
+2016/05/18 18:18:12:509976 [DEBUG] luaL_newstate alloc
+2016/05/18 18:18:12:510806 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:19:02:681051 [DEBUG] Method: 2
+2016/05/18 18:19:02:681175 [DEBUG] evblen = 12223400
+2016/05/18 18:19:02:690940 [DEBUG] rmblen = 12223400
+2016/05/18 18:19:02:710717 [DEBUG] fileType[àP¤|] is Not Supported!
+2016/05/18 18:19:02:710799 [ERROR] 0.0.0.0 fail post type
+2016/05/18 18:19:02:710834 [DEBUG] post_error_list[1]: File type not support.
+2016/05/18 18:19:02:710879 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/05/18 18:19:02:710935 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/05/18 18:19:10:144476 [DEBUG] Method: 2
+2016/05/18 18:19:10:144585 [DEBUG] evblen = 12223400
+2016/05/18 18:19:10:152039 [DEBUG] rmblen = 12223400
+2016/05/18 18:19:10:167236 [DEBUG] Begin to save movie...
+2016/05/18 18:19:10:167320 [DEBUG] Begin to Caculate MD5...
+2016/05/18 18:19:10:290073 [DEBUG] md5: 5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:19:10:290174 [DEBUG] save_path: /home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:19:10:290215 [DEBUG] Path[/home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a] is Not Existed!
+2016/05/18 18:19:10:290439 [DEBUG] save_path[/home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a] Create Finish.
+2016/05/18 18:19:10:290483 [DEBUG] save_name-->: /home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:19:10:290515 [DEBUG] File[/home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a/5e0ddc7e3e6f9dd42d629f4e4095f13a] is Not Existed!
+2016/05/18 18:19:10:290549 [DEBUG] Start to Storage the New Image...
+2016/05/18 18:19:10:301218 [DEBUG] Image [/home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a/5e0ddc7e3e6f9dd42d629f4e4095f13a] Write Successfully!
+2016/05/18 18:19:10:301307 [INFO] 0.0.0.0 succ post pic:5e0ddc7e3e6f9dd42d629f4e4095f13a size:12223400
+2016/05/18 18:19:10:301364 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"5e0ddc7e3e6f9dd42d629f4e4095f13a","size":12223400}}
+2016/05/18 18:19:10:301452 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/05/18 18:21:50:672727 [DEBUG] Method: 0
+2016/05/18 18:21:50:672848 [DEBUG] Got a GET request for </doc/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:21:50:672886 [DEBUG] md5 of request is <5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:21:50:672923 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 18:21:50:672957 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:21:50:672995 [DEBUG] Path[/home/d/my_project/ox/objs/doc/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a] is Not Existed!
+2016/05/18 18:21:50:673024 [DEBUG] Image 5e0ddc7e3e6f9dd42d629f4e4095f13a is not existed!
+2016/05/18 18:21:50:673053 [DEBUG] OX Requset Get Doc[MD5: 5e0ddc7e3e6f9dd42d629f4e4095f13a] Failed!
+2016/05/18 18:21:50:673094 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 18:21:55:247497 [DEBUG] Method: 0
+2016/05/18 18:21:55:247627 [DEBUG] Got a GET request for </video/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:21:55:247689 [DEBUG] md5 of request is <o/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:21:55:247742 [DEBUG] Url is Not a OX Request.
+2016/05/18 18:21:55:247790 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 18:21:55:247863 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 18:54:59:711919 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 18:54:59:712055 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 18:54:59:712102 [DEBUG] Paths Init Finished.
+2016/05/18 18:54:59:712134 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 18:54:59:712158 [INFO] ox started
+2016/05/18 18:54:59:712464 [DEBUG] thr_args alloc
+2016/05/18 18:54:59:712551 [DEBUG] luaL_newstate alloc
+2016/05/18 18:54:59:713368 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:54:59:717541 [DEBUG] thr_args alloc
+2016/05/18 18:54:59:717634 [DEBUG] luaL_newstate alloc
+2016/05/18 18:54:59:718452 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:55:03:177880 [DEBUG] Method: 0
+2016/05/18 18:55:03:177996 [DEBUG] Got a GET request for </video/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:55:03:178043 [DEBUG] md5 of request is <o/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:55:03:178087 [DEBUG] Url is Not a OX Request.
+2016/05/18 18:55:03:178129 [INFO] 0.0.0.0 refuse url illegal
+2016/05/18 18:55:03:178197 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 18:55:35:207743 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 18:55:35:207897 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 18:55:35:207941 [DEBUG] Paths Init Finished.
+2016/05/18 18:55:35:207967 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 18:55:35:207993 [INFO] ox started
+2016/05/18 18:55:35:208366 [DEBUG] thr_args alloc
+2016/05/18 18:55:35:208482 [DEBUG] luaL_newstate alloc
+2016/05/18 18:55:35:209327 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:55:35:213481 [DEBUG] thr_args alloc
+2016/05/18 18:55:35:213563 [DEBUG] luaL_newstate alloc
+2016/05/18 18:55:35:214357 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:55:43:679981 [DEBUG] Method: 0
+2016/05/18 18:55:43:680086 [DEBUG] Got a GET request for </video/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:55:43:680120 [DEBUG] md5 of request is <5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:55:43:680155 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 18:55:43:680188 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:55:43:680216 [DEBUG] Path[/home/d/my_project/ox/objs/doc/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a] is Not Existed!
+2016/05/18 18:55:43:680244 [DEBUG] Image 5e0ddc7e3e6f9dd42d629f4e4095f13a is not existed!
+2016/05/18 18:55:43:680271 [DEBUG] OX Requset Get Doc[MD5: 5e0ddc7e3e6f9dd42d629f4e4095f13a] Failed!
+2016/05/18 18:55:43:680322 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 18:56:50:303183 [DEBUG] Method: 0
+2016/05/18 18:56:50:303286 [DEBUG] Got a GET request for </video/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:56:50:303318 [DEBUG] md5 of request is <5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:56:50:303355 [DEBUG] ox_doc_get() start processing ox request...
+2016/05/18 18:56:50:303398 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:56:50:303460 [DEBUG] Path[/home/d/my_project/ox/objs/doc/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a] is Not Existed!
+2016/05/18 18:56:50:303506 [DEBUG] Image 5e0ddc7e3e6f9dd42d629f4e4095f13a is not existed!
+2016/05/18 18:56:50:303538 [DEBUG] OX Requset Get Doc[MD5: 5e0ddc7e3e6f9dd42d629f4e4095f13a] Failed!
+2016/05/18 18:56:50:303592 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/05/18 18:58:26:644566 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/05/18 18:58:26:644714 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/05/18 18:58:26:644767 [DEBUG] Paths Init Finished.
+2016/05/18 18:58:26:644812 [DEBUG] Begin to Start Httpd Server...
+2016/05/18 18:58:26:645048 [INFO] ox started
+2016/05/18 18:58:26:645479 [DEBUG] thr_args alloc
+2016/05/18 18:58:26:645572 [DEBUG] luaL_newstate alloc
+2016/05/18 18:58:26:646588 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:58:26:650604 [DEBUG] thr_args alloc
+2016/05/18 18:58:26:650723 [DEBUG] luaL_newstate alloc
+2016/05/18 18:58:26:651603 [DEBUG] ox_lua: ox using lua script.
+2016/05/18 18:58:28:990686 [DEBUG] Method: 0
+2016/05/18 18:58:28:990805 [DEBUG] Got a GET request for </video/5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:58:28:990854 [DEBUG] md5 of request is <5e0ddc7e3e6f9dd42d629f4e4095f13a>
+2016/05/18 18:58:28:990907 [DEBUG] ox_mov_get() start processing ox request...
+2016/05/18 18:58:28:990955 [DEBUG] whole_path: /home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:58:28:991001 [DEBUG] Path[/home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a] is A Dir.
+2016/05/18 18:58:28:991054 [DEBUG] Start to Find the Image...
+2016/05/18 18:58:28:991098 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/mov/752/1774/5e0ddc7e3e6f9dd42d629f4e4095f13a/5e0ddc7e3e6f9dd42d629f4e4095f13a
+2016/05/18 18:58:28:991159 [DEBUG] mov_size = 12223400
+2016/05/18 18:58:28:000866 [DEBUG] get buffer length: 12223400
+2016/05/18 18:58:28:000942 [DEBUG] Got the File!
+2016/05/18 18:58:28:000993 [DEBUG] headers: 1
+2016/05/18 18:58:28:001066 [DEBUG] ============ox_cbs_get() DONE!===============

@@ -10,6 +10,7 @@
 #include "cjson/cJSON.h"
 #include "ox_utils.h"
 #include "ox_db.h"
+#include "ox_mov.h"
 #include "ox_doc.h"
 #include "ox_img.h"
 #include "ox_string.h"
@@ -34,5 +35,6 @@ int ox_cbs_on_chunk_data(multipart_parser* p, const char *at, size_t length);
 void ox_cbs_index(evhtp_request_t *req, void *arg);
 void ox_cbs_image(evhtp_request_t *req, void *arg);
 void ox_cbs_doc(evhtp_request_t *req, void *arg);
+void ox_cbs_mov(evhtp_request_t *req, void *arg);
 
 #endif

@@ -80,7 +80,7 @@ quality = 75
 --value 2 is for memcached protocol storage like beansdb;
 --value 3 is for redis protocol storage like SSDB.
 --存储后端类型，1为本地存储, 3为redis协议后端如SSDB
-mode = 3
+mode = 1
 --save_new value: 0.don't save any 1.save all 2.only save types in lua script
 --新文件是否存储，0为不存储，1为全都存储，2为只存储lua脚本产生的新图
 save_new = 2

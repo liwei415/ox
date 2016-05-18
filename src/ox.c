@@ -416,8 +416,8 @@ int main()
   evhtp_set_cb(htp, "/doc", ox_cbs_doc, NULL);
 
   // video
-  evhtp_set_cb(htp, "/video/", ox_cbs_index, NULL);
-  evhtp_set_cb(htp, "/video", ox_cbs_index, NULL);
+  evhtp_set_cb(htp, "/video/", ox_cbs_mov, NULL);
+  evhtp_set_cb(htp, "/video", ox_cbs_mov, NULL);
 
   // all other
   evhtp_set_gencb(htp, ox_cbs_index, NULL);

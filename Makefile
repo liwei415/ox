@@ -1,7 +1,7 @@
 #########define
 CC = gcc
-CFLAGS = -Wall -g -O2
-#CFLAGS = -Wall
+#CFLAGS = -Wall -g -O2
+CFLAGS = -Wall
 INCLUDES = -I/usr/local/include/evhtp -I/usr/include/GraphicsMagick
 LIBS = -levent -levent_openssl -levent_pthreads -lssl -lcrypto -levhtp -lpthread -lm -lhiredis -lmemcached -llua -lMagickWand -lmagic
 
@@ -12,6 +12,7 @@ all: objs/ox
 objs/ox: objs/ox.o \
 		objs/ox_cbs.o \
 		objs/ox_access.o \
+		objs/ox_mov.o \
 		objs/ox_doc.o \
 		objs/ox_img.o \
 		objs/ox_gm.o \
@@ -30,6 +31,7 @@ objs/ox: objs/ox.o \
 		objs/ox.o \
 		objs/ox_cbs.o \
 		objs/ox_access.o \
+		objs/ox_mov.o \
 		objs/ox_doc.o \
 		objs/ox_img.o \
 		objs/ox_gm.o \
@@ -65,6 +67,12 @@ objs/ox_access.o: src/ox_access.c
 	$(CC) -c $(CFLAGS) $(INCLUDES) \
 		-o objs/ox_access.o \
 		src/ox_access.c
+
+objs/ox_mov.o: src/ox_mov.c
+
+	$(CC) -c $(CFLAGS) $(INCLUDES) \
+		-o objs/ox_mov.o \
+		src/ox_mov.c
 
 objs/ox_doc.o: src/ox_doc.c
 

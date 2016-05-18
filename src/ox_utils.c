@@ -62,6 +62,22 @@ int ox_isdoc(const char *filename)
   return isdoc;
 }
 
+int ox_ismov(const char *filename)
+{
+  int ismov = -1;
+
+  lua_getglobal(vars.L, "is_mov");
+  lua_pushstring(vars.L, filename);
+  if(lua_pcall(vars.L, 1, 1, 0) != 0) {
+    LOG_PRINT(LOG_WARNING, "lua is_mov() failed!");
+    return ismov;
+  }
+  ismov = (int)lua_tonumber(vars.L, -1);
+  lua_pop(vars.L, 1);
+
+  return ismov;
+}
+
 int ox_isdir(const char *path)
 {
   struct stat st;
