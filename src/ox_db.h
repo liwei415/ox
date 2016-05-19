@@ -13,8 +13,6 @@
 #include "ox_string.h"
 #include "ox_common.h"
 
-int ox_db_get_mode(ox_req_t *req, evhtp_request_t *request);
-int ox_db_get_doc_mode(ox_req_t *req, evhtp_request_t *request);
 int ox_db_get(thr_arg_t *thr_arg, const char *cache_key, char **buff, size_t *len);
 int ox_db_save(thr_arg_t *thr_arg, const char *cache_key, const char *buff, const size_t len);
 int ox_db_exist(thr_arg_t *thr_arg, const char *cache_key);

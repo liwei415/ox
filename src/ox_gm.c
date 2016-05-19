@@ -4,7 +4,7 @@
 
 static int _proportion(MagickWand *im, int p_type, int cols, int rows);
 static int _crop(MagickWand *im, int x, int y, int cols, int rows);
-int ox_gm_convert(MagickWand *im, ox_req_t *req);
+int ox_gm_convert(MagickWand *im, ox_req_img_t *req);
 
 static int _proportion(MagickWand *im, int p_type, int cols, int rows)
 {
@@ -131,7 +131,7 @@ static int _crop(MagickWand *im, int x, int y, int cols, int rows)
   return ret;
 }
 
-int ox_gm_convert(MagickWand *im, ox_req_t *req)
+int ox_gm_convert(MagickWand *im, ox_req_img_t *req)
 {
   int result = 1, ret = -1;
 

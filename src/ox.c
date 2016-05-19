@@ -55,9 +55,13 @@ static void set_callback(int mode)
 {
   if(mode == 1) {
     vars.get_img = ox_img_get;
+    vars.get_doc = ox_doc_get;
+    vars.get_mov = ox_mov_get;
   }
   else {
-    vars.get_img = ox_db_get_mode;
+    vars.get_img = ox_img_get_db;
+    vars.get_doc = ox_doc_get_db;
+    vars.get_mov = ox_mov_get_db;
   }
 }
 
@@ -408,16 +412,16 @@ int main()
   evhtp_set_cb(htp, "/index", ox_cbs_index, NULL);
 
   // image
-  evhtp_set_cb(htp, "/image/", ox_cbs_image, NULL);
-  evhtp_set_cb(htp, "/image", ox_cbs_image, NULL);
+  evhtp_set_cb(htp, "/img/", ox_cbs_img, NULL);
+  evhtp_set_cb(htp, "/img", ox_cbs_img, NULL);
 
   // doc
   evhtp_set_cb(htp, "/doc/", ox_cbs_doc, NULL);
   evhtp_set_cb(htp, "/doc", ox_cbs_doc, NULL);
 
   // video
-  evhtp_set_cb(htp, "/video/", ox_cbs_mov, NULL);
-  evhtp_set_cb(htp, "/video", ox_cbs_mov, NULL);
+  evhtp_set_cb(htp, "/mov/", ox_cbs_mov, NULL);
+  evhtp_set_cb(htp, "/mov", ox_cbs_mov, NULL);
 
   // all other
   evhtp_set_gencb(htp, ox_cbs_index, NULL);

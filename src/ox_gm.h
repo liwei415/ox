@@ -11,6 +11,6 @@
 #include "ox_log.h"
 #include "ox_common.h"
 
-int ox_gm_convert(MagickWand *im, ox_req_t *req);
+int ox_gm_convert(MagickWand *im, ox_req_img_t *req);
 
 #endif

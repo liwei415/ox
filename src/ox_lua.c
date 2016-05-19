@@ -1,7 +1,7 @@
 #include <wand/magick_wand.h>
 #include "ox_lua.h"
 
-int ox_lua_convert(MagickWand *im, ox_req_t *req);
+int ox_lua_convert(MagickWand *im, ox_req_img_t *req);
 
 static int get_wi_cols(lua_State *L) {
   lua_arg_t *larg = pthread_getspecific(thread_key);
@@ -156,7 +156,7 @@ const struct luaL_Reg loglib[] = {
   {NULL, NULL}
 };
 
-int ox_lua_convert(MagickWand *im, ox_req_t *req)
+int ox_lua_convert(MagickWand *im, ox_req_img_t *req)
 {
   int ret = -1;
   LOG_PRINT(LOG_DEBUG, "lua_convert: %s", req->type);

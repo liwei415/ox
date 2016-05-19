@@ -30,8 +30,8 @@ struct thr_arg_s {
   lua_State* L;
 };
 
-typedef struct ox_req_s ox_req_t;
-struct ox_req_s {
+typedef struct ox_req_img_s ox_req_img_t;
+struct ox_req_img_s {
   char *md5;
   char *type;
   int width;
@@ -44,6 +44,19 @@ struct ox_req_s {
   int quality;
   char *fmt;
   int sv;
+  thr_arg_t *thr_arg;
+};
+
+typedef struct ox_req_doc_s ox_req_doc_t;
+struct ox_req_doc_s {
+  char *md5;
+  char *fname;
+  thr_arg_t *thr_arg;
+};
+
+typedef struct ox_req_mov_s ox_req_mov_t;
+struct ox_req_mov_s {
+  char *md5;
   char *fname;
   thr_arg_t *thr_arg;
 };
@@ -124,8 +137,11 @@ struct ox_vars_s {
   ox_cbs_headers_conf_t *headers;
   ox_access_conf_t *up_access;
   ox_access_conf_t *down_access;
+  ox_access_conf_t *delete_access;
   multipart_parser_settings *mp_set;
-  int (*get_img)(ox_req_t *, evhtp_request_t *);
+  int (*get_img)(ox_req_img_t *, evhtp_request_t *);
+  int (*get_doc)(ox_req_doc_t *, evhtp_request_t *);
+  int (*get_mov)(ox_req_mov_t *, evhtp_request_t *);
 };
 
 extern ox_vars_t vars;

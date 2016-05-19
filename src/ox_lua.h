@@ -15,6 +15,6 @@ struct lua_arg_s {
   int lua_ret;
 };
 
-int ox_lua_convert(MagickWand *im, ox_req_t *req);
+int ox_lua_convert(MagickWand *im, ox_req_img_t *req);
 
 #endif

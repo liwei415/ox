@@ -176,12 +176,10 @@ int ox_strhash(const char *str)
 {
     char c[4];
     ox_strlcpy(c, str, 4);
-    //LOG_PRINT(LOG_DEBUG, "str = %s.", c);
-    //int d = htoi(c);
+
     int d = strtol(c, NULL, 16);
-    //LOG_PRINT(LOG_DEBUG, "str(3)_to_d = %d.", d);
     d = d / 2;
-    //LOG_PRINT(LOG_DEBUG, "str(3)/4 = %d.", d);
+
     return d;
 }
 

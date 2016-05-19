@@ -279,7 +279,7 @@ int _jreturn(evhtp_request_t *req, int err_no, const char *md5sum, int post_size
   return 0;
 }
 
-int _binary_parse(evhtp_request_t *req, const char *content_type, const char *address, const char *buff, int post_size)
+int _binary_parse_img(evhtp_request_t *req, const char *content_type, const char *address, const char *buff, int post_size)
 {
 
   int err_no = 0;
@@ -514,7 +514,7 @@ void ox_cbs_index(evhtp_request_t *req, void *arg)
   evhtp_send_reply(req, EVHTP_RES_OK);
 }
 
-void _image_post(evhtp_request_t *req)
+void _img_post(evhtp_request_t *req)
 {
   int post_size = 0;
   char *buff = NULL;
@@ -609,7 +609,7 @@ void _image_post(evhtp_request_t *req)
   }
 
   if(strstr(content_type, "multipart/form-data") == NULL) {
-    err_no = _binary_parse(req, content_type, address, buff, post_size);
+    err_no = _binary_parse_img(req, content_type, address, buff, post_size);
   }
   else {
     ret_json = 0;
@@ -646,14 +646,14 @@ void _image_post(evhtp_request_t *req)
   free(buff);
 }
 
-void _image_get(evhtp_request_t *req)
+void _img_get(evhtp_request_t *req)
 {
   char *md5 = NULL;
   char *fmt = NULL;
   char *type = NULL;
   char *buff = NULL;
   size_t len;
-  ox_req_t *ox_req = NULL;
+  ox_req_img_t *ox_req = NULL;
 
   evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
   struct sockaddr *saddr = ev_conn->saddr;
@@ -687,8 +687,8 @@ void _image_get(evhtp_request_t *req)
 
   // 获得uri并解析
   const char *uri = req->uri->path->full;
-  if((strlen(uri) == 6 || strlen(uri) == 7) &&
-     uri[0]=='/' && uri[1]=='i' && uri[2]=='m' && uri[3]=='a' && uri[4]=='g' && uri[5]=='e') {
+  if((strlen(uri) == 4 || strlen(uri) == 5) &&
+     uri[0]=='/' && uri[1]=='i' && uri[2]=='m' && uri[3]=='g') {
     LOG_PRINT(LOG_DEBUG, "Root Request.");
     int fd = -1;
     struct stat st;
@@ -710,7 +710,7 @@ void _image_get(evhtp_request_t *req)
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
-    LOG_PRINT(LOG_DEBUG, "============_image_get() DONE!===============");
+    LOG_PRINT(LOG_DEBUG, "============_img_get() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
     goto done;
   }
@@ -743,7 +743,7 @@ void _image_get(evhtp_request_t *req)
     goto err;
   }
   if(uri[0] == '/'){
-    ox_strlcpy(md5, uri+1+5+1, md5_len);//这里处理URL
+    ox_strlcpy(md5, uri+1+3+1, md5_len);//这里处理URL
   }
   else {
     ox_strlcpy(md5, uri, md5_len);
@@ -830,7 +830,7 @@ void _image_get(evhtp_request_t *req)
   }
 
   quality = (quality != 0 ? quality : vars.quality);
-  ox_req = (ox_req_t *)malloc(sizeof(ox_req_t));
+  ox_req = (ox_req_img_t *)malloc(sizeof(ox_req_img_t));
   if(ox_req == NULL) {
     LOG_PRINT(LOG_DEBUG, "ox_req malloc failed!");
     LOG_PRINT(LOG_ERROR, "%s fail malloc", address);
@@ -858,7 +858,7 @@ void _image_get(evhtp_request_t *req)
     get_img_rst = ox_img_get(ox_req, req); //filesystem
   }
   else {
-    get_img_rst = ox_db_get_mode(ox_req, req); //db
+    get_img_rst = ox_img_get_db(ox_req, req); //db
   }
 
   if(get_img_rst == -1) {
@@ -927,7 +927,7 @@ void _image_get(evhtp_request_t *req)
   free(buff);
 }
 
-void ox_cbs_image(evhtp_request_t *req, void *arg)
+void ox_cbs_img(evhtp_request_t *req, void *arg)
 {
 
   int req_method = evhtp_request_get_method(req);
@@ -937,11 +937,15 @@ void ox_cbs_image(evhtp_request_t *req, void *arg)
 
   LOG_PRINT(LOG_DEBUG, "Method: %d", req_method);
   if(strcmp(method_strmap[req_method], "POST") == 0) {
-    _image_post(req);
+    _img_post(req);
     return;
   }
   else if(strcmp(method_strmap[req_method], "GET") == 0) {
-    _image_get(req);
+    _img_get(req);
+    return;
+  }
+  else if(strcmp(method_strmap[req_method], "DELETE") == 0) {
+    _img_get(req);
     return;
   }
   else {
@@ -1098,7 +1102,7 @@ void _doc_get(evhtp_request_t *req)
   char *buff = NULL;
   char *fname = NULL;
   size_t len;
-  ox_req_t *ox_req = NULL;
+  ox_req_doc_t *ox_req = NULL;
 
   evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
   struct sockaddr *saddr = ev_conn->saddr;
@@ -1155,7 +1159,7 @@ void _doc_get(evhtp_request_t *req)
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
-    LOG_PRINT(LOG_DEBUG, "============_image_get() DONE!===============");
+    LOG_PRINT(LOG_DEBUG, "============_img_get() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
     goto done;
   }
@@ -1219,7 +1223,7 @@ void _doc_get(evhtp_request_t *req)
     }
   }
 
-  ox_req = (ox_req_t *)calloc(sizeof(ox_req_t), sizeof(ox_req_t));
+  ox_req = (ox_req_doc_t *)calloc(1, sizeof(ox_req_doc_t));
   ox_req->md5 = md5;
   ox_req->thr_arg = thr_arg;
   ox_req->fname = fname;
@@ -1231,7 +1235,7 @@ void _doc_get(evhtp_request_t *req)
     get_doc_rst = ox_doc_get(ox_req, req);
   }
   else {
-    get_doc_rst = ox_db_get_doc_mode(ox_req, req);
+    get_doc_rst = ox_doc_get_db(ox_req, req);
   }
 
   if(get_doc_rst == -1) {
@@ -1291,6 +1295,10 @@ void ox_cbs_doc(evhtp_request_t *req, void *arg)
     return;
   }
   else if(strcmp(method_strmap[req_method], "GET") == 0) {
+    _doc_get(req);
+    return;
+  }
+  else if(strcmp(method_strmap[req_method], "DELETE") == 0) {
     _doc_get(req);
     return;
   }
@@ -1449,7 +1457,7 @@ void _mov_get(evhtp_request_t *req)
   char *buff = NULL;
   char *fname = NULL;
   size_t len;
-  ox_req_t *ox_req = NULL;
+  ox_req_mov_t *ox_req = NULL;
 
   evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
   struct sockaddr *saddr = ev_conn->saddr;
@@ -1483,8 +1491,8 @@ void _mov_get(evhtp_request_t *req)
 
   // 获得uri并解析
   const char *uri = req->uri->path->full;
-  if((strlen(uri) == 6 || strlen(uri) == 7) &&
-     uri[0]=='/' && uri[1]=='v' && uri[2]=='i' && uri[3]=='d' && uri[4]=='e' && uri[5]=='o') {
+  if((strlen(uri) == 4 || strlen(uri) == 5) &&
+     uri[0]=='/' && uri[1]=='m' && uri[2]=='o' && uri[3]=='v') {
     LOG_PRINT(LOG_DEBUG, "Root Request.");
     int fd = -1;
     struct stat st;
@@ -1506,7 +1514,7 @@ void _mov_get(evhtp_request_t *req)
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
-    LOG_PRINT(LOG_DEBUG, "============_image_get() DONE!===============");
+    LOG_PRINT(LOG_DEBUG, "============_img_get() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
     goto done;
   }
@@ -1539,7 +1547,7 @@ void _mov_get(evhtp_request_t *req)
     goto err;
   }
   if(uri[0] == '/'){
-    ox_strlcpy(md5, uri+1+5+1, md5_len);//这里处理URL
+    ox_strlcpy(md5, uri+1+3+1, md5_len);//这里处理URL
   }
   else {
     ox_strlcpy(md5, uri, md5_len);
@@ -1570,7 +1578,7 @@ void _mov_get(evhtp_request_t *req)
     }
   }
 
-  ox_req = (ox_req_t *)calloc(sizeof(ox_req_t), sizeof(ox_req_t));
+  ox_req = (ox_req_mov_t *)calloc(1, sizeof(ox_req_mov_t));
   ox_req->md5 = md5;
   ox_req->thr_arg = thr_arg;
   ox_req->fname = fname;
@@ -1578,12 +1586,12 @@ void _mov_get(evhtp_request_t *req)
   int get_mov_rst = -1;
 
   // storage setting
-  /* if (vars.mode == 1) { */
-  get_mov_rst = ox_mov_get(ox_req, req);
-  /* } */
-  /* else { */
-  /*   get_mov_rst = ox_db_get_mov_mode(ox_req, req); */
-  /* } */
+  if (vars.mode == 1) {
+    get_mov_rst = ox_mov_get(ox_req, req);
+  }
+  else {
+    get_mov_rst = ox_mov_get_db(ox_req, req);
+  }
 
   if(get_mov_rst == -1) {
     LOG_PRINT(LOG_DEBUG, "OX Requset Get Movie [MD5: %s] Failed!", md5);
@@ -1642,6 +1650,10 @@ void ox_cbs_mov(evhtp_request_t *req, void *arg)
     return;
   }
   else if(strcmp(method_strmap[req_method], "GET") == 0) {
+    _mov_get(req);
+    return;
+  }
+  else if(strcmp(method_strmap[req_method], "DELETE") == 0) {
     _mov_get(req);
     return;
   }

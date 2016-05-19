@@ -8,6 +8,7 @@ int ox_doc_save(thr_arg_t *thr_arg, const char *buff, const int len, char *md5)
     md5_state_t mdctx;
     md5_byte_t md_value[16];
     char md5sum[33];
+    char ckey[40];
     int i;
     int h, l;
     md5_init(&mdctx);
@@ -28,15 +29,18 @@ int ox_doc_save(thr_arg_t *thr_arg, const char *buff, const int len, char *md5)
     char save_path[512];
     char save_name[512];
 
-    if(vars.mode != 1) {
-      if(ox_db_exist(thr_arg, md5sum) == 1) {
+    if(vars.mode == 3) {
+      snprintf(ckey, 40, "DOC_%s", md5sum);
+      LOG_PRINT(LOG_DEBUG, "ckey: %s", ckey);
+
+      if(ox_db_exist(thr_arg, ckey) == 1) {
         LOG_PRINT(LOG_DEBUG, "File Exist, Needn't Save.");
         result = 1;
         goto done;
       }
       LOG_PRINT(LOG_DEBUG, "ox_db_exist not found. Begin to Save File.");
 
-      if(ox_db_save(thr_arg, md5sum, buff, len) == -1) {
+      if(ox_db_save(thr_arg, ckey, buff, len) == -1) {
         LOG_PRINT(LOG_DEBUG, "save_doc_db failed.");
         goto done;
       }
@@ -123,7 +127,7 @@ done:
 }
 
 
-int ox_doc_get(ox_req_t *req, evhtp_request_t *request)
+int ox_doc_get(ox_req_doc_t *req, evhtp_request_t *request)
 {
   int result = -1;
   int fd = -1;
@@ -185,6 +189,36 @@ int ox_doc_get(ox_req_t *req, evhtp_request_t *request)
     close(fd);
   }
   free(buff);
+
+  return result;
+}
+
+int ox_doc_get_db(ox_req_doc_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+  char rsp_cache_key[CACHE_KEY_SIZE];
+  char *buff = NULL;
+  char *orig_buff = NULL;
+  size_t doc_size;
+
+  snprintf(rsp_cache_key, CACHE_KEY_SIZE, "DOC_%s", req->md5);
+  LOG_PRINT(LOG_DEBUG, "ckey: %s", rsp_cache_key);
+
+  LOG_PRINT(LOG_DEBUG, "_ox_doc_get_db() start processing ox request...");
+  if(ox_db_exist(req->thr_arg, rsp_cache_key) == -1) {
+    LOG_PRINT(LOG_DEBUG, "Doc [%s] is not existed.", rsp_cache_key);
+    goto err;
+  }
+
+  LOG_PRINT(LOG_DEBUG, "Start to Find the Doc...");
+  if(ox_db_get(req->thr_arg, rsp_cache_key, &buff, &doc_size) == 1) {
+    LOG_PRINT(LOG_DEBUG, "Get doc [%s] from backend db succ.", rsp_cache_key);
+  }
+  result = evbuffer_add(request->buffer_out, buff, doc_size);
+
+ err:
+  free(buff);
+  free(orig_buff);
 
   return result;
 }

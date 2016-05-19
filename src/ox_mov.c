@@ -8,6 +8,7 @@ int ox_mov_save(thr_arg_t *thr_arg, const char *buff, const int len, char *md5)
     md5_state_t mdctx;
     md5_byte_t md_value[16];
     char md5sum[33];
+    char ckey[40];
     int i;
     int h, l;
     md5_init(&mdctx);
@@ -28,15 +29,18 @@ int ox_mov_save(thr_arg_t *thr_arg, const char *buff, const int len, char *md5)
     char save_path[512];
     char save_name[512];
 
-    if(vars.mode != 1) {
-      if(ox_db_exist(thr_arg, md5sum) == 1) {
+    if(vars.mode == 3) {
+      snprintf(ckey, 40, "MOV_%s", md5sum);
+      LOG_PRINT(LOG_DEBUG, "ckey: %s", ckey);
+
+      if(ox_db_exist(thr_arg, ckey) == 1) {
         LOG_PRINT(LOG_DEBUG, "File Exist, Needn't Save.");
         result = 1;
         goto done;
       }
       LOG_PRINT(LOG_DEBUG, "ox_db_exist not found. Begin to Save File.");
 
-      if(ox_db_save(thr_arg, md5sum, buff, len) == -1) {
+      if(ox_db_save(thr_arg, ckey, buff, len) == -1) {
         LOG_PRINT(LOG_DEBUG, "save_mov_db failed.");
         goto done;
       }
@@ -123,7 +127,7 @@ done:
 }
 
 
-int ox_mov_get(ox_req_t *req, evhtp_request_t *request)
+int ox_mov_get(ox_req_mov_t *req, evhtp_request_t *request)
 {
   int result = -1;
   int fd = -1;
@@ -185,6 +189,37 @@ int ox_mov_get(ox_req_t *req, evhtp_request_t *request)
     close(fd);
   }
   free(buff);
+
+  return result;
+}
+
+int ox_mov_get_db(ox_req_mov_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+  char rsp_cache_key[CACHE_KEY_SIZE];
+  char *buff = NULL;
+  char *orig_buff = NULL;
+  size_t mov_size;
+
+  snprintf(rsp_cache_key, CACHE_KEY_SIZE, "MOV_%s", req->md5);
+  LOG_PRINT(LOG_DEBUG, "ckey: %s", rsp_cache_key);
+
+  LOG_PRINT(LOG_DEBUG, "_ox_mov_get_db() start processing ox request...");
+  if(ox_db_exist(req->thr_arg, rsp_cache_key) == -1) {
+    LOG_PRINT(LOG_DEBUG, "Movie [%s] is not existed.", rsp_cache_key);
+    goto err;
+  }
+  ox_strlcpy(rsp_cache_key, req->md5, CACHE_KEY_SIZE);
+
+  LOG_PRINT(LOG_DEBUG, "Start to Find the Mov...");
+  if(ox_db_get(req->thr_arg, rsp_cache_key, &buff, &mov_size) == 1) {
+    LOG_PRINT(LOG_DEBUG, "Get mov [%s] from backend db succ.", rsp_cache_key);
+  }
+  result = evbuffer_add(request->buffer_out, buff, mov_size);
+
+ err:
+  free(buff);
+  free(orig_buff);
 
   return result;
 }
