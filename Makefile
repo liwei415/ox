@@ -10,6 +10,9 @@ all: objs/ox
 
 #########
 objs/ox: objs/ox.o \
+		objs/ox_cbs_img.o \
+		objs/ox_cbs_doc.o \
+		objs/ox_cbs_mov.o \
 		objs/ox_cbs.o \
 		objs/ox_access.o \
 		objs/ox_mov.o \
@@ -29,6 +32,9 @@ objs/ox: objs/ox.o \
 
 	$(CC) -o objs/ox \
 		objs/ox.o \
+		objs/ox_cbs_img.o \
+		objs/ox_cbs_doc.o \
+		objs/ox_cbs_mov.o \
 		objs/ox_cbs.o \
 		objs/ox_access.o \
 		objs/ox_mov.o \
@@ -55,6 +61,24 @@ objs/ox.o: src/ox.c
 	$(CC) -c $(CFLAGS) $(INCLUDES) \
 		-o objs/ox.o \
 		src/ox.c
+
+objs/ox_cbs_img.o: src/ox_cbs_img.c
+
+	$(CC) -c $(CFLAGS) $(INCLUDES) \
+		-o objs/ox_cbs_img.o \
+		src/ox_cbs_img.c
+
+objs/ox_cbs_doc.o: src/ox_cbs_doc.c
+
+	$(CC) -c $(CFLAGS) $(INCLUDES) \
+		-o objs/ox_cbs_doc.o \
+		src/ox_cbs_doc.c
+
+objs/ox_cbs_mov.o: src/ox_cbs_mov.c
+
+	$(CC) -c $(CFLAGS) $(INCLUDES) \
+		-o objs/ox_cbs_mov.o \
+		src/ox_cbs_mov.c
 
 objs/ox_cbs.o: src/ox_cbs.c
 

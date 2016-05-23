@@ -16,7 +16,9 @@
 #include "ox_lua.h"
 #include "ox_access.h"
 #include "ox_string.h"
-#include "ox_cbs.h"
+#include "ox_cbs_img.h"
+#include "ox_cbs_doc.h"
+#include "ox_cbs_mov.h"
 
 #include "ox_common.h"
 

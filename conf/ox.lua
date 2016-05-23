@@ -26,9 +26,9 @@ etag = 1
 --support mask rules like 'allow 10.1.121.138/24'
 --NOTE: remove rule can improve performance
 --上传接口的IP控制权限，将权限规则注释掉可以提升服务器处理能力，下同
---upload_rule   = 'allow all'
---下载接口的IP控制权限
---download_rule = 'allow all'
+upload_rule   = 'allow 0.0.0.0; 192.168.11.0/24; 192.168.1.111'
+--下载接口的IP控制权限(此ip可绕开锁)
+download_rule = 'allow 192.168.1.111'
 --删除接口的IP控制权限
 --delete_rule = 'allow all'
 

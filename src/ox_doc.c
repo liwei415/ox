@@ -222,3 +222,47 @@ int ox_doc_get_db(ox_req_doc_t *req, evhtp_request_t *request)
 
   return result;
 }
+
+int ox_doc_del(ox_req_doc_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+
+  LOG_PRINT(LOG_DEBUG, "_doc_del() start processing admin request...");
+  char whole_path[512];
+  int lvl1 = ox_strhash(req->md5);
+  int lvl2 = ox_strhash(req->md5 + 3);
+  snprintf(whole_path, 512, "%s/%d/%d/%s", vars.doc_path, lvl1, lvl2, req->md5);
+  LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
+
+  if(ox_isdir(whole_path) == -1) {
+    LOG_PRINT(LOG_DEBUG, "path: %s is not exists!", whole_path);
+    return 2;
+  }
+
+  if(ox_rm(whole_path) != -1) {
+    result = 1;
+  }
+  return result;
+}
+
+int ox_doc_del_db(ox_req_doc_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+
+  LOG_PRINT(LOG_DEBUG, "ox_doc_del_db() start processing admin request...");
+
+  char cache_key[CACHE_KEY_SIZE+5];
+  snprintf(cache_key, 40, "DOC_%s", req->md5);
+  LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
+
+  result = ox_db_exist(req->thr_arg, cache_key);
+  if(result == -1) {
+    LOG_PRINT(LOG_DEBUG, "key: %s is not exists!", req->md5);
+    return 2;
+  }
+
+  if(ox_db_del(req->thr_arg, cache_key) != -1) {
+    result = 1;
+  }
+  return result;
+}

@@ -29,13 +29,13 @@ struct mp_arg_s {
 
 ox_cbs_headers_conf_t * ox_cbs_get_headers_conf(const char *hdr_str);
 void ox_cbs_headers_free(ox_cbs_headers_conf_t *hcf);
+int ox_cbs_headers_add(evhtp_request_t *req, ox_cbs_headers_conf_t *hcf);
 int ox_cbs_etag_set(evhtp_request_t *req, char *buff, size_t len);
+evthr_t *ox_cbs_get_request_thr(evhtp_request_t *request);
 int ox_cbs_on_header_value(multipart_parser* p, const char *at, size_t length);
+int ox_cbs_jreturn(evhtp_request_t *req, int err_no, const char *md5sum, int post_size);
+int ox_cbs_multipart_parse(evhtp_request_t *req, const char *content_type, const char *address, const char *buff, int post_size);
 int ox_cbs_on_chunk_data(multipart_parser* p, const char *at, size_t length);
 void ox_cbs_index(evhtp_request_t *req, void *arg);
-void ox_cbs_img(evhtp_request_t *req, void *arg);
-void ox_cbs_img_del(evhtp_request_t *req, void *arg);
-void ox_cbs_doc(evhtp_request_t *req, void *arg);
-void ox_cbs_mov(evhtp_request_t *req, void *arg);
 
 #endif

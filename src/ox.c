@@ -414,20 +414,20 @@ int main()
   // image
   evhtp_set_cb(htp, "/img/", ox_cbs_img, NULL);
   evhtp_set_cb(htp, "/img", ox_cbs_img, NULL);
-  evhtp_set_cb(htp, "/dimg/", ox_cbs_img_del, NULL);
-  evhtp_set_cb(htp, "/dimg", ox_cbs_img_del, NULL);
-  /* evhtp_set_cb(htp, "/limg/", ox_cbs_img_del, NULL); */
-  /* evhtp_set_cb(htp, "/limg", ox_cbs_img_del, NULL); */
-  /* evhtp_set_cb(htp, "/uimg/", ox_cbs_img_del, NULL); */
-  /* evhtp_set_cb(htp, "/uimg", ox_cbs_img_del, NULL); */
+  evhtp_set_cb(htp, "/img/del/", ox_cbs_img_del, NULL);
+  evhtp_set_cb(htp, "/img/del", ox_cbs_img_del, NULL);
 
   // doc
   evhtp_set_cb(htp, "/doc/", ox_cbs_doc, NULL);
   evhtp_set_cb(htp, "/doc", ox_cbs_doc, NULL);
+  evhtp_set_cb(htp, "/doc/del/", ox_cbs_doc_del, NULL);
+  evhtp_set_cb(htp, "/doc/del", ox_cbs_doc_del, NULL);
 
   // video
   evhtp_set_cb(htp, "/mov/", ox_cbs_mov, NULL);
   evhtp_set_cb(htp, "/mov", ox_cbs_mov, NULL);
+  evhtp_set_cb(htp, "/mov/del/", ox_cbs_mov_del, NULL);
+  evhtp_set_cb(htp, "/mov/del", ox_cbs_mov_del, NULL);
 
   // all other
   evhtp_set_gencb(htp, ox_cbs_index, NULL);

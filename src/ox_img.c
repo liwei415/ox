@@ -485,7 +485,7 @@ int ox_img_del(ox_req_img_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
 
   if(ox_isdir(whole_path) == -1) {
-    LOG_PRINT(LOG_DEBUG, "path: %s is not exist!", whole_path);
+    LOG_PRINT(LOG_DEBUG, "path: %s is not exists!", whole_path);
     return 2;
   }
 
@@ -498,124 +498,21 @@ int ox_img_del(ox_req_img_t *req, evhtp_request_t *request)
 int ox_img_del_db(ox_req_img_t *req, evhtp_request_t *request)
 {
   int result = -1;
-  char rsp_cache_key[CACHE_KEY_SIZE];
-  char *buff = NULL;
-  char *orig_buff = NULL;
-  size_t img_size;
-  MagickWand *im = NULL;
-  bool to_save = true;
 
-  LOG_PRINT(LOG_DEBUG, "_ox_get_img_db() start processing ox request...");
-  if(ox_db_exist(req->thr_arg, req->md5) == -1) {
-    LOG_PRINT(LOG_DEBUG, "Image [%s] is not existed.", req->md5);
-    goto err;
-  }
+  LOG_PRINT(LOG_DEBUG, "ox_img_del_db() start processing admin request...");
 
-  if(vars.script_on == 1 && req->type != NULL) {
-    snprintf(rsp_cache_key, CACHE_KEY_SIZE, "%s:%s", req->md5, req->type);
-  }
-  else {
-    if(req->proportion == 0 && req->width == 0 && req->height == 0) {
-      ox_strlcpy(rsp_cache_key, req->md5, CACHE_KEY_SIZE);
-    }
-    else {
-      ox_genkey(rsp_cache_key, req->md5, 9, req->width, req->height, req->proportion, req->gray, req->x, req->y, req->rotate, req->quality, req->fmt);
-    }
-  }
+  char cache_key[CACHE_KEY_SIZE];
+  ox_strlcpy(cache_key, req->md5, CACHE_KEY_SIZE);
+  LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
 
-  if(ox_memc_get_bin(req->thr_arg, rsp_cache_key, &buff, &img_size) == 1) {
-    LOG_PRINT(LOG_DEBUG, "Hit Cache[Key: %s].", rsp_cache_key);
-    to_save = false;
-    goto done;
-  }
-
-  LOG_PRINT(LOG_DEBUG, "Start to Find the Image...");
-  if(ox_db_get(req->thr_arg, rsp_cache_key, &buff, &img_size) == 1) {
-    LOG_PRINT(LOG_DEBUG, "Get image [%s] from backend db succ.", rsp_cache_key);
-    if(img_size < CACHE_MAX_SIZE) {
-      ox_memc_set_bin(req->thr_arg, rsp_cache_key, buff, img_size);
-    }
-    to_save = false;
-    goto done;
-  }
-
-  im = NewMagickWand();
-  if (im == NULL) {
-    goto err;
-  }
-
-  if(ox_memc_get_bin(req->thr_arg, req->md5, &orig_buff, &img_size) == -1) {
-    if(ox_db_get(req->thr_arg, req->md5, &orig_buff, &img_size) == -1) {
-      LOG_PRINT(LOG_DEBUG, "Get image [%s] from backend db failed.", req->md5);
-      goto err;
-    }
-    else if(img_size < CACHE_MAX_SIZE) {
-      ox_memc_set_bin(req->thr_arg, req->md5, orig_buff, img_size);
-    }
-  }
-
-  result = MagickReadImageBlob(im, (const unsigned char *)orig_buff, img_size);
-  if (result != MagickTrue) {
-    LOG_PRINT(LOG_DEBUG, "Webimg Read Blob Failed!");
-    goto err;
-  }
-  if(vars.script_on == 1 && req->type != NULL) {
-    result = ox_lua_convert(im, req);
-  }
-  else {
-    result = ox_gm_convert(im, req);
-  }
-
+  result = ox_db_exist(req->thr_arg, cache_key);
   if(result == -1) {
-    goto err;
+    LOG_PRINT(LOG_DEBUG, "key: %s is not exists!", req->md5);
+    return 2;
   }
 
-  if(result == 0) {
-    to_save = false;
-  }
-
-  buff = (char *)MagickWriteImageBlob(im, &img_size);
-  if (buff == NULL) {
-    LOG_PRINT(LOG_DEBUG, "Webimg Get Blob Failed!");
-    goto err;
-  }
-
-  if(img_size < CACHE_MAX_SIZE) {
-    ox_memc_set_bin(req->thr_arg, rsp_cache_key, buff, img_size);
-  }
-
- done:
-  if(vars.etag == 1) {
-    result = ox_cbs_etag_set(request, buff, img_size);
-    if(result == 2) {
-      goto err;
-    }
-  }
-  result = evbuffer_add(request->buffer_out, buff, img_size);
-  if(result != -1) {
-    int save_new = 0;
-    if(to_save == true) {
-      if(req->sv == 1 || vars.save_new == 1 || (vars.save_new == 2 && req->type != NULL)) {
-        save_new = 1;
-      }
-    }
-
-    if(save_new == 1) {
-      LOG_PRINT(LOG_DEBUG, "Image [%s] Saved to Storage.", rsp_cache_key);
-      ox_db_save(req->thr_arg, rsp_cache_key, buff, img_size);
-    }
-    else {
-      LOG_PRINT(LOG_DEBUG, "Image [%s] Needn't to Storage.", rsp_cache_key);
-    }
+  if(ox_db_del(req->thr_arg, cache_key) != -1) {
     result = 1;
   }
-
- err:
-  if(im != NULL) {
-    DestroyMagickWand(im);
-  }
-
-  free(buff);
-  free(orig_buff);
   return result;
 }
