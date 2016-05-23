@@ -61,6 +61,13 @@ struct ox_req_mov_s {
   thr_arg_t *thr_arg;
 };
 
+typedef struct ox_req_lock_s ox_req_lock_t;
+struct ox_req_lock_s {
+  char *md5;
+  char *passwd;
+  thr_arg_t *thr_arg;
+};
+
 typedef struct ox_cbs_header_s ox_cbs_header_t;
 struct ox_cbs_header_s {
   char key[128];

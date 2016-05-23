@@ -139,7 +139,7 @@ ox_access_conf_t * ox_access_get(const char *acc_str)
   }
   strncpy(acc, acc_str, acc_len);
   char *start = acc, *end;
-  while(start <= acc+acc_len) {
+  while(start <= acc + acc_len) {
     end = strchr(start, ';');
     end = (end) ? end : acc+acc_len;
     char *mode = start;

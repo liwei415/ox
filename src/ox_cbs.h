@@ -34,6 +34,7 @@ int ox_cbs_on_header_value(multipart_parser* p, const char *at, size_t length);
 int ox_cbs_on_chunk_data(multipart_parser* p, const char *at, size_t length);
 void ox_cbs_index(evhtp_request_t *req, void *arg);
 void ox_cbs_img(evhtp_request_t *req, void *arg);
+void ox_cbs_img_del(evhtp_request_t *req, void *arg);
 void ox_cbs_doc(evhtp_request_t *req, void *arg);
 void ox_cbs_mov(evhtp_request_t *req, void *arg);
 

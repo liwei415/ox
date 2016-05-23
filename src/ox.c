@@ -414,6 +414,12 @@ int main()
   // image
   evhtp_set_cb(htp, "/img/", ox_cbs_img, NULL);
   evhtp_set_cb(htp, "/img", ox_cbs_img, NULL);
+  evhtp_set_cb(htp, "/dimg/", ox_cbs_img_del, NULL);
+  evhtp_set_cb(htp, "/dimg", ox_cbs_img_del, NULL);
+  /* evhtp_set_cb(htp, "/limg/", ox_cbs_img_del, NULL); */
+  /* evhtp_set_cb(htp, "/limg", ox_cbs_img_del, NULL); */
+  /* evhtp_set_cb(htp, "/uimg/", ox_cbs_img_del, NULL); */
+  /* evhtp_set_cb(htp, "/uimg", ox_cbs_img_del, NULL); */
 
   // doc
   evhtp_set_cb(htp, "/doc/", ox_cbs_doc, NULL);

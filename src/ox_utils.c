@@ -94,6 +94,57 @@ int ox_isdir(const char *path)
   }
 }
 
+int ox_issdir(const char *path)
+{
+  if (strcmp(path, ".") == 0 || strcmp(path, "..") == 0) {
+    return 1;
+  }
+  else {
+    return -1;
+  }
+}
+
+void ox_get_file_path(const char *path, const char *file_name, char *file_path)
+{
+  strcpy(file_path, path);
+  if(file_path[strlen(path) - 1] != '/') {
+    ox_strlcat(file_path, "/", PATH_MAX_SIZE);
+  }
+  ox_strlcat(file_path, file_name, PATH_MAX_SIZE);
+}
+
+int ox_rm(const char *path)
+{
+  DIR *dir;
+  struct dirent *dir_info;
+  char file_path[PATH_MAX_SIZE];
+  int ret = -1;
+  if(ox_isfile(path) == 1) {
+    remove(path);
+    ret = 1;
+  }
+  if(ox_isdir(path) == 1) {
+    if((dir = opendir(path)) == NULL) {
+      return ret;
+    }
+    ret = 1;
+    while((dir_info = readdir(dir)) != NULL) {
+      ox_get_file_path(path, dir_info->d_name, file_path);
+      if(ox_issdir(dir_info->d_name) == 1) {
+        continue;
+      }
+      ret = ox_rm(file_path);
+      if(ret == -1) {
+        break;
+      }
+    }
+    if(ret == 1) {
+      ret = rmdir(path);
+    }
+  }
+  return ret;
+}
+
 int ox_mkdir(const char *path)
 {
   if(access(path, 0) == -1) {
