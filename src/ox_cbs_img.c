@@ -238,25 +238,25 @@ void ox_cbs_img_get(evhtp_request_t *req, void *arg)
     inet_aton(xff_address, &ss->sin_addr);
   }
   else {
-    inet_aton("192.168.1.111", &ss->sin_addr);
+    inet_aton("0.0.0.0", &ss->sin_addr);
   }
   strncpy(address, inet_ntoa(ss->sin_addr), 16);
 
-  if(vars.down_access != NULL) {
-    int acs = ox_access_inet(vars.down_access, ss->sin_addr.s_addr);
-    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
+  /* if(vars.down_access != NULL) { */
+  /*   int acs = ox_access_inet(vars.down_access, ss->sin_addr.s_addr); */
+  /*   LOG_PRINT(LOG_DEBUG, "access check: %d", acs); */
 
-    if(acs == OX_FORBIDDEN) {
-      LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address);
-      LOG_PRINT(LOG_INFO, "%s refuse get forbidden", address);
-      goto forbidden;
-    }
-    else if(acs == OX_ERROR) {
-      LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address);
-      LOG_PRINT(LOG_ERROR, "%s fail get access", address);
-      goto err;
-    }
-  }
+  /*   if(acs == OX_FORBIDDEN) { */
+  /*     LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address); */
+  /*     LOG_PRINT(LOG_INFO, "%s refuse get forbidden", address); */
+  /*     goto forbidden; */
+  /*   } */
+  /*   else if(acs == OX_ERROR) { */
+  /*     LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address); */
+  /*     LOG_PRINT(LOG_ERROR, "%s fail get access", address); */
+  /*     goto err; */
+  /*   } */
+  /* } */
 
   // 获得uri并解析
   const char *uri = req->uri->path->full;
@@ -445,6 +445,13 @@ void ox_cbs_img_get(evhtp_request_t *req, void *arg)
     }
     goto err;
   }
+
+  //加锁无权限
+  if(get_img_rst == -2) {
+    LOG_PRINT(LOG_DEBUG, "Image[MD5: %s] locked!", ox_req->md5);
+    goto err;
+  }
+
   if(get_img_rst == 2) {
     LOG_PRINT(LOG_DEBUG, "Etag Matched Return 304 EVHTP_RES_NOTMOD.");
     if(type) {

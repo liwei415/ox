@@ -145,12 +145,14 @@ int ox_rm(const char *path)
   return ret;
 }
 
-int ox_mklock(const char *path, char *passwd)
+int ox_mklock(const char *path, char *path_passwd)
 {
   FILE *fp = NULL;
 
   fp = fopen(path, "w");
-  fprintf(fp,"%s", passwd);
+  fclose(fp);
+
+  fp = fopen(path_passwd, "w");
   fclose(fp);
 
   return 0;

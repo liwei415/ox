@@ -44,6 +44,7 @@ struct ox_req_img_s {
   int quality;
   char *fmt;
   int sv;
+  char *passwd;
   thr_arg_t *thr_arg;
 };
 
@@ -51,6 +52,7 @@ typedef struct ox_req_doc_s ox_req_doc_t;
 struct ox_req_doc_s {
   char *md5;
   char *fname;
+  char *passwd;
   thr_arg_t *thr_arg;
 };
 
@@ -58,6 +60,7 @@ typedef struct ox_req_mov_s ox_req_mov_t;
 struct ox_req_mov_s {
   char *md5;
   char *fname;
+  char *passwd;
   thr_arg_t *thr_arg;
 };
 

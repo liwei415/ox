@@ -242,22 +242,6 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   }
   strncpy(address, inet_ntoa(ss->sin_addr), 16);
 
-  if(vars.down_access != NULL) {
-    int acs = ox_access_inet(vars.down_access, ss->sin_addr.s_addr);
-    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
-
-    if(acs == OX_FORBIDDEN) {
-      LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address);
-      LOG_PRINT(LOG_INFO, "%s refuse get forbidden", address);
-      goto forbidden;
-    }
-    else if(acs == OX_ERROR) {
-      LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address);
-      LOG_PRINT(LOG_ERROR, "%s fail get access", address);
-      goto err;
-    }
-  }
-
   // 获得uri并解析
   const char *uri = req->uri->path->full;
   if((strlen(uri) == 4 || strlen(uri) == 5) &&
@@ -364,6 +348,12 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
 
   if(get_doc_rst == -1) {
     LOG_PRINT(LOG_DEBUG, "OX Requset Get Doc[MD5: %s] Failed!", md5);
+    goto err;
+  }
+
+  //加锁无权限
+  if(get_doc_rst == -2) {
+    LOG_PRINT(LOG_DEBUG, "Doc [MD5: %s] locked!", ox_req->md5);
     goto err;
   }
 

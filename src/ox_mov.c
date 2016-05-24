@@ -141,15 +141,21 @@ int ox_mov_get(ox_req_mov_t *req, evhtp_request_t *request)
   int lvl2 = ox_strhash(req->md5 + 3);
 
   char whole_path[512];
-  snprintf(whole_path, 512, "%s/%d/%d/%s", vars.mov_path, lvl1, lvl2, req->md5);
+  char whole_path_lock[512];
+  char whole_path_lock_passwd[512];
+  snprintf(whole_path, 512, "%s/%d/%d/%s", vars.img_path, lvl1, lvl2, req->md5);
+  snprintf(whole_path_lock, 512, "%s/%d/%d/%s/lock", vars.img_path, lvl1, lvl2, req->md5);
+  snprintf(whole_path_lock, 512, "%s/%d/%d/%s/lock.%s", vars.img_path, lvl1, lvl2, req->md5, req->passwd);
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
 
   if(ox_isdir(whole_path) == -1) {
-    LOG_PRINT(LOG_DEBUG, "Image %s is not existed!", req->md5);
+    LOG_PRINT(LOG_DEBUG, "Mov %s is not existed!", req->md5);
     goto err;
   }
 
-  LOG_PRINT(LOG_DEBUG, "Start to Find the Image...");
+  if (ox_isfile(whole_path_lock) == 1 && ox_isfile(whole_path_lock_passwd) == -1) {
+    goto err;
+  }
 
   char rsp_path[512];
   snprintf(rsp_path, 512, "%s/%s", whole_path, req->md5);
@@ -274,9 +280,11 @@ int ox_mov_lock(ox_req_lock_t *req, evhtp_request_t *request)
 
   LOG_PRINT(LOG_DEBUG, "_mov_lock() start processing admin request...");
   char whole_path[512];
+  char whole_path_passwd[512];
   int lvl1 = ox_strhash(req->md5);
   int lvl2 = ox_strhash(req->md5 + 3);
   snprintf(whole_path, 512, "%s/%d/%d/%s/lock", vars.mov_path, lvl1, lvl2, req->md5);
+  snprintf(whole_path_passwd, 512, "%s/%d/%d/%s/lock.%s", vars.mov_path, lvl1, lvl2, req->md5, req->passwd);
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
 
   if(ox_isfile(whole_path) == 1) {
@@ -284,7 +292,7 @@ int ox_mov_lock(ox_req_lock_t *req, evhtp_request_t *request)
     return 2;
   }
 
-  if(ox_mklock(whole_path, req->passwd) != -1) {
+  if(ox_mklock(whole_path, whole_path_passwd) != -1) {
     result = 1;
   }
   return result;
@@ -297,7 +305,7 @@ int ox_mov_lock_db(ox_req_lock_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "ox_mov_lock_db() start processing admin request...");
 
   char cache_key[CACHE_KEY_SIZE];
-  snprintf(cache_key, CACHE_KEY_SIZE, "%s.LOCK", req->md5);
+  snprintf(cache_key, CACHE_KEY_SIZE, "%s.lock", req->md5);
   LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
 
   result = ox_db_exist(req->thr_arg, cache_key);
