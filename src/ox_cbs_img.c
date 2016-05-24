@@ -267,14 +267,14 @@ void ox_cbs_img_get(evhtp_request_t *req, void *arg)
     struct stat st;
     if((fd = open(vars.root_path, O_RDONLY)) == -1) {
       LOG_PRINT(LOG_DEBUG, "Root_page Open Failed. Return Default Page.");
-      evbuffer_add_printf(req->buffer_out, "<html><body><h1>img get</h1></body></html>");
+      evbuffer_add_printf(req->buffer_out, "<html><body><h1>img get: no key</h1></body></html>");
     }
     else {
       if (fstat(fd, &st) < 0) {
         /* Make sure the length still matches, now that we
          * opened the file :/ */
         LOG_PRINT(LOG_DEBUG, "Root_page Length fstat Failed. Return Default Page.");
-        evbuffer_add_printf(req->buffer_out, "<html><body><h1>img get: Please let me know the image name</h1></body></html>");
+        evbuffer_add_printf(req->buffer_out, "<html><body><h1>img get: no key</h1></body></html>");
       }
       else {
         evbuffer_add_file(req->buffer_out, fd, 0, st.st_size);

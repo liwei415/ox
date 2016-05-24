@@ -25,5 +25,7 @@ int ox_doc_get(ox_req_doc_t *req, evhtp_request_t *request);
 int ox_doc_get_db(ox_req_doc_t *req, evhtp_request_t *request);
 int ox_doc_del(ox_req_doc_t *req, evhtp_request_t *request);
 int ox_doc_del_db(ox_req_doc_t *req, evhtp_request_t *request);
+int ox_doc_lock(ox_req_lock_t *req, evhtp_request_t *request);
+int ox_doc_lock_db(ox_req_lock_t *req, evhtp_request_t *request);
 
 #endif
