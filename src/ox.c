@@ -412,10 +412,12 @@ int main()
   evhtp_set_cb(htp, "/index", ox_cbs_index, NULL);
 
   // image
-  evhtp_set_cb(htp, "/img/", ox_cbs_img, NULL);
-  evhtp_set_cb(htp, "/img", ox_cbs_img, NULL);
+  evhtp_set_cb(htp, "/img/", ox_cbs_img_get, NULL);
+  evhtp_set_cb(htp, "/imgs", ox_cbs_imgs_post, NULL);
   evhtp_set_cb(htp, "/img/del/", ox_cbs_img_del, NULL);
-  evhtp_set_cb(htp, "/img/del", ox_cbs_img_del, NULL);
+  //evhtp_set_cb(htp, "/imgs/del", ox_cbs_imgs_del, NULL);
+  evhtp_set_cb(htp, "/img/lock/", ox_cbs_img_lock, NULL);
+  //evhtp_set_cb(htp, "/imgs/lock", ox_cbs_imgs_lock, NULL);
 
   // doc
   evhtp_set_cb(htp, "/doc/", ox_cbs_doc, NULL);

@@ -23,6 +23,7 @@ int ox_isdoc(const char *filename);
 int ox_ismov(const char *filename);
 int ox_isdir(const char *path);
 int ox_issdir(const char *path);
+int ox_mklock(const char *path, char *passwd);
 int ox_rm(const char *path);
 int ox_mkdir(const char *path);
 int ox_mkdirs(const char *dir);

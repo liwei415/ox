@@ -516,3 +516,53 @@ int ox_img_del_db(ox_req_img_t *req, evhtp_request_t *request)
   }
   return result;
 }
+
+int ox_img_lock(ox_req_lock_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+
+  LOG_PRINT(LOG_DEBUG, "_img_lock() start processing admin request...");
+  char whole_path[512];
+  int lvl1 = ox_strhash(req->md5);
+  int lvl2 = ox_strhash(req->md5 + 3);
+  snprintf(whole_path, 512, "%s/%d/%d/%s/lock", vars.img_path, lvl1, lvl2, req->md5);
+  LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
+
+  if(ox_isfile(whole_path) == 1) {
+    LOG_PRINT(LOG_DEBUG, "path: %s already locked!", whole_path);
+    return 2;
+  }
+
+  if(ox_mklock(whole_path, req->passwd) != -1) {
+    result = 1;
+  }
+  return result;
+}
+
+int ox_img_lock_db(ox_req_lock_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+
+  LOG_PRINT(LOG_DEBUG, "ox_img_lock_db() start processing admin request...");
+
+  char cache_key[CACHE_KEY_SIZE];
+  snprintf(cache_key, CACHE_KEY_SIZE, "%s.LOCK", req->md5);
+  LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
+
+  result = ox_db_exist(req->thr_arg, cache_key);
+  if(result == -1) {
+    LOG_PRINT(LOG_DEBUG, "lock key: %s is not exists!", cache_key);
+    return 2;
+  }
+
+  if(ox_db_save(req->thr_arg, cache_key, req->passwd, strlen(req->passwd)) == -1) {
+    LOG_PRINT(LOG_DEBUG, "lock_img_db failed.");
+    return 2;
+  }
+  else {
+    LOG_PRINT(LOG_DEBUG, "lock_img_db succ.");
+    result = 1;
+  }
+
+  return result;
+}

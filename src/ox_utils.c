@@ -145,6 +145,17 @@ int ox_rm(const char *path)
   return ret;
 }
 
+int ox_mklock(const char *path, char *passwd)
+{
+  FILE *fp = NULL;
+
+  fp = fopen(path, "w");
+  fprintf(fp,"%s", passwd);
+  fclose(fp);
+
+  return 0;
+}
+
 int ox_mkdir(const char *path)
 {
   if(access(path, 0) == -1) {
