@@ -21,6 +21,8 @@ void ox_cbs_mov_del(evhtp_request_t *req, void *arg);
 //void ox_cbs_movs_del(evhtp_request_t *req, void *arg);
 void ox_cbs_mov_lock(evhtp_request_t *req, void *arg);
 //void ox_cbs_movs_lock(evhtp_request_t *req, void *arg);
+void ox_cbs_mov_unlock(evhtp_request_t *req, void *arg);
+//void ox_cbs_movs_unlock(evhtp_request_t *req, void *arg);
 
 
 #endif

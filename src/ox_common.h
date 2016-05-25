@@ -44,6 +44,7 @@ struct ox_req_img_s {
   int quality;
   char *fmt;
   int sv;
+  int acs;
   char *passwd;
   thr_arg_t *thr_arg;
 };
@@ -53,6 +54,7 @@ struct ox_req_doc_s {
   char *md5;
   char *fname;
   char *passwd;
+  int acs;
   thr_arg_t *thr_arg;
 };
 
@@ -61,11 +63,19 @@ struct ox_req_mov_s {
   char *md5;
   char *fname;
   char *passwd;
+  int acs;
   thr_arg_t *thr_arg;
 };
 
 typedef struct ox_req_lock_s ox_req_lock_t;
 struct ox_req_lock_s {
+  char *md5;
+  char *passwd;
+  thr_arg_t *thr_arg;
+};
+
+typedef struct ox_req_unlock_s ox_req_unlock_t;
+struct ox_req_unlock_s {
   char *md5;
   char *passwd;
   thr_arg_t *thr_arg;

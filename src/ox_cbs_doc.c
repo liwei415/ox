@@ -212,9 +212,11 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   char *md5 = NULL;
   char *fmt = NULL;
   char *type = NULL;
+  char *passwd = NULL;
   char *buff = NULL;
   char *fname = NULL;
   size_t len;
+  int acs = -9;
   ox_req_doc_t *ox_req = NULL;
 
   evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
@@ -242,6 +244,11 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   }
   strncpy(address, inet_ntoa(ss->sin_addr), 16);
 
+  if(vars.down_access != NULL) {
+    acs = ox_access_inet(vars.down_access, ss->sin_addr.s_addr);
+    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
+  }
+
   // 获得uri并解析
   const char *uri = req->uri->path->full;
   if((strlen(uri) == 4 || strlen(uri) == 5) &&
@@ -267,7 +274,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
-    LOG_PRINT(LOG_DEBUG, "============_img_get() DONE!===============");
+    LOG_PRINT(LOG_DEBUG, "============_doc_get() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
     goto done;
   }
@@ -328,6 +335,16 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
         snprintf(fname, nlen - 1, "attachment; filename=%s", str_n);
       }
       LOG_PRINT(LOG_DEBUG, "fname = %s", fname);
+    }
+
+    const char *str_p = evhtp_kv_find(params, "p");
+    if(str_p) {
+      size_t p_len = strlen(str_p) + 1;
+      passwd = (char *)malloc(p_len);
+      if(passwd != NULL) {
+        ox_strlcpy(passwd, str_p, p_len);
+      }
+      LOG_PRINT(LOG_DEBUG, "passwd = %s", passwd);
     }
   }
 
@@ -391,6 +408,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   free(fmt);
   free(md5);
   free(type);
+  free(passwd);
   free(buff);
   free(fname);
   free(ox_req);
@@ -474,7 +492,7 @@ void ox_cbs_doc_del(evhtp_request_t *req, void *arg)
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
-    LOG_PRINT(LOG_DEBUG, "============_img_del() DONE!===============");
+    LOG_PRINT(LOG_DEBUG, "============_doc_del() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
     goto done;
   }
@@ -551,7 +569,7 @@ void ox_cbs_doc_del(evhtp_request_t *req, void *arg)
   ox_cbs_jreturn(req, err_no, NULL, 0);
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
-  LOG_PRINT(LOG_DEBUG, "============_img_del() ERROR!===============");
+  LOG_PRINT(LOG_DEBUG, "============_doc_del() ERROR!===============");
 
  done:
   free(ox_req);
@@ -618,7 +636,7 @@ void ox_cbs_doc_lock(evhtp_request_t *req, void *arg)
     struct stat st;
     if((fd = open(vars.root_path, O_RDONLY)) == -1) {
       LOG_PRINT(LOG_DEBUG, "Root_page Open Failed. Return Default Page.");
-      err_no =3;
+      err_no = 3;
       goto err;
     }
     else {
@@ -626,7 +644,7 @@ void ox_cbs_doc_lock(evhtp_request_t *req, void *arg)
         /* Make sure the length still matches, now that we
          * opened the file :/ */
         LOG_PRINT(LOG_DEBUG, "Root_page Length fstat Failed. Return Default Page.");
-        err_no =3;
+        err_no = 3;
         goto err;
       }
       else {
@@ -688,13 +706,13 @@ void ox_cbs_doc_lock(evhtp_request_t *req, void *arg)
         LOG_PRINT(LOG_DEBUG, "passwd = %s", passwd);
       }
       else {
-        err_no = 2;
+        err_no = 11;
         goto err;
       }
     }
   }
   else {
-    err_no = 2;
+    err_no = 11;
     goto err;
   }
 
@@ -746,6 +764,202 @@ void ox_cbs_doc_lock(evhtp_request_t *req, void *arg)
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_doc_lock() ERROR!===============");
+
+ done:
+  free(passwd);
+  free(ox_req);
+}
+
+void ox_cbs_doc_unlock(evhtp_request_t *req, void *arg)
+{
+  char md5[35];
+  char *passwd = NULL;
+  int err_no = 0;
+
+  ox_req_unlock_t *ox_req = NULL;
+
+  evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
+  struct sockaddr *saddr = ev_conn->saddr;
+  struct sockaddr_in *ss = (struct sockaddr_in *)saddr;
+  char address[16];
+
+  int req_method = evhtp_request_get_method(req);
+  if(req_method >= 16) {
+    req_method = 16;
+  }
+
+  LOG_PRINT(LOG_DEBUG, "Method: %d", req_method);
+  if(strcmp(method_strmap[req_method], "GET") != 0) {
+    LOG_PRINT(LOG_DEBUG, "Request Method Not Support.");
+    err_no = 2;
+    goto err;
+  }
+
+  const char *xff_address = evhtp_header_find(req->headers_in, "X-Forwarded-For");
+  if(xff_address) {
+    inet_aton(xff_address, &ss->sin_addr);
+  }
+  else {
+    //    inet_aton("192.168.1.111", &ss->sin_addr);
+    inet_aton("0.0.0.0", &ss->sin_addr);
+  }
+  strncpy(address, inet_ntoa(ss->sin_addr), 16);
+
+  if (vars.up_access != NULL) {
+    int acs = ox_access_inet(vars.up_access, ss->sin_addr.s_addr);
+    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
+    if(acs == OX_FORBIDDEN) {
+      LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address);
+      LOG_PRINT(LOG_INFO, "%s refuse post forbidden", address);
+      err_no = 3;
+      goto forbidden;
+    }
+    else if (acs == OX_ERROR) {
+      LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address);
+      LOG_PRINT(LOG_ERROR, "%s fail post access %s", address);
+      err_no = 0;
+      goto err;
+    }
+  }
+
+  // 获得uri并解析
+  const char *uri = req->uri->path->full;
+  if((strlen(uri) == 5 || strlen(uri) == 6) &&
+     uri[0]=='/' && uri[1]=='i' && uri[2]=='m' && uri[3]=='g' &&
+     uri[4]=='/' && uri[5]=='u' && uri[6]=='n' && uri[7]=='l' && uri[8]=='o' && uri[9]=='c' && uri[10]=='k' && uri[11]=='/') {
+    LOG_PRINT(LOG_DEBUG, "Root Request.");
+    int fd = -1;
+    struct stat st;
+    if((fd = open(vars.root_path, O_RDONLY)) == -1) {
+      LOG_PRINT(LOG_DEBUG, "Root_page Open Failed. Return Default Page.");
+      err_no =3;
+      goto err;
+    }
+    else {
+      if (fstat(fd, &st) < 0) {
+        /* Make sure the length still matches, now that we
+         * opened the file :/ */
+        LOG_PRINT(LOG_DEBUG, "Root_page Length fstat Failed. Return Default Page.");
+        err_no =3;
+        goto err;
+      }
+      else {
+        evbuffer_add_file(req->buffer_out, fd, 0, st.st_size);
+      }
+    }
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
+    evhtp_send_reply(req, EVHTP_RES_OK);
+    LOG_PRINT(LOG_DEBUG, "============_doc_del() DONE!===============");
+    LOG_PRINT(LOG_INFO, "%s succ root page", address);
+    goto done;
+  }
+
+  if(strstr(uri, "favicon.ico")) {
+    LOG_PRINT(LOG_DEBUG, "favicon.ico Request, Denied.");
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
+    ox_cbs_headers_add(req, vars.headers);
+    evhtp_send_reply(req, EVHTP_RES_OK);
+    goto done;
+  }
+  LOG_PRINT(LOG_DEBUG, "Got a GET request for <%s>",  uri);
+
+  /* Don't allow any ".."s in the path, to avoid exposing stuff outside */
+  /* of the docroot.  This test is both overzealous and underzealous: */
+  /* it forbids aceptable paths like "/this/one..here", but it doesn't */
+  /* do anything to prevent symlink following." */
+  if (strstr(uri, "..")) {
+    LOG_PRINT(LOG_DEBUG, "attempt to upper dir!");
+    LOG_PRINT(LOG_INFO, "%s refuse directory", address);
+    err_no = 3;
+    goto forbidden;
+  }
+
+  ox_strlcpy(md5, uri+1+10+1, 33);//这里处理URL
+  if(ox_ismd5(md5) == -1) {
+    LOG_PRINT(LOG_DEBUG, "Url [%s] is Not a OX Request.", md5);
+    LOG_PRINT(LOG_INFO, "%s refuse url illegal", address);
+    err_no = 8;
+    goto err;
+  }
+
+  evthr_t *thread = ox_cbs_get_request_thr(req);
+  thr_arg_t *thr_arg = (thr_arg_t *)evthr_get_aux(thread);
+
+  evhtp_kvs_t *params;
+  params = req->uri->query;
+  if(params != NULL) {
+    if(vars.disable_args != 1) {
+
+      const char *str_p = evhtp_kv_find(params, "p");
+      if(str_p) {
+        size_t p_len = strlen(str_p) + 1;
+        passwd = (char *)malloc(p_len);
+        if(passwd != NULL) {
+          ox_strlcpy(passwd, str_p, p_len);
+        }
+        LOG_PRINT(LOG_DEBUG, "passwd = %s", passwd);
+      }
+      else {
+        err_no = 2;
+        goto err;
+      }
+    }
+  }
+  else {
+    err_no = 2;
+    goto err;
+  }
+
+  ox_req = (ox_req_unlock_t *)calloc(1, sizeof(ox_req_unlock_t));
+  if(ox_req == NULL) {
+    LOG_PRINT(LOG_DEBUG, "ox_req calloc failed!");
+    LOG_PRINT(LOG_ERROR, "%s fail calloc", address);
+    goto err;
+  }
+
+  ox_req->md5 = md5;
+  ox_req->passwd = passwd;
+  ox_req->thr_arg = thr_arg;
+
+  int unlock_doc_rst = -1;
+
+  // storage setting
+  if (vars.mode == 1) {
+    unlock_doc_rst = ox_doc_unlock(ox_req, req);
+  }
+  else {
+    unlock_doc_rst = ox_doc_unlock_db(ox_req, req);
+  }
+
+  if(unlock_doc_rst == 2) {
+    LOG_PRINT(LOG_DEBUG, "Lock doc[MD5: %s] failed, path is not exists!", md5);
+    err_no = 10;
+    goto err;
+  }
+  else {
+    err_no = -1;
+  }
+
+  ox_cbs_jreturn(req, err_no, md5, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_doc_del() DONE!===============");
+  goto done;
+
+ forbidden:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_doc_del() FORBIDDEN!===============");
+  goto done;
+
+ err:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_doc_del() ERROR!===============");
 
  done:
   free(ox_req);

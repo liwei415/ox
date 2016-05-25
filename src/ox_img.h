@@ -28,5 +28,7 @@ int ox_img_del(ox_req_img_t *req, evhtp_request_t *request);
 int ox_img_del_db(ox_req_img_t *req, evhtp_request_t *request);
 int ox_img_lock(ox_req_lock_t *req, evhtp_request_t *request);
 int ox_img_lock_db(ox_req_lock_t *req, evhtp_request_t *request);
+int ox_img_unlock(ox_req_unlock_t *req, evhtp_request_t *request);
+int ox_img_unlock_db(ox_req_unlock_t *req, evhtp_request_t *request);
 
 #endif

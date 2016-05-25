@@ -20,7 +20,7 @@ int ox_isfile(const char *filename)
 {
   struct stat st;
   if(stat(filename, &st) < 0) {
-    LOG_PRINT(LOG_DEBUG, "File[%s] is Not Existed!", filename);
+    LOG_PRINT(LOG_DEBUG, "File [%s] is Not Existed!", filename);
     return -1;
   }
   if(S_ISREG(st.st_mode)) {

@@ -145,7 +145,7 @@ int ox_img_get(ox_req_img_t *req, evhtp_request_t *request)
   char whole_path_lock_passwd[512];
   snprintf(whole_path, 512, "%s/%d/%d/%s", vars.img_path, lvl1, lvl2, req->md5);
   snprintf(whole_path_lock, 512, "%s/%d/%d/%s/lock", vars.img_path, lvl1, lvl2, req->md5);
-  snprintf(whole_path_lock, 512, "%s/%d/%d/%s/lock.%s", vars.img_path, lvl1, lvl2, req->md5, req->passwd);
+  snprintf(whole_path_lock_passwd, 512, "%s/%d/%d/%s/lock.%s", vars.img_path, lvl1, lvl2, req->md5, req->passwd);
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
 
   if(ox_isdir(whole_path) == -1) {
@@ -153,24 +153,12 @@ int ox_img_get(ox_req_img_t *req, evhtp_request_t *request)
     goto err;
   }
 
-  /* if(vars.down_access != NULL) { */
-  /*   int acs = ox_access_inet(vars.down_access, ss->sin_addr.s_addr); */
-  /*   LOG_PRINT(LOG_DEBUG, "access check: %d", acs); */
-
-  /*   if(acs == OX_FORBIDDEN) { */
-  /*     LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address); */
-  /*     LOG_PRINT(LOG_INFO, "%s refuse get forbidden", address); */
-  /*     goto forbidden; */
-  /*   } */
-  /*   else if(acs == OX_ERROR) { */
-  /*     LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address); */
-  /*     LOG_PRINT(LOG_ERROR, "%s fail get access", address); */
-  /*     goto err; */
-  /*   } */
-  /* } */
-
-  if (ox_isfile(whole_path_lock) == 1 && ox_isfile(whole_path_lock_passwd) == -1) {
-    goto err;
+  if (req->acs != OX_OK) {
+    LOG_PRINT(LOG_DEBUG, "acs != OX_OK");
+    if (ox_isfile(whole_path_lock) == 1 && ox_isfile(whole_path_lock_passwd) == -1) {
+      LOG_PRINT(LOG_DEBUG, "lock exist and lock.passwd is not exist.");
+      goto err;
+    }
   }
 
   if(vars.script_on == 1 && req->type != NULL) {
@@ -350,7 +338,7 @@ int ox_img_get(ox_req_img_t *req, evhtp_request_t *request)
   if(vars.etag == 1) {
     result = ox_cbs_etag_set(request, buff, len);
     if(result == 2) {
-        goto err;
+      goto err;
     }
   }
   result = evbuffer_add(request->buffer_out, buff, len);
@@ -572,7 +560,9 @@ int ox_img_lock_db(ox_req_lock_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "ox_img_lock_db() start processing admin request...");
 
   char cache_key[CACHE_KEY_SIZE];
+  char cache_key_passwd[CACHE_KEY_SIZE];
   snprintf(cache_key, CACHE_KEY_SIZE, "%s.lock", req->md5);
+  snprintf(cache_key_passwd, CACHE_KEY_SIZE, "%s.lock.%s", req->md5, req->passwd);
   LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
 
   result = ox_db_exist(req->thr_arg, cache_key);
@@ -581,12 +571,49 @@ int ox_img_lock_db(ox_req_lock_t *req, evhtp_request_t *request)
     return 2;
   }
 
-  if(ox_db_save(req->thr_arg, cache_key, req->passwd, strlen(req->passwd)) == -1) {
-    LOG_PRINT(LOG_DEBUG, "lock_img_db failed.");
-    return 2;
+  ox_db_save(req->thr_arg, cache_key, "1", 1);
+  ox_db_save(req->thr_arg, cache_key_passwd, "1", 1);
+
+  return 1;
+}
+
+int ox_img_unlock(ox_req_unlock_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+
+  LOG_PRINT(LOG_DEBUG, "_img_lock() start processing admin request...");
+  char whole_path[512];
+  char whole_path_passwd[512];
+  int lvl1 = ox_strhash(req->md5);
+  int lvl2 = ox_strhash(req->md5 + 3);
+  snprintf(whole_path, 512, "%s/%d/%d/%s/lock", vars.img_path, lvl1, lvl2, req->md5);
+  snprintf(whole_path_passwd, 512, "%s/%d/%d/%s/lock.%s", vars.img_path, lvl1, lvl2, req->md5, req->passwd);
+  LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
+
+  if (ox_isfile(whole_path) == 1 && ox_isfile(whole_path_passwd) == 1) {
+    ox_rm(whole_path);
+    ox_rm(whole_path_passwd);
+    result = 1;
   }
-  else {
-    LOG_PRINT(LOG_DEBUG, "lock_img_db succ.");
+
+  return result;
+}
+
+int ox_img_unlock_db(ox_req_unlock_t *req, evhtp_request_t *request)
+{
+  int result = -1;
+
+  LOG_PRINT(LOG_DEBUG, "ox_img_lock_db() start processing admin request...");
+
+  char cache_key[CACHE_KEY_SIZE];
+  char cache_key_passwd[CACHE_KEY_SIZE];
+  snprintf(cache_key, CACHE_KEY_SIZE, "%s.lock", req->md5);
+  snprintf(cache_key_passwd, CACHE_KEY_SIZE, "%s.lock.%s", req->md5, req->passwd);
+  LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
+
+  if (ox_db_exist(req->thr_arg, cache_key) == 1 && ox_db_exist(req->thr_arg, cache_key_passwd) == 1) {
+    ox_db_del(req->thr_arg, cache_key);
+    ox_db_del(req->thr_arg, cache_key_passwd);
     result = 1;
   }
 

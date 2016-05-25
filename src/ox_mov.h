@@ -27,5 +27,7 @@ int ox_mov_del(ox_req_mov_t *req, evhtp_request_t *request);
 int ox_mov_del_db(ox_req_mov_t *req, evhtp_request_t *request);
 int ox_mov_lock(ox_req_lock_t *req, evhtp_request_t *request);
 int ox_mov_lock_db(ox_req_lock_t *req, evhtp_request_t *request);
+int ox_mov_unlock(ox_req_unlock_t *req, evhtp_request_t *request);
+int ox_mov_unlock_db(ox_req_unlock_t *req, evhtp_request_t *request);
 
 #endif
