@@ -370,9 +370,24 @@ int ox_img_get_db(ox_req_img_t *req, evhtp_request_t *request)
   bool to_save = true;
 
   LOG_PRINT(LOG_DEBUG, "_ox_get_img_db() start processing ox request...");
+
+  char cache_key[CACHE_KEY_SIZE];
+  char cache_key_passwd[CACHE_KEY_SIZE];
+  snprintf(cache_key, CACHE_KEY_SIZE, "%s.lock", req->md5);
+  snprintf(cache_key_passwd, CACHE_KEY_SIZE, "%s.lock.%s", req->md5, req->passwd);
+  LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
+
   if(ox_db_exist(req->thr_arg, req->md5) == -1) {
     LOG_PRINT(LOG_DEBUG, "Image [%s] is not existed.", req->md5);
     goto err;
+  }
+
+  if (req->acs != OX_OK) {
+    LOG_PRINT(LOG_DEBUG, "acs != OX_OK");
+    if (ox_db_exist(req->thr_arg, cache_key) == 1 && ox_db_exist(req->thr_arg, cache_key_passwd) == -1) {
+      LOG_PRINT(LOG_DEBUG, "lock exist and md5.lock.passwd is not exist.");
+      goto err;
+    }
   }
 
   if(vars.script_on == 1 && req->type != NULL) {
@@ -566,8 +581,8 @@ int ox_img_lock_db(ox_req_lock_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
 
   result = ox_db_exist(req->thr_arg, cache_key);
-  if(result == -1) {
-    LOG_PRINT(LOG_DEBUG, "lock key: %s is not exists!", cache_key);
+  if(result == 1) {
+    LOG_PRINT(LOG_DEBUG, "lock key: %s exists!", cache_key);
     return 2;
   }
 

@@ -215,9 +215,24 @@ int ox_doc_get_db(ox_req_doc_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "ckey: %s", rsp_cache_key);
 
   LOG_PRINT(LOG_DEBUG, "_ox_doc_get_db() start processing ox request...");
+
+  char cache_key[CACHE_KEY_SIZE];
+  char cache_key_passwd[CACHE_KEY_SIZE];
+  snprintf(cache_key, CACHE_KEY_SIZE, "DOC_%s.lock", req->md5);
+  snprintf(cache_key_passwd, CACHE_KEY_SIZE, "DOC_%s.lock.%s", req->md5, req->passwd);
+  LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
+
   if(ox_db_exist(req->thr_arg, rsp_cache_key) == -1) {
     LOG_PRINT(LOG_DEBUG, "Doc [%s] is not existed.", rsp_cache_key);
     goto err;
+  }
+
+  if (req->acs != OX_OK) {
+    LOG_PRINT(LOG_DEBUG, "acs != OX_OK");
+    if (ox_db_exist(req->thr_arg, cache_key) == 1 && ox_db_exist(req->thr_arg, cache_key_passwd) == -1) {
+      LOG_PRINT(LOG_DEBUG, "lock exist and md5.lock.passwd is not exist.");
+      goto err;
+    }
   }
 
   LOG_PRINT(LOG_DEBUG, "Start to Find the Doc...");
@@ -314,8 +329,8 @@ int ox_doc_lock_db(ox_req_lock_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "original key: %s", cache_key);
 
   result = ox_db_exist(req->thr_arg, cache_key);
-  if(result == -1) {
-    LOG_PRINT(LOG_DEBUG, "lock key: %s is not exists!", cache_key);
+  if(result == 1) {
+    LOG_PRINT(LOG_DEBUG, "lock key: %s exists!", cache_key);
     return 2;
   }
 

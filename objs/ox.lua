@@ -28,7 +28,7 @@ etag = 1
 --上传接口的IP控制权限，将权限规则注释掉可以提升服务器处理能力，下同
 upload_rule   = 'allow 0.0.0.0; 192.168.11.0/24; 192.168.1.111'
 --下载接口的IP控制权限(此ip可绕开锁)
-download_rule = 'allow 0.0.0.0 192.168.1.111'
+download_rule = 'allow 192.168.1.111'
 --删除接口的IP控制权限
 --delete_rule = 'allow all'
 
@@ -82,7 +82,7 @@ quality = 75
 --value 2 is for memcached protocol storage like beansdb;
 --value 3 is for redis protocol storage like SSDB.
 --存储后端类型，1为本地存储, 3为redis协议后端如SSDB
-mode = 1
+mode = 3
 --save_new value: 0.don't save any 1.save all 2.only save types in lua script
 --新文件是否存储，0为不存储，1为全都存储，2为只存储lua脚本产生的新图
 save_new = 2
