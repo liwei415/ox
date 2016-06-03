@@ -18,10 +18,10 @@
 void ox_cbs_img_get(evhtp_request_t *req, void *arg);
 void ox_cbs_imgs_post(evhtp_request_t *req, void *arg);
 void ox_cbs_img_del(evhtp_request_t *req, void *arg);
-//void ox_cbs_imgs_del(evhtp_request_t *req, void *arg);
+void ox_cbs_imgs_del(evhtp_request_t *req, void *arg);
 void ox_cbs_img_lock(evhtp_request_t *req, void *arg);
-//void ox_cbs_imgs_lock(evhtp_request_t *req, void *arg);
+void ox_cbs_imgs_lock(evhtp_request_t *req, void *arg);
 void ox_cbs_img_unlock(evhtp_request_t *req, void *arg);
-//void ox_cbs_imgs_unlock(evhtp_request_t *req, void *arg);
+void ox_cbs_imgs_unlock(evhtp_request_t *req, void *arg);
 
 #endif

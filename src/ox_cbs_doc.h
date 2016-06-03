@@ -18,10 +18,10 @@
 void ox_cbs_doc_get(evhtp_request_t *req, void *arg);
 void ox_cbs_docs_post(evhtp_request_t *req, void *arg);
 void ox_cbs_doc_del(evhtp_request_t *req, void *arg);
-//void ox_cbs_docs_del(evhtp_request_t *req, void *arg);
+void ox_cbs_docs_del(evhtp_request_t *req, void *arg);
 void ox_cbs_doc_lock(evhtp_request_t *req, void *arg);
-//void ox_cbs_docs_lock(evhtp_request_t *req, void *arg);
+void ox_cbs_docs_lock(evhtp_request_t *req, void *arg);
 void ox_cbs_doc_unlock(evhtp_request_t *req, void *arg);
-//void ox_cbs_docs_unlock(evhtp_request_t *req, void *arg);
+void ox_cbs_docs_unlock(evhtp_request_t *req, void *arg);
 
 #endif

@@ -144,7 +144,7 @@ void ox_cbs_imgs_post(evhtp_request_t *req, void *arg)
   }
   evbuf_t *buf;
   buf = req->buffer_in;
-  buff = (char *)malloc(post_size);
+  buff = (char *)calloc(post_size + 1, sizeof(char));
   if(buff == NULL) {
     LOG_PRINT(LOG_DEBUG, "buff malloc failed!");
     LOG_PRINT(LOG_ERROR, "%s fail malloc buff", address);
@@ -669,6 +669,179 @@ void ox_cbs_img_del(evhtp_request_t *req, void *arg)
   free(ox_req);
 }
 
+
+void ox_cbs_imgs_del(evhtp_request_t *req, void *arg)
+{
+  char md5[33];
+  char *buff = NULL;
+  int post_size = 0;
+  int err_no = 0;
+
+  ox_req_img_t *ox_req = NULL;
+
+  evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
+  struct sockaddr *saddr = ev_conn->saddr;
+  struct sockaddr_in *ss = (struct sockaddr_in *)saddr;
+  char address[16];
+
+  int req_method = evhtp_request_get_method(req);
+  if(req_method >= 16) {
+    req_method = 16;
+  }
+
+  LOG_PRINT(LOG_DEBUG, "Method: %d", req_method);
+  if(strcmp(method_strmap[req_method], "POST") != 0) {
+    LOG_PRINT(LOG_DEBUG, "Request Method Not Support.");
+    err_no = 2;
+    goto err;
+  }
+
+  const char *xff_address = evhtp_header_find(req->headers_in, "X-Forwarded-For");
+  if(xff_address) {
+    inet_aton(xff_address, &ss->sin_addr);
+  }
+  else {
+    inet_aton("0.0.0.0", &ss->sin_addr);
+  }
+  strncpy(address, inet_ntoa(ss->sin_addr), 16);
+
+  if (vars.up_access != NULL) {
+    int acs = ox_access_inet(vars.up_access, ss->sin_addr.s_addr);
+    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
+    if(acs == OX_FORBIDDEN) {
+      LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address);
+      LOG_PRINT(LOG_INFO, "%s refuse post forbidden", address);
+      err_no = 3;
+      goto forbidden;
+    }
+    else if (acs == OX_ERROR) {
+      LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address);
+      LOG_PRINT(LOG_ERROR, "%s fail post access %s", address);
+      err_no = 0;
+      goto err;
+    }
+  }
+
+  const char *content_len = evhtp_header_find(req->headers_in, "Content-Length");
+  if(!content_len) {
+    LOG_PRINT(LOG_DEBUG, "Get Content-Length error!");
+    LOG_PRINT(LOG_ERROR, "%s fail post content-length", address);
+    err_no = 5;
+    goto err;
+  }
+  post_size = atoi(content_len);
+  if(post_size <= 0) {
+    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
+    err_no = 5;
+    goto err;
+  }
+  if(post_size > vars.max_size_img) {
+    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_ERROR, "%s fail post large", address);
+    err_no = 7;
+    goto err;
+  }
+  evbuf_t *buf;
+  buf = req->buffer_in;
+  buff = (char *)calloc(post_size + 1, sizeof(char));
+  if(buff == NULL) {
+    LOG_PRINT(LOG_DEBUG, "buff malloc failed!");
+    LOG_PRINT(LOG_ERROR, "%s fail malloc buff", address);
+    err_no = 0;
+    goto err;
+  }
+  int rmblen, evblen;
+  if(evbuffer_get_length(buf) <= 0) {
+    LOG_PRINT(LOG_DEBUG, "Empty Request!");
+    LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
+    err_no = 4;
+    goto err;
+  }
+  while((evblen = evbuffer_get_length(buf)) > 0) {
+    LOG_PRINT(LOG_DEBUG, "evblen = %d", evblen);
+    rmblen = evbuffer_remove(buf, buff, evblen);
+    LOG_PRINT(LOG_DEBUG, "rmblen = %d", rmblen);
+    if(rmblen < 0) {
+      LOG_PRINT(LOG_DEBUG, "evbuffer_remove failed!");
+      LOG_PRINT(LOG_ERROR, "%s fail post parse", address);
+      err_no = 4;
+      goto err;
+    }
+  }
+
+  evthr_t *thread = ox_cbs_get_request_thr(req);
+  thr_arg_t *thr_arg = (thr_arg_t *)evthr_get_aux(thread);
+
+  ox_req = (ox_req_img_t *)calloc(1, sizeof(ox_req_img_t));
+  ox_req->md5 = md5;
+  ox_req->thr_arg = thr_arg;
+
+  cJSON *root, *sub, *chd;
+  if((root = cJSON_Parse(buff)) == NULL) {
+    goto err;
+  }
+
+  int j_size = cJSON_GetArraySize(root);
+  if (j_size == 1) {
+    chd = cJSON_GetObjectItem(root, "md5");
+    if (chd == NULL) {
+      goto err;
+    }
+    ox_strlcpy(ox_req->md5, chd->valuestring, 33);
+    if (vars.mode == 1) {
+      ox_img_del(ox_req, req);
+    }
+    else {
+      ox_img_del_db(ox_req, req);
+    }
+  }
+  else {
+    int i;
+    for (i = 0; i < j_size; i++) {
+      sub = cJSON_GetArrayItem(root, i);
+
+      chd = cJSON_GetObjectItem(sub, "md5");
+      if (chd == NULL) {
+        goto err;
+      }
+      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
+
+      if (vars.mode == 1) {
+        ox_img_del(ox_req, req);
+      }
+      else {
+        ox_img_del_db(ox_req, req);
+      }
+    }
+  }
+  err_no = -1;
+
+  ox_cbs_jreturn(req, err_no, md5, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() DONE!===============");
+  goto done;
+
+ forbidden:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() FORBIDDEN!===============");
+  goto done;
+
+ err:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() ERROR!===============");
+
+ done:
+  free(buff);
+  cJSON_Delete(root);
+  free(ox_req);
+}
+
 void ox_cbs_img_lock(evhtp_request_t *req, void *arg)
 {
   char md5[35];
@@ -865,6 +1038,200 @@ void ox_cbs_img_lock(evhtp_request_t *req, void *arg)
   free(passwd);
 }
 
+void ox_cbs_imgs_lock(evhtp_request_t *req, void *arg)
+{
+  char md5[33];
+  char passwd[33];
+  char *buff = NULL;
+  int post_size = 0;
+  int err_no = 0;
+
+  ox_req_lock_t *ox_req = NULL;
+
+  evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
+  struct sockaddr *saddr = ev_conn->saddr;
+  struct sockaddr_in *ss = (struct sockaddr_in *)saddr;
+  char address[16];
+
+  int req_method = evhtp_request_get_method(req);
+  if(req_method >= 16) {
+    req_method = 16;
+  }
+
+  LOG_PRINT(LOG_DEBUG, "Method: %d", req_method);
+  if(strcmp(method_strmap[req_method], "POST") != 0) {
+    LOG_PRINT(LOG_DEBUG, "Request Method Not Support.");
+    err_no = 2;
+    goto err;
+  }
+
+  const char *xff_address = evhtp_header_find(req->headers_in, "X-Forwarded-For");
+  if(xff_address) {
+    inet_aton(xff_address, &ss->sin_addr);
+  }
+  else {
+    //    inet_aton("192.168.1.111", &ss->sin_addr);
+    inet_aton("0.0.0.0", &ss->sin_addr);
+  }
+  strncpy(address, inet_ntoa(ss->sin_addr), 16);
+
+  if (vars.up_access != NULL) {
+    int acs = ox_access_inet(vars.up_access, ss->sin_addr.s_addr);
+    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
+    if(acs == OX_FORBIDDEN) {
+      LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address);
+      LOG_PRINT(LOG_INFO, "%s refuse post forbidden", address);
+      err_no = 3;
+      goto forbidden;
+    }
+    else if (acs == OX_ERROR) {
+      LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address);
+      LOG_PRINT(LOG_ERROR, "%s fail post access %s", address);
+      err_no = 0;
+      goto err;
+    }
+  }
+
+  const char *content_len = evhtp_header_find(req->headers_in, "Content-Length");
+  if(!content_len) {
+    LOG_PRINT(LOG_DEBUG, "Get Content-Length error!");
+    LOG_PRINT(LOG_ERROR, "%s fail post content-length", address);
+    err_no = 5;
+    goto err;
+  }
+  post_size = atoi(content_len);
+  if(post_size <= 0) {
+    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
+    err_no = 5;
+    goto err;
+  }
+  if(post_size > vars.max_size_mov) {
+    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_ERROR, "%s fail post large", address);
+    err_no = 7;
+    goto err;
+  }
+  evbuf_t *buf;
+  buf = req->buffer_in;
+  buff = (char *)calloc(post_size + 1, sizeof(char));
+  if(buff == NULL) {
+    LOG_PRINT(LOG_DEBUG, "buff malloc failed!");
+    LOG_PRINT(LOG_ERROR, "%s fail malloc buff", address);
+    err_no = 0;
+    goto err;
+  }
+  int rmblen, evblen;
+  if(evbuffer_get_length(buf) <= 0) {
+    LOG_PRINT(LOG_DEBUG, "Empty Request!");
+    LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
+    err_no = 4;
+    goto err;
+  }
+  while((evblen = evbuffer_get_length(buf)) > 0) {
+    LOG_PRINT(LOG_DEBUG, "evblen = %d", evblen);
+    rmblen = evbuffer_remove(buf, buff, evblen);
+    LOG_PRINT(LOG_DEBUG, "rmblen = %d", rmblen);
+    if(rmblen < 0) {
+      LOG_PRINT(LOG_DEBUG, "evbuffer_remove failed!");
+      LOG_PRINT(LOG_ERROR, "%s fail post parse", address);
+      err_no = 4;
+      goto err;
+    }
+  }
+
+  evthr_t *thread = ox_cbs_get_request_thr(req);
+  thr_arg_t *thr_arg = (thr_arg_t *)evthr_get_aux(thread);
+
+  ox_req = (ox_req_lock_t *)calloc(1, sizeof(ox_req_lock_t));
+  ox_req->md5 = md5;
+  ox_req->md5 = passwd;
+  ox_req->thr_arg = thr_arg;
+
+  cJSON *root, *sub, *chd;
+  if((root = cJSON_Parse(buff)) == NULL) {
+    goto err;
+  }
+
+  int j_size = cJSON_GetArraySize(root);
+  LOG_PRINT(LOG_DEBUG, "~~~here1~~~+++%s____", buff);
+  LOG_PRINT(LOG_DEBUG, "~~~here2~~~+++%d____", j_size);
+  /* if (j_size == 1) { */
+    chd = cJSON_GetObjectItem(root, "md5");
+    if (chd == NULL) {
+      goto err;
+    }
+    ox_strlcpy(ox_req->md5, chd->valuestring, 33);
+    LOG_PRINT(LOG_DEBUG, "here3:%s____", ox_req->md5);
+
+    chd = cJSON_GetObjectItem(root, "passwd");
+    LOG_PRINT(LOG_DEBUG, "here4:___nothing to do!_");
+    if (chd == NULL) {
+      goto err;
+    }
+    ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
+    LOG_PRINT(LOG_DEBUG, "here4:%s____", ox_req->passwd);
+
+    if (vars.mode == 1) {
+      ox_img_lock(ox_req, req);
+    }
+    else {
+      ox_img_lock_db(ox_req, req);
+    }
+  /* } */
+  /* else { */
+  /*   int i; */
+  /*   for (i = 0; i < j_size; i++) { */
+  /*     sub = cJSON_GetArrayItem(root, i); */
+
+  /*     chd = cJSON_GetObjectItem(sub, "md5"); */
+  /*     if (chd == NULL) { */
+  /*       goto err; */
+  /*     } */
+  /*     ox_strlcpy(ox_req->md5, chd->valuestring, 33); */
+  /*     LOG_PRINT(LOG_DEBUG, "here5:%s____", ox_req->md5); */
+
+  /*     chd = cJSON_GetObjectItem(sub, "passwd"); */
+  /*     if (chd == NULL) { */
+  /*       goto err; */
+  /*     } */
+  /*     ox_strlcpy(ox_req->passwd, chd->valuestring, 33); */
+  /*     LOG_PRINT(LOG_DEBUG, "here6:%s____", ox_req->passwd); */
+  /*     if (vars.mode == 1) { */
+  /*       ox_img_lock(ox_req, req); */
+  /*     } */
+  /*     else { */
+  /*       ox_img_lock_db(ox_req, req); */
+  /*     } */
+  /*   } */
+  /* } */
+  err_no = -1;
+
+  ox_cbs_jreturn(req, err_no, md5, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() DONE!===============");
+  goto done;
+
+ forbidden:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() FORBIDDEN!===============");
+  goto done;
+
+ err:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() ERROR!===============");
+
+ done:
+  free(buff);
+  cJSON_Delete(root);
+  free(ox_req);
+}
+
 void ox_cbs_img_unlock(evhtp_request_t *req, void *arg)
 {
   char md5[35];
@@ -1059,4 +1426,178 @@ void ox_cbs_img_unlock(evhtp_request_t *req, void *arg)
  done:
   free(ox_req);
   free(passwd);
+}
+
+void ox_cbs_imgs_unlock(evhtp_request_t *req, void *arg)
+{
+  char md5[33];
+  char passwd[33];
+  char *buff = NULL;
+  int post_size = 0;
+  int err_no = 0;
+
+  ox_req_unlock_t *ox_req = NULL;
+
+  evhtp_connection_t *ev_conn = evhtp_request_get_connection(req);
+  struct sockaddr *saddr = ev_conn->saddr;
+  struct sockaddr_in *ss = (struct sockaddr_in *)saddr;
+  char address[16];
+
+  int req_method = evhtp_request_get_method(req);
+  if(req_method >= 16) {
+    req_method = 16;
+  }
+
+  LOG_PRINT(LOG_DEBUG, "Method: %d", req_method);
+  if(strcmp(method_strmap[req_method], "POST") != 0) {
+    LOG_PRINT(LOG_DEBUG, "Request Method Not Support.");
+    err_no = 2;
+    goto err;
+  }
+
+  const char *xff_address = evhtp_header_find(req->headers_in, "X-Forwarded-For");
+  if(xff_address) {
+    inet_aton(xff_address, &ss->sin_addr);
+  }
+  else {
+    //    inet_aton("192.168.1.111", &ss->sin_addr);
+    inet_aton("0.0.0.0", &ss->sin_addr);
+  }
+  strncpy(address, inet_ntoa(ss->sin_addr), 16);
+
+  if (vars.up_access != NULL) {
+    int acs = ox_access_inet(vars.up_access, ss->sin_addr.s_addr);
+    LOG_PRINT(LOG_DEBUG, "access check: %d", acs);
+    if(acs == OX_FORBIDDEN) {
+      LOG_PRINT(LOG_DEBUG, "check access: ip[%s] forbidden!", address);
+      LOG_PRINT(LOG_INFO, "%s refuse post forbidden", address);
+      err_no = 3;
+      goto forbidden;
+    }
+    else if (acs == OX_ERROR) {
+      LOG_PRINT(LOG_DEBUG, "check access: check ip[%s] failed!", address);
+      LOG_PRINT(LOG_ERROR, "%s fail post access %s", address);
+      err_no = 0;
+      goto err;
+    }
+  }
+
+  const char *content_len = evhtp_header_find(req->headers_in, "Content-Length");
+  if(!content_len) {
+    LOG_PRINT(LOG_DEBUG, "Get Content-Length error!");
+    LOG_PRINT(LOG_ERROR, "%s fail post content-length", address);
+    err_no = 5;
+    goto err;
+  }
+  post_size = atoi(content_len);
+  if(post_size <= 0) {
+    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
+    err_no = 5;
+    goto err;
+  }
+  if(post_size > vars.max_size_mov) {
+    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_ERROR, "%s fail post large", address);
+    err_no = 7;
+    goto err;
+  }
+  evbuf_t *buf;
+  buf = req->buffer_in;
+  buff = (char *)calloc(post_size + 1, sizeof(char));
+  if(buff == NULL) {
+    LOG_PRINT(LOG_DEBUG, "buff malloc failed!");
+    LOG_PRINT(LOG_ERROR, "%s fail malloc buff", address);
+    err_no = 0;
+    goto err;
+  }
+  int rmblen, evblen;
+  if(evbuffer_get_length(buf) <= 0) {
+    LOG_PRINT(LOG_DEBUG, "Empty Request!");
+    LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
+    err_no = 4;
+    goto err;
+  }
+  while((evblen = evbuffer_get_length(buf)) > 0) {
+    LOG_PRINT(LOG_DEBUG, "evblen = %d", evblen);
+    rmblen = evbuffer_remove(buf, buff, evblen);
+    LOG_PRINT(LOG_DEBUG, "rmblen = %d", rmblen);
+    if(rmblen < 0) {
+      LOG_PRINT(LOG_DEBUG, "evbuffer_remove failed!");
+      LOG_PRINT(LOG_ERROR, "%s fail post parse", address);
+      err_no = 4;
+      goto err;
+    }
+  }
+
+  evthr_t *thread = ox_cbs_get_request_thr(req);
+  thr_arg_t *thr_arg = (thr_arg_t *)evthr_get_aux(thread);
+
+  ox_req = (ox_req_unlock_t *)calloc(1, sizeof(ox_req_unlock_t));
+  ox_req->md5 = md5;
+  ox_req->passwd = passwd;
+  ox_req->thr_arg = thr_arg;
+
+  cJSON *root, *sub, *chd;
+  if((root = cJSON_Parse(buff)) == NULL) {
+    goto err;
+  }
+
+  int j_size = cJSON_GetArraySize(root);
+  if (j_size == 1) {
+    chd = cJSON_GetObjectItem(root, "md5");
+    ox_strlcpy(ox_req->md5, chd->valuestring, 33);
+
+    chd = cJSON_GetObjectItem(root, "passwd");
+    ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
+    if (vars.mode == 1) {
+      ox_img_unlock(ox_req, req);
+    }
+    else {
+      ox_img_unlock_db(ox_req, req);
+    }
+  }
+  else {
+    int i;
+    for (i = 0; i < j_size; i++) {
+      sub = cJSON_GetArrayItem(root, i);
+
+      chd = cJSON_GetObjectItem(sub, "md5");
+      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
+
+      chd = cJSON_GetObjectItem(root, "passwd");
+      ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
+      if (vars.mode == 1) {
+        ox_img_unlock(ox_req, req);
+      }
+      else {
+        ox_img_unlock_db(ox_req, req);
+      }
+    }
+  }
+  err_no = -1;
+
+  ox_cbs_jreturn(req, err_no, md5, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() DONE!===============");
+  goto done;
+
+ forbidden:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() FORBIDDEN!===============");
+  goto done;
+
+ err:
+  ox_cbs_jreturn(req, err_no, NULL, 0);
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
+  evhtp_send_reply(req, EVHTP_RES_OK);
+  LOG_PRINT(LOG_DEBUG, "============_img_del() ERROR!===============");
+
+ done:
+  free(buff);
+  cJSON_Delete(root);
+  free(ox_req);
 }
