@@ -12,7 +12,8 @@ static const char *post_error_list[] = {
   "Request url illegal.",
   "Image not existed.",
   "Delete resource failed.",
-  "Wrong input params."
+  "Wrong input params.",
+  "Wrong Json Node."
 };
 
 int ox_cbs_etag_set(evhtp_request_t *req, char *buff, size_t len)

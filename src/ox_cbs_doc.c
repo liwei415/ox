@@ -636,13 +636,13 @@ void ox_cbs_docs_del(evhtp_request_t *req, void *arg)
   }
   post_size = atoi(content_len);
   if(post_size <= 0) {
-    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_DEBUG, "Doc Size is Zero!");
     LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
     err_no = 5;
     goto err;
   }
   if(post_size > vars.max_size_doc) {
-    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_DEBUG, "Doc Size Too Large!");
     LOG_PRINT(LOG_ERROR, "%s fail post large", address);
     err_no = 7;
     goto err;
@@ -684,13 +684,16 @@ void ox_cbs_docs_del(evhtp_request_t *req, void *arg)
 
   cJSON *root, *sub, *chd;
   if((root = cJSON_Parse(buff)) == NULL) {
+    err_no = 11;
     goto err;
   }
 
-  int j_size = cJSON_GetArraySize(root);
-  if (j_size == 1) {
-    chd = cJSON_GetObjectItem(root, "md5");
+  int i, j_size = cJSON_GetArraySize(root);
+  for (i = 0; i < j_size; i++) {
+    sub = cJSON_GetArrayItem(root, i);
+    chd = cJSON_GetObjectItem(sub, "md5");
     if (chd == NULL) {
+      err_no = 12;
       goto err;
     }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
@@ -699,23 +702,6 @@ void ox_cbs_docs_del(evhtp_request_t *req, void *arg)
     }
     else {
       ox_doc_del_db(ox_req, req);
-    }
-  }
-  else {
-    int i;
-    for (i = 0; i < j_size; i++) {
-      sub = cJSON_GetArrayItem(root, i);
-      chd = cJSON_GetObjectItem(sub, "md5");
-      if (chd == NULL) {
-        goto err;
-      }
-      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
-      if (vars.mode == 1) {
-        ox_doc_del(ox_req, req);
-      }
-      else {
-        ox_doc_del_db(ox_req, req);
-      }
     }
   }
   err_no = -1;
@@ -1002,13 +988,13 @@ void ox_cbs_docs_lock(evhtp_request_t *req, void *arg)
   }
   post_size = atoi(content_len);
   if(post_size <= 0) {
-    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_DEBUG, "Doc Size is Zero!");
     LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
     err_no = 5;
     goto err;
   }
-  if(post_size > vars.max_size_mov) {
-    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+  if(post_size > vars.max_size_doc) {
+    LOG_PRINT(LOG_DEBUG, "Doc Size Too Large!");
     LOG_PRINT(LOG_ERROR, "%s fail post large", address);
     err_no = 7;
     goto err;
@@ -1046,44 +1032,37 @@ void ox_cbs_docs_lock(evhtp_request_t *req, void *arg)
 
   ox_req = (ox_req_lock_t *)calloc(1, sizeof(ox_req_lock_t));
   ox_req->md5 = md5;
-  ox_req->md5 = passwd;
+  ox_req->passwd = passwd;
   ox_req->thr_arg = thr_arg;
 
   cJSON *root, *sub, *chd;
   if((root = cJSON_Parse(buff)) == NULL) {
+    err_no = 11;
     goto err;
   }
 
-  int j_size = cJSON_GetArraySize(root);
-  if (j_size == 1) {
-    chd = cJSON_GetObjectItem(root, "md5");
+  int i, j_size = cJSON_GetArraySize(root);
+  for (i = 0; i < j_size; i++) {
+    sub = cJSON_GetArrayItem(root, i);
+
+    chd = cJSON_GetObjectItem(sub, "md5");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
 
-    chd = cJSON_GetObjectItem(root, "passwd");
+    chd = cJSON_GetObjectItem(sub, "passwd");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
     if (vars.mode == 1) {
       ox_doc_lock(ox_req, req);
     }
     else {
       ox_doc_lock_db(ox_req, req);
-    }
-  }
-  else {
-    int i;
-    for (i = 0; i < j_size; i++) {
-      sub = cJSON_GetArrayItem(root, i);
-
-      chd = cJSON_GetObjectItem(sub, "md5");
-      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
-
-      chd = cJSON_GetObjectItem(root, "passwd");
-      ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
-      if (vars.mode == 1) {
-        ox_doc_lock(ox_req, req);
-      }
-      else {
-        ox_doc_lock_db(ox_req, req);
-      }
     }
   }
   err_no = -1;
@@ -1330,7 +1309,7 @@ void ox_cbs_docs_unlock(evhtp_request_t *req, void *arg)
   }
 
   LOG_PRINT(LOG_DEBUG, "Method: %d", req_method);
-  if(strcmp(method_strmap[req_method], "GET") != 0) {
+  if(strcmp(method_strmap[req_method], "POST") != 0) {
     LOG_PRINT(LOG_DEBUG, "Request Method Not Support.");
     err_no = 2;
     goto err;
@@ -1372,13 +1351,13 @@ void ox_cbs_docs_unlock(evhtp_request_t *req, void *arg)
   }
   post_size = atoi(content_len);
   if(post_size <= 0) {
-    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_DEBUG, "Doc Size is Zero!");
     LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
     err_no = 5;
     goto err;
   }
-  if(post_size > vars.max_size_mov) {
-    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+  if(post_size > vars.max_size_doc) {
+    LOG_PRINT(LOG_DEBUG, "Doc Size Too Large!");
     LOG_PRINT(LOG_ERROR, "%s fail post large", address);
     err_no = 7;
     goto err;
@@ -1421,39 +1400,32 @@ void ox_cbs_docs_unlock(evhtp_request_t *req, void *arg)
 
   cJSON *root, *sub, *chd;
   if((root = cJSON_Parse(buff)) == NULL) {
+    err_no = 11;
     goto err;
   }
 
-  int j_size = cJSON_GetArraySize(root);
-  if (j_size == 1) {
-    chd = cJSON_GetObjectItem(root, "md5");
+  int i, j_size = cJSON_GetArraySize(root);
+  for (i = 0; i < j_size; i++) {
+    sub = cJSON_GetArrayItem(root, i);
+
+    chd = cJSON_GetObjectItem(sub, "md5");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
 
-    chd = cJSON_GetObjectItem(root, "passwd");
+    chd = cJSON_GetObjectItem(sub, "passwd");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
     if (vars.mode == 1) {
       ox_doc_unlock(ox_req, req);
     }
     else {
       ox_doc_unlock_db(ox_req, req);
-    }
-  }
-  else {
-    int i;
-    for (i = 0; i < j_size; i++) {
-      sub = cJSON_GetArrayItem(root, i);
-
-      chd = cJSON_GetObjectItem(sub, "md5");
-      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
-
-      chd = cJSON_GetObjectItem(root, "passwd");
-      ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
-      if (vars.mode == 1) {
-        ox_doc_unlock(ox_req, req);
-      }
-      else {
-        ox_doc_unlock_db(ox_req, req);
-      }
     }
   }
   err_no = -1;

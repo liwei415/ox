@@ -371,7 +371,7 @@ void ox_cbs_mov_get(evhtp_request_t *req, void *arg)
 
   //加锁无权限
   if(get_mov_rst == -2) {
-    LOG_PRINT(LOG_DEBUG, "Image[MD5: %s] locked!", ox_req->md5);
+    LOG_PRINT(LOG_DEBUG, "Mov[MD5: %s] locked!", ox_req->md5);
     goto err;
   }
 
@@ -637,13 +637,13 @@ void ox_cbs_movs_del(evhtp_request_t *req, void *arg)
   }
   post_size = atoi(content_len);
   if(post_size <= 0) {
-    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_DEBUG, "Mov Size is Zero!");
     LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
     err_no = 5;
     goto err;
   }
   if(post_size > vars.max_size_mov) {
-    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_DEBUG, "Mov Size Too Large!");
     LOG_PRINT(LOG_ERROR, "%s fail post large", address);
     err_no = 7;
     goto err;
@@ -685,13 +685,16 @@ void ox_cbs_movs_del(evhtp_request_t *req, void *arg)
 
   cJSON *root, *sub, *chd;
   if((root = cJSON_Parse(buff)) == NULL) {
+    err_no = 11;
     goto err;
   }
 
-  int j_size = cJSON_GetArraySize(root);
-  if (j_size == 1) {
-    chd = cJSON_GetObjectItem(root, "md5");
+  int i, j_size = cJSON_GetArraySize(root);
+  for (i = 0; i < j_size; i++) {
+    sub = cJSON_GetArrayItem(root, i);
+    chd = cJSON_GetObjectItem(sub, "md5");
     if (chd == NULL) {
+      err_no = 12;
       goto err;
     }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
@@ -700,23 +703,6 @@ void ox_cbs_movs_del(evhtp_request_t *req, void *arg)
     }
     else {
       ox_mov_del_db(ox_req, req);
-    }
-  }
-  else {
-    int i;
-    for (i = 0; i < j_size; i++) {
-      sub = cJSON_GetArrayItem(root, i);
-      chd = cJSON_GetObjectItem(sub, "md5");
-      if (chd == NULL) {
-        goto err;
-      }
-      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
-      if (vars.mode == 1) {
-        ox_mov_del(ox_req, req);
-      }
-      else {
-        ox_mov_del_db(ox_req, req);
-      }
     }
   }
   err_no = -1;
@@ -1003,13 +989,13 @@ void ox_cbs_movs_lock(evhtp_request_t *req, void *arg)
   }
   post_size = atoi(content_len);
   if(post_size <= 0) {
-    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_DEBUG, "Mov Size is Zero!");
     LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
     err_no = 5;
     goto err;
   }
   if(post_size > vars.max_size_mov) {
-    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_DEBUG, "Mov Size Too Large!");
     LOG_PRINT(LOG_ERROR, "%s fail post large", address);
     err_no = 7;
     goto err;
@@ -1047,44 +1033,37 @@ void ox_cbs_movs_lock(evhtp_request_t *req, void *arg)
 
   ox_req = (ox_req_lock_t *)calloc(1, sizeof(ox_req_lock_t));
   ox_req->md5 = md5;
-  ox_req->md5 = passwd;
+  ox_req->passwd = passwd;
   ox_req->thr_arg = thr_arg;
 
   cJSON *root, *sub, *chd;
   if((root = cJSON_Parse(buff)) == NULL) {
+    err_no = 11;
     goto err;
   }
 
-  int j_size = cJSON_GetArraySize(root);
-  if (j_size == 1) {
-    chd = cJSON_GetObjectItem(root, "md5");
+  int i, j_size = cJSON_GetArraySize(root);
+  for (i = 0; i < j_size; i++) {
+    sub = cJSON_GetArrayItem(root, i);
+
+    chd = cJSON_GetObjectItem(sub, "md5");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
 
-    chd = cJSON_GetObjectItem(root, "passwd");
+    chd = cJSON_GetObjectItem(sub, "passwd");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
     if (vars.mode == 1) {
       ox_mov_lock(ox_req, req);
     }
     else {
       ox_mov_lock_db(ox_req, req);
-    }
-  }
-  else {
-    int i;
-    for (i = 0; i < j_size; i++) {
-      sub = cJSON_GetArrayItem(root, i);
-
-      chd = cJSON_GetObjectItem(sub, "md5");
-      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
-
-      chd = cJSON_GetObjectItem(root, "passwd");
-      ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
-      if (vars.mode == 1) {
-        ox_mov_lock(ox_req, req);
-      }
-      else {
-        ox_mov_lock_db(ox_req, req);
-      }
     }
   }
   err_no = -1;
@@ -1373,13 +1352,13 @@ void ox_cbs_movs_unlock(evhtp_request_t *req, void *arg)
   }
   post_size = atoi(content_len);
   if(post_size <= 0) {
-    LOG_PRINT(LOG_DEBUG, "Image Size is Zero!");
+    LOG_PRINT(LOG_DEBUG, "Mov Size is Zero!");
     LOG_PRINT(LOG_ERROR, "%s fail post empty", address);
     err_no = 5;
     goto err;
   }
   if(post_size > vars.max_size_mov) {
-    LOG_PRINT(LOG_DEBUG, "Image Size Too Large!");
+    LOG_PRINT(LOG_DEBUG, "Mov Size Too Large!");
     LOG_PRINT(LOG_ERROR, "%s fail post large", address);
     err_no = 7;
     goto err;
@@ -1422,39 +1401,32 @@ void ox_cbs_movs_unlock(evhtp_request_t *req, void *arg)
 
   cJSON *root, *sub, *chd;
   if((root = cJSON_Parse(buff)) == NULL) {
+    err_no = 11;
     goto err;
   }
 
-  int j_size = cJSON_GetArraySize(root);
-  if (j_size == 1) {
-    chd = cJSON_GetObjectItem(root, "md5");
+  int i, j_size = cJSON_GetArraySize(root);
+  for (i = 0; i < j_size; i++) {
+    sub = cJSON_GetArrayItem(root, i);
+
+    chd = cJSON_GetObjectItem(sub, "md5");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
 
-    chd = cJSON_GetObjectItem(root, "passwd");
+    chd = cJSON_GetObjectItem(sub, "passwd");
+    if (chd == NULL) {
+      err_no = 12;
+      goto err;
+    }
     ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
     if (vars.mode == 1) {
       ox_mov_unlock(ox_req, req);
     }
     else {
       ox_mov_unlock_db(ox_req, req);
-    }
-  }
-  else {
-    int i;
-    for (i = 0; i < j_size; i++) {
-      sub = cJSON_GetArrayItem(root, i);
-
-      chd = cJSON_GetObjectItem(sub, "md5");
-      ox_strlcpy(ox_req->md5, chd->valuestring, 33);
-
-      chd = cJSON_GetObjectItem(root, "passwd");
-      ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
-      if (vars.mode == 1) {
-        ox_mov_unlock(ox_req, req);
-      }
-      else {
-        ox_mov_unlock_db(ox_req, req);
-      }
     }
   }
   err_no = -1;
