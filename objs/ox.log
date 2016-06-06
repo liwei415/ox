@@ -786,3 +786,14 @@
 2016/06/06 18:05:40:878564 [DEBUG] Method: 2
 2016/06/06 18:05:40:878630 [DEBUG] Request Method Not Support.
 2016/06/06 18:05:40:878666 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/06 19:42:44:557715 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/06 19:42:44:557795 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/06 19:42:44:557815 [DEBUG] Paths Init Finished.
+2016/06/06 19:42:44:557831 [DEBUG] Begin to Start Httpd Server...
+2016/06/06 19:42:44:557847 [INFO] ox started
+2016/06/06 19:42:44:558044 [DEBUG] thr_args alloc
+2016/06/06 19:42:44:558090 [DEBUG] luaL_newstate alloc
+2016/06/06 19:42:44:558627 [DEBUG] ox_lua: ox using lua script.
+2016/06/06 19:42:44:563107 [DEBUG] thr_args alloc
+2016/06/06 19:42:44:563168 [DEBUG] luaL_newstate alloc
+2016/06/06 19:42:44:563628 [DEBUG] ox_lua: ox using lua script.

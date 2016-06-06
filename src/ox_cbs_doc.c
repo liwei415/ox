@@ -273,6 +273,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
     }
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Access-Control-Allow-Origin", "*", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
     LOG_PRINT(LOG_DEBUG, "============_doc_get() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
@@ -283,6 +284,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
     LOG_PRINT(LOG_DEBUG, "favicon.ico Request, Denied.");
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Access-Control-Allow-Origin", "*", 0, 0));
     ox_cbs_headers_add(req, vars.headers);
     evhtp_send_reply(req, EVHTP_RES_OK);
     goto done;
@@ -382,6 +384,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   //todo libmagic处理mime
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "application/octet-stream", 0, 0));
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Disposition", fname, 0, 0));
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Access-Control-Allow-Origin", "*", 0, 0));
 
   ox_cbs_headers_add(req, vars.headers);
   evhtp_send_reply(req, EVHTP_RES_OK);
@@ -393,6 +396,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   evbuffer_add_printf(req->buffer_out, "<html><body><h1>403 Forbidden!</h1></body></html>");
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Access-Control-Allow-Origin", "*", 0, 0));
   evhtp_send_reply(req, EVHTP_RES_FORBIDDEN);
   LOG_PRINT(LOG_DEBUG, "============ox_cbs_get() FORBIDDEN!===============");
   goto done;
@@ -401,6 +405,7 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
   evbuffer_add_printf(req->buffer_out, "<html><body><h1>404 Not Found!</h1></body></html>");
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
+  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Access-Control-Allow-Origin", "*", 0, 0));
   evhtp_send_reply(req, EVHTP_RES_NOTFOUND);
   LOG_PRINT(LOG_DEBUG, "============ox_cbs_get() ERROR!===============");
 
