@@ -695,7 +695,7 @@ void ox_cbs_movs_del(evhtp_request_t *req, void *arg)
     chd = cJSON_GetObjectItem(sub, "md5");
     if (chd == NULL) {
       err_no = 12;
-      goto err;
+      goto jerr;
     }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
     if (vars.mode == 1) {
@@ -711,7 +711,7 @@ void ox_cbs_movs_del(evhtp_request_t *req, void *arg)
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_mov_del() DONE!===============");
-  goto done;
+  goto jdone;
 
  forbidden:
   ox_cbs_jreturn(req, err_no, NULL, 0);
@@ -720,15 +720,21 @@ void ox_cbs_movs_del(evhtp_request_t *req, void *arg)
   LOG_PRINT(LOG_DEBUG, "============_mov_del() FORBIDDEN!===============");
   goto done;
 
+ jerr:
+  cJSON_Delete(root);
+
  err:
   ox_cbs_jreturn(req, err_no, NULL, 0);
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_mov_del() ERROR!===============");
+  goto done;
+
+ jdone:
+  cJSON_Delete(root);
 
  done:
   free(buff);
-  cJSON_Delete(root);
   free(ox_req);
 }
 
@@ -1049,14 +1055,14 @@ void ox_cbs_movs_lock(evhtp_request_t *req, void *arg)
     chd = cJSON_GetObjectItem(sub, "md5");
     if (chd == NULL) {
       err_no = 12;
-      goto err;
+      goto jerr;
     }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
 
     chd = cJSON_GetObjectItem(sub, "passwd");
     if (chd == NULL) {
       err_no = 12;
-      goto err;
+      goto jerr;
     }
     ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
     if (vars.mode == 1) {
@@ -1072,7 +1078,7 @@ void ox_cbs_movs_lock(evhtp_request_t *req, void *arg)
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_mov_lock() DONE!===============");
-  goto done;
+  goto jdone;
 
  forbidden:
   ox_cbs_jreturn(req, err_no, NULL, 0);
@@ -1081,15 +1087,21 @@ void ox_cbs_movs_lock(evhtp_request_t *req, void *arg)
   LOG_PRINT(LOG_DEBUG, "============_mov_lock() FORBIDDEN!===============");
   goto done;
 
+ jerr:
+  cJSON_Delete(root);
+
  err:
   ox_cbs_jreturn(req, err_no, NULL, 0);
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_mov_lock() ERROR!===============");
+  goto done;
+
+ jdone:
+  cJSON_Delete(root);
 
  done:
   free(buff);
-  cJSON_Delete(root);
   free(ox_req);
 }
 
@@ -1412,14 +1424,14 @@ void ox_cbs_movs_unlock(evhtp_request_t *req, void *arg)
     chd = cJSON_GetObjectItem(sub, "md5");
     if (chd == NULL) {
       err_no = 12;
-      goto err;
+      goto jerr;
     }
     ox_strlcpy(ox_req->md5, chd->valuestring, 33);
 
     chd = cJSON_GetObjectItem(sub, "passwd");
     if (chd == NULL) {
       err_no = 12;
-      goto err;
+      goto jerr;
     }
     ox_strlcpy(ox_req->passwd, chd->valuestring, 33);
     if (vars.mode == 1) {
@@ -1435,7 +1447,7 @@ void ox_cbs_movs_unlock(evhtp_request_t *req, void *arg)
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_mov_del() DONE!===============");
-  goto done;
+  goto jdone;
 
  forbidden:
   ox_cbs_jreturn(req, err_no, NULL, 0);
@@ -1444,14 +1456,20 @@ void ox_cbs_movs_unlock(evhtp_request_t *req, void *arg)
   LOG_PRINT(LOG_DEBUG, "============_mov_del() FORBIDDEN!===============");
   goto done;
 
+ jerr:
+  cJSON_Delete(root);
+
  err:
   ox_cbs_jreturn(req, err_no, NULL, 0);
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
   evhtp_send_reply(req, EVHTP_RES_OK);
   LOG_PRINT(LOG_DEBUG, "============_mov_del() ERROR!===============");
+  goto done;
+
+ jdone:
+  cJSON_Delete(root);
 
  done:
   free(buff);
-  cJSON_Delete(root);
   free(ox_req);
 }

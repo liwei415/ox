@@ -734,3 +734,55 @@
 2016/06/04 00:15:48:312209 [DEBUG] Path[/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa/lock.liweiliwei] is Not Existed!
 2016/06/04 00:15:48:312259 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"26a824a7647ebe0d4815ea0ae4d135fa","size":0}}
 2016/06/04 00:15:48:312321 [DEBUG] ============_img_del() DONE!===============
+2016/06/06 18:00:45:707816 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/06 18:00:45:707943 [DEBUG] Path[/home/d/my_project/ox/objs/img] is Not Existed!
+2016/06/06 18:00:45:708041 [DEBUG] Paths Init Finished.
+2016/06/06 18:00:45:708073 [DEBUG] Begin to Start Httpd Server...
+2016/06/06 18:00:45:708098 [INFO] ox started
+2016/06/06 18:00:45:708365 [DEBUG] thr_args alloc
+2016/06/06 18:00:45:708431 [DEBUG] luaL_newstate alloc
+2016/06/06 18:00:45:709316 [DEBUG] ox_lua: ox using lua script.
+2016/06/06 18:00:45:713423 [DEBUG] thr_args alloc
+2016/06/06 18:00:45:713477 [DEBUG] luaL_newstate alloc
+2016/06/06 18:00:45:714328 [DEBUG] ox_lua: ox using lua script.
+2016/06/06 18:00:59:918485 [DEBUG] Method: 0
+2016/06/06 18:00:59:918569 [DEBUG] rules: 0x25b36a0
+2016/06/06 18:00:59:918589 [DEBUG] addr: 0
+2016/06/06 18:00:59:918605 [DEBUG] rules->value->addr: 1862379712
+2016/06/06 18:00:59:918619 [DEBUG] rules->value->mask: -1
+2016/06/06 18:00:59:918632 [DEBUG] access check: -2
+2016/06/06 18:00:59:918650 [DEBUG] Got a GET request for </img/lock>
+2016/06/06 18:00:59:918665 [DEBUG] md5 of request is <lock>
+2016/06/06 18:00:59:918678 [DEBUG] Url is Not a OX Request.
+2016/06/06 18:00:59:918693 [INFO] 0.0.0.0 refuse url illegal
+2016/06/06 18:00:59:918725 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/06 18:01:05:258844 [DEBUG] Method: 0
+2016/06/06 18:01:05:258932 [DEBUG] Request Method Not Support.
+2016/06/06 18:01:05:258992 [DEBUG] post_error_list[2]: Request method error.
+2016/06/06 18:01:05:259038 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":2,"message":"Request method error."}}
+2016/06/06 18:01:05:259103 [DEBUG] ============_img_del() ERROR!===============
+2016/06/06 18:04:57:467112 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/06 18:04:57:467189 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/06 18:04:57:467207 [DEBUG] Paths Init Finished.
+2016/06/06 18:04:57:467221 [DEBUG] Begin to Start Httpd Server...
+2016/06/06 18:04:57:467235 [INFO] ox started
+2016/06/06 18:04:57:467417 [DEBUG] thr_args alloc
+2016/06/06 18:04:57:467458 [DEBUG] luaL_newstate alloc
+2016/06/06 18:04:57:467934 [DEBUG] ox_lua: ox using lua script.
+2016/06/06 18:04:57:472474 [DEBUG] thr_args alloc
+2016/06/06 18:04:57:472522 [DEBUG] luaL_newstate alloc
+2016/06/06 18:04:57:472987 [DEBUG] ox_lua: ox using lua script.
+2016/06/06 18:05:12:082838 [DEBUG] Method: 0
+2016/06/06 18:05:12:082906 [DEBUG] rules: 0x8a96a0
+2016/06/06 18:05:12:082928 [DEBUG] addr: 0
+2016/06/06 18:05:12:082944 [DEBUG] rules->value->addr: 1862379712
+2016/06/06 18:05:12:082958 [DEBUG] rules->value->mask: -1
+2016/06/06 18:05:12:082972 [DEBUG] access check: -2
+2016/06/06 18:05:12:082990 [DEBUG] Got a GET request for </img/lock>
+2016/06/06 18:05:12:083004 [DEBUG] md5 of request is <lock>
+2016/06/06 18:05:12:083018 [DEBUG] Url is Not a OX Request.
+2016/06/06 18:05:12:083033 [INFO] 0.0.0.0 refuse url illegal
+2016/06/06 18:05:12:083058 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/06 18:05:40:878564 [DEBUG] Method: 2
+2016/06/06 18:05:40:878630 [DEBUG] Request Method Not Support.
+2016/06/06 18:05:40:878666 [DEBUG] ============ox_cbs_get() ERROR!===============
