@@ -1,5 +1,5 @@
 ## Overview
-OX is a image/file/video server, written by pure C.
+OX is an image/file/video server, written by pure C.
 
 ## Required Dependencies
 * [libevhtp](https://github.com/ellzey/libevhtp/)
@@ -49,7 +49,7 @@ OX is a image/file/video server, written by pure C.
 
 
 ## Log
-+++++++++++++++++++++++++++++++++20160603 更新日志++++++++++++++++++++++++++++++++++++++  
++++++++++++++++++++++++++++++++++20160606 更新日志++++++++++++++++++++++++++++++++++++++  
 * bugfix cJSON_Delete();
 
 +++++++++++++++++++++++++++++++++20160603 更新日志++++++++++++++++++++++++++++++++++++++  
