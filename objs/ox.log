@@ -797,3 +797,322 @@
 2016/06/06 19:42:44:563107 [DEBUG] thr_args alloc
 2016/06/06 19:42:44:563168 [DEBUG] luaL_newstate alloc
 2016/06/06 19:42:44:563628 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:56:29:854064 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/07 11:56:29:854208 [DEBUG] Path[/home/d/my_project/ox/objs/img] is Not Existed!
+2016/06/07 11:56:29:854322 [DEBUG] Paths Init Finished.
+2016/06/07 11:56:29:854360 [DEBUG] Begin to Start Httpd Server...
+2016/06/07 11:56:29:854396 [INFO] ox started
+2016/06/07 11:56:29:854855 [DEBUG] thr_args alloc
+2016/06/07 11:56:29:854986 [DEBUG] luaL_newstate alloc
+2016/06/07 11:56:29:856034 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:56:29:859920 [DEBUG] thr_args alloc
+2016/06/07 11:56:29:859990 [DEBUG] luaL_newstate alloc
+2016/06/07 11:56:29:860805 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:56:55:626946 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/07 11:56:55:627026 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/07 11:56:55:627046 [DEBUG] Paths Init Finished.
+2016/06/07 11:56:55:627063 [DEBUG] Begin to Start Httpd Server...
+2016/06/07 11:56:55:627080 [INFO] ox started
+2016/06/07 11:56:55:627295 [DEBUG] thr_args alloc
+2016/06/07 11:56:55:627340 [DEBUG] luaL_newstate alloc
+2016/06/07 11:56:55:627914 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:56:55:632378 [DEBUG] thr_args alloc
+2016/06/07 11:56:55:632426 [DEBUG] luaL_newstate alloc
+2016/06/07 11:56:55:632958 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:57:19:370161 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/07 11:57:19:370324 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/07 11:57:19:370363 [DEBUG] Paths Init Finished.
+2016/06/07 11:57:19:370392 [DEBUG] Begin to Start Httpd Server...
+2016/06/07 11:57:19:370422 [INFO] ox started
+2016/06/07 11:57:19:370787 [DEBUG] thr_args alloc
+2016/06/07 11:57:19:370897 [DEBUG] luaL_newstate alloc
+2016/06/07 11:57:19:372320 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:57:19:376084 [DEBUG] thr_args alloc
+2016/06/07 11:57:19:376202 [DEBUG] luaL_newstate alloc
+2016/06/07 11:57:19:377408 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:58:02:360732 [DEBUG] Method: 2
+2016/06/07 11:58:02:360865 [DEBUG] evblen = 91405
+2016/06/07 11:58:02:360949 [DEBUG] rmblen = 91405
+2016/06/07 11:58:02:362401 [DEBUG] Begin to Save Image...
+2016/06/07 11:58:02:362480 [DEBUG] Begin to Caculate MD5...
+2016/06/07 11:58:02:363880 [DEBUG] md5: 54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 11:58:02:363945 [DEBUG] save_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 11:58:02:364001 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is Not Existed!
+2016/06/07 11:58:02:364195 [DEBUG] save_path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] Create Finish.
+2016/06/07 11:58:02:364256 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 11:58:02:364305 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0] is Not Existed!
+2016/06/07 11:58:02:364332 [DEBUG] Start to Storage the New Image...
+2016/06/07 11:58:02:364518 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0] Write Successfully!
+2016/06/07 11:58:02:364582 [INFO] 0.0.0.0 succ post pic:54f1d4fdfa470264890adaf27ea1c82a size:91405
+2016/06/07 11:58:02:364648 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"54f1d4fdfa470264890adaf27ea1c82a","size":91405}}
+2016/06/07 11:58:02:364708 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/07 11:58:19:940576 [DEBUG] Method: 0
+2016/06/07 11:58:19:940667 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 11:58:19:940711 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 11:58:19:940745 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 11:58:19:940778 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 11:58:19:940810 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 11:58:19:940838 [DEBUG] acs != OX_OK
+2016/06/07 11:58:19:940872 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 11:58:19:940906 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:0:0:1:0:-1:-1:0:75:jpg
+2016/06/07 11:58:19:940931 [DEBUG] Start to Find the Image...
+2016/06/07 11:58:19:940955 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 11:58:19:940980 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/07 11:58:20:118033 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 11:58:20:128892 [DEBUG] image size = 91405
+2016/06/07 11:58:20:139389 [DEBUG] wi_set_quality(im, 75)
+2016/06/07 11:58:20:139446 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 11:58:20:139482 [DEBUG] convert(im, req) 1
+2016/06/07 11:58:20:148561 [DEBUG] Image[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg] is Not Existed. Begin to Save it.
+2016/06/07 11:58:20:148615 [DEBUG] Start to Storage the New Image...
+2016/06/07 11:58:20:148715 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg] Write Successfully!
+2016/06/07 11:58:20:148737 [DEBUG] Begin to Caculate MD5...
+2016/06/07 11:58:20:149282 [DEBUG] md5: 39f79dabdd3416750abdf10d889d6864
+2016/06/07 11:58:20:149320 [DEBUG] If-None-Match: (null)
+2016/06/07 11:58:20:149643 [DEBUG] get buffer length: 85011
+2016/06/07 11:58:20:149664 [DEBUG] Got the File!
+2016/06/07 11:58:20:149680 [DEBUG] headers: 1
+2016/06/07 11:58:20:149708 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:85011
+2016/06/07 11:58:20:149726 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/07 11:59:21:855009 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/07 11:59:21:855091 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/07 11:59:21:855111 [DEBUG] Paths Init Finished.
+2016/06/07 11:59:21:855128 [DEBUG] Begin to Start Httpd Server...
+2016/06/07 11:59:21:855143 [INFO] ox started
+2016/06/07 11:59:21:855365 [DEBUG] thr_args alloc
+2016/06/07 11:59:21:855411 [DEBUG] luaL_newstate alloc
+2016/06/07 11:59:21:855933 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:59:21:860594 [DEBUG] thr_args alloc
+2016/06/07 11:59:21:860653 [DEBUG] luaL_newstate alloc
+2016/06/07 11:59:21:861183 [DEBUG] ox_lua: ox using lua script.
+2016/06/07 11:59:46:752020 [DEBUG] Method: 0
+2016/06/07 11:59:46:752103 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 11:59:46:752131 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 11:59:46:752153 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 11:59:46:752174 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 11:59:46:752194 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 11:59:46:752210 [DEBUG] acs != OX_OK
+2016/06/07 11:59:46:752228 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 11:59:46:752247 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:0:0:1:0:-1:-1:0:75:jpg
+2016/06/07 11:59:46:752263 [DEBUG] Start to Find the Image...
+2016/06/07 11:59:46:752280 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 11:59:46:752296 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/07 11:59:46:752446 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 11:59:46:759894 [DEBUG] image size = 91405
+2016/06/07 11:59:46:770142 [DEBUG] wi_set_quality(im, 75)
+2016/06/07 11:59:46:770198 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 11:59:46:770231 [DEBUG] convert(im, req) 1
+2016/06/07 11:59:46:779382 [DEBUG] Image[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg] is Not Existed. Begin to Save it.
+2016/06/07 11:59:46:779441 [DEBUG] Start to Storage the New Image...
+2016/06/07 11:59:46:779554 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg] Write Successfully!
+2016/06/07 11:59:46:779583 [DEBUG] Begin to Caculate MD5...
+2016/06/07 11:59:46:780054 [DEBUG] md5: 39f79dabdd3416750abdf10d889d6864
+2016/06/07 11:59:46:780073 [DEBUG] If-None-Match: 39f79dabdd3416750abdf10d889d6864
+2016/06/07 11:59:46:780274 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/07 11:59:46:780295 [INFO] 0.0.0.0 succ 304 pic:54f1d4fdfa470264890adaf27ea1c82a w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/07 11:59:47:527854 [DEBUG] Method: 0
+2016/06/07 11:59:47:527978 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 11:59:47:528021 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 11:59:47:528059 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 11:59:47:528099 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 11:59:47:528139 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 11:59:47:528173 [DEBUG] acs != OX_OK
+2016/06/07 11:59:47:528211 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 11:59:47:528268 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:0:0:1:0:-1:-1:0:75:jpg
+2016/06/07 11:59:47:528303 [DEBUG] Start to Find the Image...
+2016/06/07 11:59:47:528337 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 11:59:47:528374 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/07 11:59:47:528430 [DEBUG] img_size = 85011
+2016/06/07 11:59:47:528563 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/07 11:59:47:528605 [DEBUG] Begin to Caculate MD5...
+2016/06/07 11:59:47:529609 [DEBUG] md5: 39f79dabdd3416750abdf10d889d6864
+2016/06/07 11:59:47:529649 [DEBUG] If-None-Match: 39f79dabdd3416750abdf10d889d6864
+2016/06/07 11:59:47:529683 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/07 11:59:47:529714 [INFO] 0.0.0.0 succ 304 pic:54f1d4fdfa470264890adaf27ea1c82a w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/07 12:00:44:015282 [DEBUG] Method: 0
+2016/06/07 12:00:44:015428 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:00:44:015518 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:00:44:015599 [DEBUG] fmt = jpg
+2016/06/07 12:00:44:015690 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 12:00:44:015763 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 12:00:44:015829 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 12:00:44:015890 [DEBUG] acs != OX_OK
+2016/06/07 12:00:44:015952 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 12:00:44:016022 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:0:0:1:0:0:0:0:85:jpg
+2016/06/07 12:00:44:016084 [DEBUG] Start to Find the Image...
+2016/06/07 12:00:44:016142 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 12:00:44:016203 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_0*0_r0_q85.jpg
+2016/06/07 12:00:44:016321 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 12:00:44:028114 [DEBUG] image size = 91405
+2016/06/07 12:00:44:044804 [DEBUG] wi_set_quality(im, 85)
+2016/06/07 12:00:44:044882 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 12:00:44:044916 [DEBUG] convert(im, req) 1
+2016/06/07 12:00:44:056486 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0_p1_g0_0*0_r0_q85.jpg] Needn't to Storage.
+2016/06/07 12:00:44:056556 [DEBUG] Begin to Caculate MD5...
+2016/06/07 12:00:44:057200 [DEBUG] md5: 39f79dabdd3416750abdf10d889d6864
+2016/06/07 12:00:44:057227 [DEBUG] If-None-Match: (null)
+2016/06/07 12:00:44:057304 [DEBUG] get buffer length: 85011
+2016/06/07 12:00:44:057331 [DEBUG] Got the File!
+2016/06/07 12:00:44:057353 [DEBUG] headers: 1
+2016/06/07 12:00:44:057391 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:0 h:0 p:1 g:0 x:0 y:0 r:0 q:85 f:jpg size:85011
+2016/06/07 12:00:44:057415 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/07 12:00:50:469334 [DEBUG] Method: 0
+2016/06/07 12:00:50:469411 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:00:50:469447 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:00:50:469486 [DEBUG] fmt = jpg
+2016/06/07 12:00:50:469515 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 12:00:50:469544 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 12:00:50:469569 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 12:00:50:469592 [DEBUG] acs != OX_OK
+2016/06/07 12:00:50:469618 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 12:00:50:469656 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:200:200:1:0:0:0:0:85:jpg
+2016/06/07 12:00:50:469678 [DEBUG] Start to Find the Image...
+2016/06/07 12:00:50:469702 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 12:00:50:469727 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g0_0*0_r0_q85.jpg
+2016/06/07 12:00:50:469780 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 12:00:50:475053 [DEBUG] image size = 91405
+2016/06/07 12:00:50:484928 [DEBUG] crop(im, 0, 0, 200, 200)
+2016/06/07 12:00:50:485004 [DEBUG] wi_crop(im, 0, 0, 200, 200)
+2016/06/07 12:00:50:485299 [DEBUG] wi_set_quality(im, 85)
+2016/06/07 12:00:50:485338 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 12:00:50:485372 [DEBUG] convert(im, req) 1
+2016/06/07 12:00:50:486563 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g0_0*0_r0_q85.jpg] Needn't to Storage.
+2016/06/07 12:00:50:486601 [DEBUG] Begin to Caculate MD5...
+2016/06/07 12:00:50:486666 [DEBUG] md5: 2729fd7903c0835de152e27f76502bae
+2016/06/07 12:00:50:486694 [DEBUG] If-None-Match: (null)
+2016/06/07 12:00:50:486736 [DEBUG] get buffer length: 6557
+2016/06/07 12:00:50:486761 [DEBUG] Got the File!
+2016/06/07 12:00:50:486783 [DEBUG] headers: 1
+2016/06/07 12:00:50:486817 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:200 h:200 p:1 g:0 x:0 y:0 r:0 q:85 f:jpg size:6557
+2016/06/07 12:00:50:486841 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/07 12:00:55:730244 [DEBUG] Method: 0
+2016/06/07 12:00:55:730314 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:00:55:730336 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:00:55:730355 [DEBUG] fmt = jpg
+2016/06/07 12:00:55:730371 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 12:00:55:730394 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 12:00:55:730424 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 12:00:55:730453 [DEBUG] acs != OX_OK
+2016/06/07 12:00:55:730492 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 12:00:55:730521 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:200:200:1:1:0:0:0:85:jpg
+2016/06/07 12:00:55:730538 [DEBUG] Start to Find the Image...
+2016/06/07 12:00:55:730553 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 12:00:55:730569 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_0*0_r0_q85.jpg
+2016/06/07 12:00:55:730613 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 12:00:55:735356 [DEBUG] image size = 91405
+2016/06/07 12:00:55:744212 [DEBUG] crop(im, 0, 0, 200, 200)
+2016/06/07 12:00:55:744316 [DEBUG] wi_crop(im, 0, 0, 200, 200)
+2016/06/07 12:00:55:744613 [DEBUG] wi_gray(im)
+2016/06/07 12:00:55:746344 [DEBUG] gray() ret = 1
+2016/06/07 12:00:55:746371 [DEBUG] wi_set_quality(im, 85)
+2016/06/07 12:00:55:746390 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 12:00:55:746411 [DEBUG] convert(im, req) 1
+2016/06/07 12:00:55:746919 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_0*0_r0_q85.jpg] Needn't to Storage.
+2016/06/07 12:00:55:746946 [DEBUG] Begin to Caculate MD5...
+2016/06/07 12:00:55:746994 [DEBUG] md5: 9843b2f193100d71a28d51824d4dfca7
+2016/06/07 12:00:55:747012 [DEBUG] If-None-Match: (null)
+2016/06/07 12:00:55:747042 [DEBUG] get buffer length: 5407
+2016/06/07 12:00:55:747062 [DEBUG] Got the File!
+2016/06/07 12:00:55:747079 [DEBUG] headers: 1
+2016/06/07 12:00:55:747109 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:200 h:200 p:1 g:1 x:0 y:0 r:0 q:85 f:jpg size:5407
+2016/06/07 12:00:55:747128 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/07 12:01:10:435041 [DEBUG] Method: 0
+2016/06/07 12:01:10:435127 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:01:10:435164 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:01:10:435196 [DEBUG] fmt = jpg
+2016/06/07 12:01:10:435223 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 12:01:10:435252 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 12:01:10:435282 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 12:01:10:435310 [DEBUG] acs != OX_OK
+2016/06/07 12:01:10:435331 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 12:01:10:435364 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:200:200:1:1:-1:-1:0:85:jpg
+2016/06/07 12:01:10:435391 [DEBUG] Start to Find the Image...
+2016/06/07 12:01:10:435418 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 12:01:10:435446 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_-1*-1_r0_q85.jpg
+2016/06/07 12:01:10:435516 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 12:01:10:439833 [DEBUG] image size = 91405
+2016/06/07 12:01:10:449156 [DEBUG] proportion(im, 1, 200, 200)
+2016/06/07 12:01:10:449218 [DEBUG] p=2, wi_scale(im, 200, 489)
+2016/06/07 12:01:10:462532 [DEBUG] p=2, wi_crop(im, 0, 144, 200, 200)
+2016/06/07 12:01:10:462690 [DEBUG] wi_gray(im)
+2016/06/07 12:01:10:465239 [DEBUG] gray() ret = 1
+2016/06/07 12:01:10:465276 [DEBUG] wi_set_quality(im, 85)
+2016/06/07 12:01:10:465302 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 12:01:10:465329 [DEBUG] convert(im, req) 1
+2016/06/07 12:01:10:466290 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_-1*-1_r0_q85.jpg] Needn't to Storage.
+2016/06/07 12:01:10:466327 [DEBUG] Begin to Caculate MD5...
+2016/06/07 12:01:10:466409 [DEBUG] md5: 76091f3448fe9d1192b955d8be0143be
+2016/06/07 12:01:10:466433 [DEBUG] If-None-Match: (null)
+2016/06/07 12:01:10:466476 [DEBUG] get buffer length: 10741
+2016/06/07 12:01:10:466502 [DEBUG] Got the File!
+2016/06/07 12:01:10:466525 [DEBUG] headers: 1
+2016/06/07 12:01:10:466561 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:200 h:200 p:1 g:1 x:-1 y:-1 r:0 q:85 f:jpg size:10741
+2016/06/07 12:01:10:466585 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/07 12:01:19:153347 [DEBUG] Method: 0
+2016/06/07 12:01:19:153481 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:01:19:153558 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:01:19:153628 [DEBUG] fmt = jpg
+2016/06/07 12:01:19:153695 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 12:01:19:153762 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 12:01:19:153825 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 12:01:19:153883 [DEBUG] acs != OX_OK
+2016/06/07 12:01:19:153944 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 12:01:19:154007 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:200:200:1:1:-1:-1:45:85:jpg
+2016/06/07 12:01:19:154051 [DEBUG] Start to Find the Image...
+2016/06/07 12:01:19:154098 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 12:01:19:154147 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_-1*-1_r45_q85.jpg
+2016/06/07 12:01:19:154239 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 12:01:19:162418 [DEBUG] image size = 91405
+2016/06/07 12:01:19:174786 [DEBUG] proportion(im, 1, 200, 200)
+2016/06/07 12:01:19:174870 [DEBUG] p=2, wi_scale(im, 200, 489)
+2016/06/07 12:01:19:191184 [DEBUG] p=2, wi_crop(im, 0, 144, 200, 200)
+2016/06/07 12:01:19:191372 [DEBUG] wi_rotate(im, 45)
+2016/06/07 12:01:19:366982 [DEBUG] rotate() ret = 1
+2016/06/07 12:01:19:367068 [DEBUG] wi_gray(im)
+2016/06/07 12:01:19:370061 [DEBUG] gray() ret = 1
+2016/06/07 12:01:19:370090 [DEBUG] wi_set_quality(im, 85)
+2016/06/07 12:01:19:370109 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 12:01:19:370130 [DEBUG] convert(im, req) 1
+2016/06/07 12:01:19:371051 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_-1*-1_r45_q85.jpg] Needn't to Storage.
+2016/06/07 12:01:19:371078 [DEBUG] Begin to Caculate MD5...
+2016/06/07 12:01:19:371167 [DEBUG] md5: 40d9efa7f82a81ab31b46d6ce6d75ab7
+2016/06/07 12:01:19:371186 [DEBUG] If-None-Match: (null)
+2016/06/07 12:01:19:371217 [DEBUG] get buffer length: 13147
+2016/06/07 12:01:19:371237 [DEBUG] Got the File!
+2016/06/07 12:01:19:371254 [DEBUG] headers: 1
+2016/06/07 12:01:19:371284 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:200 h:200 p:1 g:1 x:-1 y:-1 r:45 q:85 f:jpg size:13147
+2016/06/07 12:01:19:371303 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/07 12:01:24:365055 [DEBUG] Method: 0
+2016/06/07 12:01:24:365124 [DEBUG] Got a GET request for </img/54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:01:24:365149 [DEBUG] md5 of request is <54f1d4fdfa470264890adaf27ea1c82a>
+2016/06/07 12:01:24:365170 [DEBUG] fmt = jpg
+2016/06/07 12:01:24:365187 [DEBUG] ox_img_get() start processing ox request...
+2016/06/07 12:01:24:365206 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a
+2016/06/07 12:01:24:365224 [DEBUG] Path[/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a] is A Dir.
+2016/06/07 12:01:24:365239 [DEBUG] acs != OX_OK
+2016/06/07 12:01:24:365256 [DEBUG] File [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/lock] is Not Existed!
+2016/06/07 12:01:24:365274 [DEBUG] key: 54f1d4fdfa470264890adaf27ea1c82a:200:200:1:1:-1:-1:65:85:jpg
+2016/06/07 12:01:24:365290 [DEBUG] Start to Find the Image...
+2016/06/07 12:01:24:365305 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/0*0
+2016/06/07 12:01:24:365320 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_-1*-1_r65_q85.jpg
+2016/06/07 12:01:24:365365 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/07 12:01:24:370266 [DEBUG] image size = 91405
+2016/06/07 12:01:24:379497 [DEBUG] proportion(im, 1, 200, 200)
+2016/06/07 12:01:24:379566 [DEBUG] p=2, wi_scale(im, 200, 489)
+2016/06/07 12:01:24:393567 [DEBUG] p=2, wi_crop(im, 0, 144, 200, 200)
+2016/06/07 12:01:24:393737 [DEBUG] wi_rotate(im, 65)
+2016/06/07 12:01:24:404443 [DEBUG] rotate() ret = 1
+2016/06/07 12:01:24:404524 [DEBUG] wi_gray(im)
+2016/06/07 12:01:24:408476 [DEBUG] gray() ret = 1
+2016/06/07 12:01:24:408531 [DEBUG] wi_set_quality(im, 85)
+2016/06/07 12:01:24:408554 [DEBUG] wi_set_format(im, jpg)
+2016/06/07 12:01:24:408582 [DEBUG] convert(im, req) 1
+2016/06/07 12:01:24:409781 [DEBUG] Image [/home/d/my_project/ox/objs/img/679/234/54f1d4fdfa470264890adaf27ea1c82a/200*200_p1_g1_-1*-1_r65_q85.jpg] Needn't to Storage.
+2016/06/07 12:01:24:409815 [DEBUG] Begin to Caculate MD5...
+2016/06/07 12:01:24:409909 [DEBUG] md5: b5a4f34019b44cdb392769d1e2b9afa1
+2016/06/07 12:01:24:409933 [DEBUG] If-None-Match: (null)
+2016/06/07 12:01:24:409973 [DEBUG] get buffer length: 12841
+2016/06/07 12:01:24:409997 [DEBUG] Got the File!
+2016/06/07 12:01:24:410019 [DEBUG] headers: 1
+2016/06/07 12:01:24:410055 [INFO] 0.0.0.0 succ pic:54f1d4fdfa470264890adaf27ea1c82a w:200 h:200 p:1 g:1 x:-1 y:-1 r:65 q:85 f:jpg size:12841
+2016/06/07 12:01:24:410078 [DEBUG] ============ox_cbs_get() DONE!===============

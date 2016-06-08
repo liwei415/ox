@@ -26,9 +26,9 @@ etag = 1
 --support mask rules like 'allow 10.1.121.138/24'
 --NOTE: remove rule can improve performance
 --上传接口的IP控制权限，将权限规则注释掉可以提升服务器处理能力，下同
-upload_rule   = 'allow 0.0.0.0; 192.168.11.0/24; 192.168.1.111'
+--upload_rule   = 'allow 0.0.0.0; 192.168.11.0/24; 192.168.1.111'
 --下载接口的IP控制权限(此ip可绕开锁)
-download_rule = 'allow 192.168.1.111'
+--download_rule = 'allow 192.168.1.111'
 --删除接口的IP控制权限
 --delete_rule = 'allow all'
 
@@ -85,7 +85,7 @@ quality = 75
 mode = 1
 --save_new value: 0.don't save any 1.save all 2.only save types in lua script
 --新文件是否存储，0为不存储，1为全都存储，2为只存储lua脚本产生的新图
-save_new = 2
+save_new = 0
 --上传大小限制，默认5MB
 max_size_img = 100*1024*1024
 max_size_doc = 100*1024*1024

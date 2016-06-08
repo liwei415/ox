@@ -22,27 +22,27 @@ OX is an image/file/video server, written by pure C.
 3. 加锁：http://127.0.0.1:xxx/img/lock/(md5)?p=xxxxx
 4. 解锁：http://127.0.0.1:xxx/img/unlock/(md5)?p=xxxxx
 5. 删除：http://127.0.0.1:xxx/img/del/(md5)
-6. 批量加锁：post json数据至http://127.0.0.1:xxx/imgs/lock 数据示例：[{"md5":"(md501)", "passwd01":"xxx"},{"md5":"(md502)", "passwd02":"xxx"}]
-6. 批量解锁：post json数据至http://127.0.0.1:xxx/imgs/unloc 数据示例：[{"md5":"(md501)", "passwd01":"xxx"},{"md5":"(md502)", "passwd02":"xxx"}]
-6. 批量删除：post json数据至http://127.0.0.1:xxx/imgs/del 数据示例：[{"md5":"(md501)"},{"md5":"(md502)"}]
+6. 批量加锁：post json数据至http://127.0.0.1:xxx/imgs/lock 数据示例：[{"md5":"(md501)", "passwd":"xxx"},{"md5":"(md502)", "passwd":"xxx"}]
+7. 批量解锁：post json数据至http://127.0.0.1:xxx/imgs/unlock 数据示例：[{"md5":"(md501)", "passwd":"xxx"},{"md5":"(md502)", "passwd":"xxx"}]
+8. 批量删除：post json数据至http://127.0.0.1:xxx/imgs/del 数据示例：[{"md5":"(md501)"},{"md5":"(md502)"}]
 
 * 文档
 1. 上传: curl -H "Content-Type:text" --data-binary @xx.txt "http://127.0.0.1:xxx/docs"
 2. 下载: http://127.0.0.1:xxx/doc/(md5)?n=xx.txt
 4. 解锁：http://127.0.0.1:xxx/doc/unlock/(md5)?p=xxxxx
 5. 删除：http://127.0.0.1:xxx/doc/del/(md5)
-6. 批量加锁：post json数据至http://127.0.0.1:xxx/docs/lock 数据示例：[{"md5":"(md501)", "passwd01":"xxx"},{"md5":"(md502)", "passwd02":"xxx"}]
-6. 批量解锁：post json数据至http://127.0.0.1:xxx/docs/unloc 数据示例：[{"md5":"(md501)", "passwd01":"xxx"},{"md5":"(md502)", "passwd02":"xxx"}]
-6. 批量删除：post json数据至http://127.0.0.1:xxx/docs/del 数据示例：[{"md5":"(md501)"},{"md5":"(md502)"}]
+6. 批量加锁：post json数据至http://127.0.0.1:xxx/docs/lock 数据示例：[{"md5":"(md501)", "passwd":"xxx"},{"md5":"(md502)", "passwd":"xxx"}]
+7. 批量解锁：post json数据至http://127.0.0.1:xxx/docs/unlock 数据示例：[{"md5":"(md501)", "passwd":"xxx"},{"md5":"(md502)", "passwd":"xxx"}]
+8. 批量删除：post json数据至http://127.0.0.1:xxx/docs/del 数据示例：[{"md5":"(md501)"},{"md5":"(md502)"}]
 
 * 视频
 1. 上传: curl -H "Content-Type:mov" --data-binary @xx.mov "http://127.0.0.1:xxx/movs"
 2. 下载: http://127.0.0.1:xxx/mov/(md5)?n=xx.mov
 4. 解锁：http://127.0.0.1:xxx/mov/unlock/(md5)?p=xxxxx
 5. 删除：http://127.0.0.1:xxx/mov/del/(md5)
-6. 批量加锁：post json数据至http://127.0.0.1:xxx/movs/lock 数据示例：[{"md5":"(md501)", "passwd01":"xxx"},{"md5":"(md502)", "passwd02":"xxx"}]
-6. 批量解锁：post json数据至http://127.0.0.1:xxx/movs/unloc 数据示例：[{"md5":"(md501)", "passwd01":"xxx"},{"md5":"(md502)", "passwd02":"xxx"}]
-6. 批量删除：post json数据至http://127.0.0.1:xxx/movs/del 数据示例：[{"md5":"(md501)"},{"md5":"(md502)"}]
+6. 批量加锁：post json数据至http://127.0.0.1:xxx/movs/lock 数据示例：[{"md5":"(md501)", "passwd":"xxx"},{"md5":"(md502)", "passwd":"xxx"}]
+7. 批量解锁：post json数据至http://127.0.0.1:xxx/movs/unlock 数据示例：[{"md5":"(md501)", "passwd":"xxx"},{"md5":"(md502)", "passwd":"xxx"}]
+8. 批量删除：post json数据至http://127.0.0.1:xxx/movs/del 数据示例：[{"md5":"(md501)"},{"md5":"(md502)"}]
 
 ## TODO
 * post多个资源实现
