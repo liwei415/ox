@@ -906,7 +906,7 @@ void ox_cbs_doc_lock(evhtp_request_t *req, void *arg)
 
   if(lock_doc_rst == 2) {
     LOG_PRINT(LOG_DEBUG, "Lock doc[MD5: %s] failed, path is not exists!", md5);
-    err_no = 10;
+    err_no = 13;
     goto err;
   }
   else {
@@ -1274,7 +1274,7 @@ void ox_cbs_doc_unlock(evhtp_request_t *req, void *arg)
 
   if(unlock_doc_rst == 2) {
     LOG_PRINT(LOG_DEBUG, "Lock doc[MD5: %s] failed, path is not exists!", md5);
-    err_no = 10;
+    err_no = 14;
     goto err;
   }
   else {

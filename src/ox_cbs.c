@@ -13,7 +13,9 @@ static const char *post_error_list[] = {
   "Image not existed.",
   "Delete resource failed.",
   "Wrong input params.",
-  "Wrong Json Node."
+  "Wrong Json Node.",
+  "lock resource failed."
+  "unlock resource failed."
 };
 
 int ox_cbs_etag_set(evhtp_request_t *req, char *buff, size_t len)

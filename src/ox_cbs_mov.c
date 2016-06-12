@@ -822,7 +822,7 @@ void ox_cbs_mov_lock(evhtp_request_t *req, void *arg)
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "text/html", 0, 0));
     evhtp_send_reply(req, EVHTP_RES_OK);
-    LOG_PRINT(LOG_DEBUG, "============_mov_del() DONE!===============");
+    LOG_PRINT(LOG_DEBUG, "============_mov_lock() DONE!===============");
     LOG_PRINT(LOG_INFO, "%s succ root page", address);
     goto done;
   }
@@ -907,7 +907,7 @@ void ox_cbs_mov_lock(evhtp_request_t *req, void *arg)
 
   if(lock_mov_rst == 2) {
     LOG_PRINT(LOG_DEBUG, "Lock mov[MD5: %s] failed, path is not exists!", md5);
-    err_no = 10;
+    err_no = 13;
     goto err;
   }
   else {
@@ -1275,7 +1275,7 @@ void ox_cbs_mov_unlock(evhtp_request_t *req, void *arg)
 
   if(unlock_mov_rst == 2) {
     LOG_PRINT(LOG_DEBUG, "Lock mov[MD5: %s] failed, path is not exists!", md5);
-    err_no = 10;
+    err_no = 14;
     goto err;
   }
   else {
