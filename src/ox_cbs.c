@@ -14,7 +14,7 @@ static const char *post_error_list[] = {
   "Delete resource failed.",
   "Wrong input params.",
   "Wrong Json Node.",
-  "lock resource failed."
+  "lock resource failed.",
   "unlock resource failed."
 };
 
