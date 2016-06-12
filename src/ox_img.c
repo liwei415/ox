@@ -553,6 +553,13 @@ int ox_img_lock(ox_req_lock_t *req, evhtp_request_t *request)
   char whole_path_passwd[512];
   int lvl1 = ox_strhash(req->md5);
   int lvl2 = ox_strhash(req->md5 + 3);
+
+  snprintf(whole_path, 512, "%s/%d/%d/%s", vars.img_path, lvl1, lvl2, req->md5);
+  if(ox_isdir(whole_path) == -1) {
+    LOG_PRINT(LOG_DEBUG, "path: %s is not exists needn't lock!", whole_path);
+    return 3;
+  }
+
   snprintf(whole_path, 512, "%s/%d/%d/%s/lock", vars.img_path, lvl1, lvl2, req->md5);
   snprintf(whole_path_passwd, 512, "%s/%d/%d/%s/lock.%s", vars.img_path, lvl1, lvl2, req->md5, req->passwd);
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
