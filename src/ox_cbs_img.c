@@ -36,12 +36,12 @@ int _binary_parse_img(evhtp_request_t *req, const char *content_type, const char
   //做错误标记err_no = 1
   const char *ctype = magic_buffer(magic_cookie, buff, post_size);
   if (ox_isimg(ctype) != 1) {
+    LOG_PRINT(LOG_DEBUG, "fileType[%s] is Not Supported!", ctype);
     err_no = 1;
   }
   magic_close(magic_cookie);
 
   if (err_no == 1) {
-    LOG_PRINT(LOG_DEBUG, "fileType[%s] is Not Supported!", ctype);
     LOG_PRINT(LOG_ERROR, "%s fail post type", address);
     goto done;
   }

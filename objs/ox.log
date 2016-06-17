@@ -721,3 +721,126 @@ aaa
 2016/06/17 10:33:03:454530 [DEBUG] lock exist and lock.passwd is not exist.
 2016/06/17 10:33:03:454557 [DEBUG] OX Requset Get Doc[MD5: 535dd55061b777369dd70ac8b1b3128c] Failed!
 2016/06/17 10:33:03:454604 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/17 10:47:27:469864 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/17 10:47:27:469940 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/17 10:47:27:469965 [DEBUG] Paths Init Finished.
+2016/06/17 10:47:27:469980 [DEBUG] Begin to Start Httpd Server...
+2016/06/17 10:47:27:469996 [INFO] ox started
+2016/06/17 10:47:27:470160 [DEBUG] thr_args alloc
+2016/06/17 10:47:27:470211 [DEBUG] luaL_newstate alloc
+2016/06/17 10:47:27:470692 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:47:27:475246 [DEBUG] thr_args alloc
+2016/06/17 10:47:27:475295 [DEBUG] luaL_newstate alloc
+2016/06/17 10:47:27:475813 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:47:34:461194 [DEBUG] Method: 2
+2016/06/17 10:47:34:461259 [DEBUG] evblen = 25827
+2016/06/17 10:47:34:461285 [DEBUG] rmblen = 25827
+2016/06/17 10:47:34:461809 [DEBUG] fileType[] is Not Supported!
+2016/06/17 10:47:34:461830 [ERROR] 0.0.0.0 fail post type
+2016/06/17 10:47:34:461849 [DEBUG] post_error_list[1]: File type not support.
+2016/06/17 10:47:34:461873 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/06/17 10:47:34:461901 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 10:48:12:459316 [DEBUG] Method: 2
+2016/06/17 10:48:12:459383 [DEBUG] evblen = 25827
+2016/06/17 10:48:12:459408 [DEBUG] rmblen = 25827
+2016/06/17 10:48:12:459899 [DEBUG] fileType[] is Not Supported!
+2016/06/17 10:48:12:459920 [ERROR] 0.0.0.0 fail post type
+2016/06/17 10:48:12:459937 [DEBUG] post_error_list[1]: File type not support.
+2016/06/17 10:48:12:459965 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/06/17 10:48:12:459991 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 10:48:42:515209 [DEBUG] Method: 2
+2016/06/17 10:48:42:515275 [DEBUG] evblen = 25827
+2016/06/17 10:48:42:515302 [DEBUG] rmblen = 25827
+2016/06/17 10:48:42:515896 [DEBUG] fileType[] is Not Supported!
+2016/06/17 10:48:42:515922 [ERROR] 0.0.0.0 fail post type
+2016/06/17 10:48:42:515949 [DEBUG] post_error_list[1]: File type not support.
+2016/06/17 10:48:42:515986 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/06/17 10:48:42:516015 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 10:49:00:010712 [DEBUG] Method: 2
+2016/06/17 10:49:00:010773 [DEBUG] Image Size is Zero!
+2016/06/17 10:49:00:010793 [ERROR] 0.0.0.0 fail post empty
+2016/06/17 10:49:00:010813 [DEBUG] post_error_list[5]: Content-Length error.
+2016/06/17 10:49:00:010832 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":5,"message":"Content-Length error."}}
+2016/06/17 10:49:00:010859 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 10:49:18:160634 [DEBUG] Method: 2
+2016/06/17 10:49:18:160735 [DEBUG] evblen = 25827
+2016/06/17 10:49:18:160780 [DEBUG] rmblen = 25827
+2016/06/17 10:49:18:161661 [DEBUG] Begin to Save Image...
+2016/06/17 10:49:18:161708 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:49:18:162027 [DEBUG] md5: 26a824a7647ebe0d4815ea0ae4d135fa
+2016/06/17 10:49:18:162074 [DEBUG] save_path: /home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa
+2016/06/17 10:49:18:162117 [DEBUG] Path[/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa] is Not Existed!
+2016/06/17 10:49:18:162282 [DEBUG] save_path[/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa] Create Finish.
+2016/06/17 10:49:18:162321 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa/0*0
+2016/06/17 10:49:18:162357 [DEBUG] File [/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa/0*0] is Not Existed!
+2016/06/17 10:49:18:162389 [DEBUG] Start to Storage the New Image...
+2016/06/17 10:49:18:162486 [DEBUG] Image [/home/d/my_project/ox/objs/img/309/1042/26a824a7647ebe0d4815ea0ae4d135fa/0*0] Write Successfully!
+2016/06/17 10:49:18:162526 [INFO] 0.0.0.0 succ post pic:26a824a7647ebe0d4815ea0ae4d135fa size:25827
+2016/06/17 10:49:18:162570 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"26a824a7647ebe0d4815ea0ae4d135fa","size":25827}}
+2016/06/17 10:49:18:162620 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/17 11:01:33:633034 [DEBUG] Method: 2
+2016/06/17 11:01:33:633109 [DEBUG] evblen = 149652
+2016/06/17 11:01:33:633212 [DEBUG] rmblen = 149652
+2016/06/17 11:01:33:641066 [DEBUG] fileType[] is Not Supported!
+2016/06/17 11:01:33:641112 [ERROR] 0.0.0.0 fail post type
+2016/06/17 11:01:33:641134 [DEBUG] post_error_list[1]: File type not support.
+2016/06/17 11:01:33:641166 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/06/17 11:01:33:641212 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 11:01:39:311089 [DEBUG] Method: 2
+2016/06/17 11:01:39:311170 [DEBUG] evblen = 149652
+2016/06/17 11:01:39:311269 [DEBUG] rmblen = 149652
+2016/06/17 11:01:39:318585 [DEBUG] Begin to save doc...
+2016/06/17 11:01:39:318646 [DEBUG] Begin to Caculate MD5...
+2016/06/17 11:01:39:319458 [DEBUG] md5: f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:01:39:319490 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:01:39:319513 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25] is Not Existed!
+2016/06/17 11:01:39:319637 [DEBUG] save_path[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25] Create Finish.
+2016/06/17 11:01:39:319668 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:01:39:319686 [DEBUG] File [/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25] is Not Existed!
+2016/06/17 11:01:39:319713 [DEBUG] Start to Storage the New Image...
+2016/06/17 11:01:39:319829 [DEBUG] Image [/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25] Write Successfully!
+2016/06/17 11:01:39:319859 [INFO] 0.0.0.0 succ post pic:f856ba0e057ba5372a504d9bc1c8ed25 size:149652
+2016/06/17 11:01:39:319914 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"f856ba0e057ba5372a504d9bc1c8ed25","size":149652}}
+2016/06/17 11:01:39:319952 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/17 11:05:08:489073 [DEBUG] Method: 2
+2016/06/17 11:05:08:489179 [DEBUG] evblen = 149652
+2016/06/17 11:05:08:489222 [DEBUG] rmblen = 149652
+2016/06/17 11:05:08:496121 [DEBUG] Begin to save doc...
+2016/06/17 11:05:08:496172 [DEBUG] Begin to Caculate MD5...
+2016/06/17 11:05:08:496981 [DEBUG] md5: f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:05:08:497014 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:05:08:497033 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25] is A Dir.
+2016/06/17 11:05:08:497049 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:05:08:497065 [DEBUG] File[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25] is A File.
+2016/06/17 11:05:08:497091 [DEBUG] Check File Exist. Needn't Save.
+2016/06/17 11:05:08:497107 [INFO] 0.0.0.0 succ post pic:f856ba0e057ba5372a504d9bc1c8ed25 size:149652
+2016/06/17 11:05:08:497129 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"f856ba0e057ba5372a504d9bc1c8ed25","size":149652}}
+2016/06/17 11:05:08:497160 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/17 11:06:24:845845 [DEBUG] Method: 2
+2016/06/17 11:06:24:846065 [DEBUG] evblen = 149652
+2016/06/17 11:06:24:846177 [DEBUG] rmblen = 149652
+2016/06/17 11:06:24:863857 [DEBUG] Begin to save doc...
+2016/06/17 11:06:24:863966 [DEBUG] Begin to Caculate MD5...
+2016/06/17 11:06:24:865850 [DEBUG] md5: f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:06:24:865912 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:06:24:866000 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25] is A Dir.
+2016/06/17 11:06:24:866054 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 11:06:24:866111 [DEBUG] File[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25] is A File.
+2016/06/17 11:06:24:866161 [DEBUG] Check File Exist. Needn't Save.
+2016/06/17 11:06:24:866214 [INFO] 0.0.0.0 succ post pic:f856ba0e057ba5372a504d9bc1c8ed25 size:149652
+2016/06/17 11:06:24:866280 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"f856ba0e057ba5372a504d9bc1c8ed25","size":149652}}
+2016/06/17 11:06:24:866358 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/17 13:01:32:939072 [DEBUG] Method: 2
+2016/06/17 13:01:32:939265 [DEBUG] evblen = 149652
+2016/06/17 13:01:32:939390 [DEBUG] rmblen = 149652
+2016/06/17 13:01:32:956411 [DEBUG] Begin to save doc...
+2016/06/17 13:01:32:956493 [DEBUG] Begin to Caculate MD5...
+2016/06/17 13:01:32:958054 [DEBUG] md5: f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 13:01:32:958095 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 13:01:32:958129 [DEBUG] Path[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25] is A Dir.
+2016/06/17 13:01:32:958161 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25
+2016/06/17 13:01:32:958195 [DEBUG] File[/home/d/my_project/ox/objs/doc/1986/861/f856ba0e057ba5372a504d9bc1c8ed25/f856ba0e057ba5372a504d9bc1c8ed25] is A File.
+2016/06/17 13:01:32:958236 [DEBUG] Check File Exist. Needn't Save.
+2016/06/17 13:01:32:958256 [INFO] 0.0.0.0 succ post pic:f856ba0e057ba5372a504d9bc1c8ed25 size:149652
+2016/06/17 13:01:32:958281 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"f856ba0e057ba5372a504d9bc1c8ed25","size":149652}}
+2016/06/17 13:01:32:958318 [DEBUG] ============ox_cbs_post() DONE!===============
