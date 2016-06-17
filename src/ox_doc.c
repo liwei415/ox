@@ -149,7 +149,7 @@ int ox_doc_get(ox_req_doc_t *req, evhtp_request_t *request)
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
 
   if(ox_isdir(whole_path) == -1) {
-    LOG_PRINT(LOG_DEBUG, "Image %s is not existed!", req->md5);
+    LOG_PRINT(LOG_DEBUG, "Doc %s is not existed!", req->md5);
     goto err;
   }
 
@@ -309,7 +309,7 @@ int ox_doc_lock(ox_req_lock_t *req, evhtp_request_t *request)
   }
 
   snprintf(whole_path, 512, "%s/%d/%d/%s/lock", vars.doc_path, lvl1, lvl2, req->md5);
-  snprintf(whole_path, 512, "%s/%d/%d/%s/lock.%s", vars.doc_path, lvl1, lvl2, req->md5, req->passwd);
+  snprintf(whole_path_passwd, 512, "%s/%d/%d/%s/lock.%s", vars.doc_path, lvl1, lvl2, req->md5, req->passwd);
   LOG_PRINT(LOG_DEBUG, "whole_path: %s", whole_path);
 
   if(ox_isfile(whole_path) == 1) {

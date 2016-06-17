@@ -1,0 +1,723 @@
+2016/06/14 11:26:20:860380 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/14 11:26:20:860474 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/14 11:26:20:860492 [DEBUG] Paths Init Finished.
+2016/06/14 11:26:20:860506 [DEBUG] Begin to Start Httpd Server...
+2016/06/14 11:26:20:860519 [INFO] ox started
+2016/06/14 11:26:20:860721 [DEBUG] thr_args alloc
+2016/06/14 11:26:20:860761 [DEBUG] luaL_newstate alloc
+2016/06/14 11:26:20:865888 [DEBUG] thr_args alloc
+2016/06/14 11:26:20:865928 [DEBUG] luaL_newstate alloc
+2016/06/14 11:26:20:886811 [DEBUG] ox_lua: ox using lua script.
+2016/06/14 11:26:20:886818 [DEBUG] ox_lua: ox using lua script.
+2016/06/14 11:27:41:785901 [DEBUG] Method: 2
+2016/06/14 11:27:41:785964 [DEBUG] evblen = 248
+2016/06/14 11:27:41:785984 [DEBUG] rmblen = 248
+2016/06/14 11:27:41:786000 [DEBUG] let me see: 
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="md5"
+
+4a4c54f7ac253f55358bc9ce0d763e52
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="passwd01"
+
+aaa
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+
+2016/06/14 11:27:41:786035 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"N\u0001´C","size":0}}
+2016/06/14 11:27:41:786065 [DEBUG] ============_img_del() DONE!===============
+2016/06/14 11:27:48:277516 [DEBUG] Method: 2
+2016/06/14 11:27:48:277636 [DEBUG] evblen = 248
+2016/06/14 11:27:48:277658 [DEBUG] rmblen = 248
+2016/06/14 11:27:48:277674 [DEBUG] let me see: 
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="md5"
+
+4a4c54f7ac253f55358bc9ce0d763e52
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="passwd01"
+
+aaa
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+
+2016/06/14 11:27:48:277701 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"","size":0}}
+2016/06/14 11:27:48:277739 [DEBUG] ============_img_del() DONE!===============
+2016/06/14 11:28:02:972411 [DEBUG] Method: 2
+2016/06/14 11:28:02:972484 [DEBUG] evblen = 160939
+2016/06/14 11:28:02:972593 [DEBUG] rmblen = 160939
+2016/06/14 11:28:02:981834 [DEBUG] Begin to Save Image...
+2016/06/14 11:28:02:981878 [DEBUG] Begin to Caculate MD5...
+2016/06/14 11:28:02:982766 [DEBUG] md5: 5c3308c7a953d3a5e5750041f55a8589
+2016/06/14 11:28:02:982793 [DEBUG] save_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/14 11:28:02:982814 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is Not Existed!
+2016/06/14 11:28:02:982908 [DEBUG] save_path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] Create Finish.
+2016/06/14 11:28:02:982926 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/14 11:28:02:982943 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0] is Not Existed!
+2016/06/14 11:28:02:982957 [DEBUG] Start to Storage the New Image...
+2016/06/14 11:28:02:983076 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0] Write Successfully!
+2016/06/14 11:28:02:983107 [INFO] 0.0.0.0 succ post pic:5c3308c7a953d3a5e5750041f55a8589 size:160939
+2016/06/14 11:28:02:983128 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"5c3308c7a953d3a5e5750041f55a8589","size":160939}}
+2016/06/14 11:28:02:983159 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/14 11:31:30:548699 [DEBUG] Method: 2
+2016/06/14 11:31:30:548778 [DEBUG] evblen = 248
+2016/06/14 11:31:30:548806 [DEBUG] rmblen = 248
+2016/06/14 11:31:30:548829 [DEBUG] let me see: 
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="md5"
+
+4a4c54f7ac253f55358bc9ce0d763e52
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="passwd01"
+
+aaa
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+
+2016/06/14 11:31:30:548864 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"","size":0}}
+2016/06/14 11:31:30:548903 [DEBUG] ============_img_del() DONE!===============
+2016/06/14 11:31:32:615392 [DEBUG] Method: 2
+2016/06/14 11:31:32:615460 [DEBUG] evblen = 160939
+2016/06/14 11:31:32:615546 [DEBUG] rmblen = 160939
+2016/06/14 11:31:32:616157 [DEBUG] Begin to Save Image...
+2016/06/14 11:31:32:616176 [DEBUG] Begin to Caculate MD5...
+2016/06/14 11:31:32:617027 [DEBUG] md5: 5c3308c7a953d3a5e5750041f55a8589
+2016/06/14 11:31:32:617046 [DEBUG] save_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/14 11:31:32:617062 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/14 11:31:32:617075 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/14 11:31:32:617088 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0] is A File.
+2016/06/14 11:31:32:617101 [DEBUG] Check File Exist. Needn't Save.
+2016/06/14 11:31:32:617113 [INFO] 0.0.0.0 succ post pic:5c3308c7a953d3a5e5750041f55a8589 size:160939
+2016/06/14 11:31:32:617133 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"5c3308c7a953d3a5e5750041f55a8589","size":160939}}
+2016/06/14 11:31:32:617158 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/14 11:31:50:145230 [DEBUG] Method: 2
+2016/06/14 11:31:50:145315 [DEBUG] evblen = 248
+2016/06/14 11:31:50:145333 [DEBUG] rmblen = 248
+2016/06/14 11:31:50:145348 [DEBUG] let me see: 
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="md5"
+
+4a4c54f7ac253f55358bc9ce0d763e52
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="passwd01"
+
+aaa
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+
+2016/06/14 11:31:50:145370 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"","size":0}}
+2016/06/14 11:31:50:145395 [DEBUG] ============_img_del() DONE!===============
+2016/06/14 11:31:59:360163 [DEBUG] Method: 2
+2016/06/14 11:31:59:360222 [DEBUG] Image Size is Zero!
+2016/06/14 11:31:59:360244 [ERROR] 0.0.0.0 fail post empty
+2016/06/14 11:31:59:360261 [DEBUG] post_error_list[5]: Content-Length error.
+2016/06/14 11:31:59:360279 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":5,"message":"Content-Length error."}}
+2016/06/14 11:31:59:360303 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 10:00:00:750990 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/17 10:00:00:778372 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/17 10:00:00:778505 [DEBUG] Paths Init Finished.
+2016/06/17 10:00:00:778562 [DEBUG] Begin to Start Httpd Server...
+2016/06/17 10:00:00:778612 [INFO] ox started
+2016/06/17 10:00:00:779096 [DEBUG] thr_args alloc
+2016/06/17 10:00:00:779164 [DEBUG] luaL_newstate alloc
+2016/06/17 10:00:00:784501 [DEBUG] thr_args alloc
+2016/06/17 10:00:00:784566 [DEBUG] luaL_newstate alloc
+2016/06/17 10:00:00:787307 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:00:00:787316 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:01:51:757095 [DEBUG] Method: 2
+2016/06/17 10:01:51:757172 [DEBUG] evblen = 160939
+2016/06/17 10:01:51:757284 [DEBUG] rmblen = 160939
+2016/06/17 10:01:51:766677 [DEBUG] Begin to Save Image...
+2016/06/17 10:01:51:766723 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:01:51:767831 [DEBUG] md5: 5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:01:51:767862 [DEBUG] save_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:01:51:800795 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:01:51:800838 [DEBUG] save_name-->: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:01:51:801076 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0] is A File.
+2016/06/17 10:01:51:801101 [DEBUG] Check File Exist. Needn't Save.
+2016/06/17 10:01:51:801119 [INFO] 0.0.0.0 succ post pic:5c3308c7a953d3a5e5750041f55a8589 size:160939
+2016/06/17 10:01:51:801154 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"5c3308c7a953d3a5e5750041f55a8589","size":160939}}
+2016/06/17 10:01:51:801192 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/17 10:03:45:225079 [DEBUG] Method: 2
+2016/06/17 10:03:45:225152 [DEBUG] evblen = 248
+2016/06/17 10:03:45:225172 [DEBUG] rmblen = 248
+2016/06/17 10:03:45:225189 [DEBUG] let me see: 
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="md5"
+
+4a4c54f7ac253f55358bc9ce0d763e52
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="passwd01"
+
+aaa
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+
+2016/06/17 10:03:45:225220 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"","size":0}}
+2016/06/17 10:03:45:225247 [DEBUG] ============_img_del() DONE!===============
+2016/06/17 10:04:05:462519 [DEBUG] Method: 0
+2016/06/17 10:04:05:462647 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:05:462712 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:05:462766 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:05:462823 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:05:462876 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:05:462925 [DEBUG] acs != OX_OK
+2016/06/17 10:04:05:462995 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:05:463057 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:05:463106 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:05:463155 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:05:463206 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:05:641839 [DEBUG] Not Hit Original Image Cache. Begin to Open it.
+2016/06/17 10:04:05:668116 [DEBUG] image size = 160939
+2016/06/17 10:04:05:678211 [DEBUG] wi_set_quality(im, 75)
+2016/06/17 10:04:05:678281 [DEBUG] wi_set_format(im, jpg)
+2016/06/17 10:04:05:678314 [DEBUG] convert(im, req) 1
+2016/06/17 10:04:05:686605 [DEBUG] Image[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] is Not Existed. Begin to Save it.
+2016/06/17 10:04:05:686681 [DEBUG] Start to Storage the New Image...
+2016/06/17 10:04:05:686845 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Write Successfully!
+2016/06/17 10:04:05:686879 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:05:687805 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:05:687837 [DEBUG] If-None-Match: (null)
+2016/06/17 10:04:05:688039 [DEBUG] get buffer length: 156422
+2016/06/17 10:04:05:688060 [DEBUG] Got the File!
+2016/06/17 10:04:05:688076 [DEBUG] headers: 1
+2016/06/17 10:04:05:688103 [INFO] 0.0.0.0 succ pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:156422
+2016/06/17 10:04:05:688122 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:04:08:082578 [DEBUG] Method: 0
+2016/06/17 10:04:08:082654 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:08:082677 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:08:082695 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:08:082716 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:08:082736 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:08:082753 [DEBUG] acs != OX_OK
+2016/06/17 10:04:08:082771 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:08:082790 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:08:082808 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:08:082825 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:08:082844 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:08:082883 [DEBUG] img_size = 156422
+2016/06/17 10:04:08:082972 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:08:082994 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:08:083959 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:08:083981 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:08:083999 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:08:084015 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:08:906299 [DEBUG] Method: 0
+2016/06/17 10:04:08:906414 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:08:906467 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:08:906499 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:08:906532 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:08:906556 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:08:906575 [DEBUG] acs != OX_OK
+2016/06/17 10:04:08:906595 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:08:906618 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:08:906638 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:08:906656 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:08:906676 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:08:906697 [DEBUG] img_size = 156422
+2016/06/17 10:04:08:906738 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:08:906760 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:08:907834 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:08:907859 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:08:907879 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:08:907898 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:09:729542 [DEBUG] Method: 0
+2016/06/17 10:04:09:729605 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:09:729625 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:09:729643 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:09:729662 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:09:729680 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:09:729695 [DEBUG] acs != OX_OK
+2016/06/17 10:04:09:729710 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:09:729730 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:09:729745 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:09:729759 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:09:729775 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:09:729792 [DEBUG] img_size = 156422
+2016/06/17 10:04:09:729825 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:09:729843 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:09:730700 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:09:730731 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:09:730758 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:09:730774 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:10:641149 [DEBUG] Method: 0
+2016/06/17 10:04:10:641220 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:10:641239 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:10:641257 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:10:641275 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:10:641292 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:10:641307 [DEBUG] acs != OX_OK
+2016/06/17 10:04:10:641323 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:10:641343 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:10:641359 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:10:641374 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:10:641391 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:10:641408 [DEBUG] img_size = 156422
+2016/06/17 10:04:10:641444 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:10:641461 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:10:642317 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:10:642337 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:10:642353 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:10:642368 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:11:355877 [DEBUG] Method: 0
+2016/06/17 10:04:11:356000 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:11:356040 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:11:356081 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:11:356121 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:11:356173 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:11:356202 [DEBUG] acs != OX_OK
+2016/06/17 10:04:11:356239 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:11:356266 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:11:356287 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:11:356308 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:11:356330 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:11:356354 [DEBUG] img_size = 156422
+2016/06/17 10:04:11:356398 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:11:356423 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:11:357631 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:11:357661 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:11:357684 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:11:357705 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:12:061561 [DEBUG] Method: 0
+2016/06/17 10:04:12:061632 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:12:061654 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:12:061686 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:12:061705 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:12:061723 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:12:061737 [DEBUG] acs != OX_OK
+2016/06/17 10:04:12:061754 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:12:061773 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:12:061788 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:12:061803 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:12:061819 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:12:061837 [DEBUG] img_size = 156422
+2016/06/17 10:04:12:061872 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:12:061890 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:12:063384 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:12:063423 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:12:063454 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:12:063482 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:12:817352 [DEBUG] Method: 0
+2016/06/17 10:04:12:817421 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:12:817440 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:12:817458 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:12:817476 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:12:817494 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:12:817509 [DEBUG] acs != OX_OK
+2016/06/17 10:04:12:817525 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:12:817543 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:12:817558 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:12:817574 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:12:817590 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:12:817607 [DEBUG] img_size = 156422
+2016/06/17 10:04:12:817643 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:12:817661 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:12:818528 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:12:818551 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:12:818568 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:12:818583 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:13:610092 [DEBUG] Method: 0
+2016/06/17 10:04:13:610172 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:13:610204 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:13:610234 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:13:610265 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:13:610295 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:13:610321 [DEBUG] acs != OX_OK
+2016/06/17 10:04:13:610350 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:13:610392 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:13:610420 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:13:610447 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:13:610474 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:13:610503 [DEBUG] img_size = 156422
+2016/06/17 10:04:13:610555 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:13:610584 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:13:611484 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:13:611518 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:13:611548 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:13:611573 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:14:337876 [DEBUG] Method: 0
+2016/06/17 10:04:14:337940 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:14:337970 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:14:337995 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:14:338024 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:14:338052 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:14:338077 [DEBUG] acs != OX_OK
+2016/06/17 10:04:14:338102 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:14:338130 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:14:338155 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:14:338172 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:14:338187 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:14:338214 [DEBUG] img_size = 156422
+2016/06/17 10:04:14:338266 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:14:338289 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:14:339155 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:14:339177 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:14:339203 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:14:339227 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:15:115299 [DEBUG] Method: 0
+2016/06/17 10:04:15:115400 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:15:115435 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:15:115477 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:15:115529 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:15:115582 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:15:115631 [DEBUG] acs != OX_OK
+2016/06/17 10:04:15:115684 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:15:115745 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:15:115797 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:15:115846 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:15:115893 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:15:115957 [DEBUG] img_size = 156422
+2016/06/17 10:04:15:116059 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:15:116108 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:15:117704 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:15:117769 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:15:117826 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:15:117873 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:15:867717 [DEBUG] Method: 0
+2016/06/17 10:04:15:867811 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:15:867842 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:04:15:867870 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:04:15:867899 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:04:15:867927 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:04:15:867964 [DEBUG] acs != OX_OK
+2016/06/17 10:04:15:868010 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:04:15:868046 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:04:15:868075 [DEBUG] Start to Find the Image...
+2016/06/17 10:04:15:868103 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:04:15:868133 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:04:15:868164 [DEBUG] img_size = 156422
+2016/06/17 10:04:15:868224 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:04:15:868257 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:04:15:869827 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:15:869863 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:04:15:869891 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:04:15:869917 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:04:56:153931 [DEBUG] Method: 2
+2016/06/17 10:04:56:154017 [DEBUG] evblen = 248
+2016/06/17 10:04:56:154058 [DEBUG] rmblen = 248
+2016/06/17 10:04:56:154092 [DEBUG] let me see: 
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="md5"
+
+4a4c54f7ac253f55358bc9ce0d763e52
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="passwd01"
+
+aaa
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+
+2016/06/17 10:04:56:154126 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"","size":0}}
+2016/06/17 10:04:56:154161 [DEBUG] ============_img_del() DONE!===============
+2016/06/17 10:05:24:394784 [DEBUG] Method: 2
+2016/06/17 10:05:24:394861 [DEBUG] evblen = 66
+2016/06/17 10:05:24:394898 [DEBUG] rmblen = 66
+2016/06/17 10:05:24:394928 [DEBUG] let me see: [{"md5":"5c3308c7a953d3a5e5750041f55a8589","passwd":"liweiliwei"}]
+2016/06/17 10:05:24:394982 [DEBUG] _img_lock() start processing admin request...
+2016/06/17 10:05:24:395015 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:05:24:395046 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock
+2016/06/17 10:05:24:395087 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is Not Existed!
+2016/06/17 10:05:24:395147 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"5c3308c7a953d3a5e5750041f55a8589","size":0}}
+2016/06/17 10:05:24:395181 [DEBUG] ============_img_del() DONE!===============
+2016/06/17 10:05:28:459395 [DEBUG] Method: 0
+2016/06/17 10:05:28:459467 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:05:28:459499 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:05:28:459518 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:05:28:459537 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:05:28:459556 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:05:28:459570 [DEBUG] acs != OX_OK
+2016/06/17 10:05:28:459588 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is A File.
+2016/06/17 10:05:28:459609 [DEBUG] File [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock.(null)] is Not Existed!
+2016/06/17 10:05:28:459626 [DEBUG] lock exist and lock.passwd is not exist.
+2016/06/17 10:05:28:459642 [DEBUG] OX Requset Get Image[MD5: 5c3308c7a953d3a5e5750041f55a8589] Failed!
+2016/06/17 10:05:28:459657 [ERROR] 0.0.0.0 fail pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:05:28:459683 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/17 10:05:39:211181 [DEBUG] Method: 0
+2016/06/17 10:05:39:211274 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:05:39:211311 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:05:39:211345 [DEBUG] passwd = liweiliwei
+2016/06/17 10:05:39:211375 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:05:39:211407 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:05:39:211438 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:05:39:211466 [DEBUG] acs != OX_OK
+2016/06/17 10:05:39:211495 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is A File.
+2016/06/17 10:05:39:211525 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock.liweiliwei] is A File.
+2016/06/17 10:05:39:211558 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:05:39:211585 [DEBUG] Start to Find the Image...
+2016/06/17 10:05:39:211611 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:05:39:211639 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:05:39:211669 [DEBUG] img_size = 156422
+2016/06/17 10:05:39:211721 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:05:39:211749 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:05:39:212657 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:05:39:212694 [DEBUG] If-None-Match: (null)
+2016/06/17 10:05:39:212746 [DEBUG] get buffer length: 156422
+2016/06/17 10:05:39:212770 [DEBUG] Got the File!
+2016/06/17 10:05:39:212789 [DEBUG] headers: 1
+2016/06/17 10:05:39:212816 [INFO] 0.0.0.0 succ pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg size:156422
+2016/06/17 10:05:39:212834 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:06:17:619017 [DEBUG] Method: 2
+2016/06/17 10:06:17:619128 [DEBUG] evblen = 19
+2016/06/17 10:06:17:619173 [DEBUG] rmblen = 19
+2016/06/17 10:06:17:626006 [DEBUG] Begin to save doc...
+2016/06/17 10:06:17:626056 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:06:17:626085 [DEBUG] md5: 535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:06:17:626110 [DEBUG] save_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:06:17:626138 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is Not Existed!
+2016/06/17 10:06:17:671777 [DEBUG] save_path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] Create Finish.
+2016/06/17 10:06:17:671865 [DEBUG] save_name-->: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:06:17:671928 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c] is Not Existed!
+2016/06/17 10:06:17:671998 [DEBUG] Start to Storage the New Image...
+2016/06/17 10:06:17:672073 [DEBUG] Image [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c] Write Successfully!
+2016/06/17 10:06:17:672107 [INFO] 0.0.0.0 succ post pic:535dd55061b777369dd70ac8b1b3128c size:19
+2016/06/17 10:06:17:672142 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"535dd55061b777369dd70ac8b1b3128c","size":19}}
+2016/06/17 10:06:17:672195 [DEBUG] ============ox_cbs_post() DONE!===============
+2016/06/17 10:06:29:618982 [DEBUG] Method: 0
+2016/06/17 10:06:29:619094 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:06:29:619152 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:06:29:619209 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:06:29:619258 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:06:29:619308 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:06:29:619362 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:06:29:619390 [DEBUG] doc_size = 19
+2016/06/17 10:06:29:619432 [DEBUG] get buffer length: 19
+2016/06/17 10:06:29:619474 [DEBUG] Got the File!
+2016/06/17 10:06:29:619504 [DEBUG] headers: 1
+2016/06/17 10:06:29:619542 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:07:01:543851 [DEBUG] Method: 2
+2016/06/17 10:07:01:543930 [DEBUG] evblen = 66
+2016/06/17 10:07:01:543957 [DEBUG] rmblen = 66
+2016/06/17 10:07:01:544004 [DEBUG] _doc_lock() start processing admin request...
+2016/06/17 10:07:01:544040 [DEBUG] Path[/home/d/my_project/ox/objs/doc/737/388/5c3308c7a953d3a5e5750041f55a8589] is Not Existed!
+2016/06/17 10:07:01:544065 [DEBUG] path: /home/d/my_project/ox/objs/doc/737/388/5c3308c7a953d3a5e5750041f55a8589 is not exists needn't lock!
+2016/06/17 10:07:01:544094 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"5c3308c7a953d3a5e5750041f55a8589","size":0}}
+2016/06/17 10:07:01:544153 [DEBUG] ============_doc_lock() DONE!===============
+2016/06/17 10:07:07:524321 [DEBUG] Method: 0
+2016/06/17 10:07:07:524396 [DEBUG] Got a GET request for </img/5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:07:07:524420 [DEBUG] md5 of request is <5c3308c7a953d3a5e5750041f55a8589>
+2016/06/17 10:07:07:524441 [DEBUG] passwd = liweiliwei
+2016/06/17 10:07:07:524468 [DEBUG] ox_img_get() start processing ox request...
+2016/06/17 10:07:07:524522 [DEBUG] whole_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589
+2016/06/17 10:07:07:524575 [DEBUG] Path[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589] is A Dir.
+2016/06/17 10:07:07:524604 [DEBUG] acs != OX_OK
+2016/06/17 10:07:07:524655 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock] is A File.
+2016/06/17 10:07:07:524706 [DEBUG] File[/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/lock.liweiliwei] is A File.
+2016/06/17 10:07:07:524749 [DEBUG] key: 5c3308c7a953d3a5e5750041f55a8589:0:0:1:0:-1:-1:0:75:jpg
+2016/06/17 10:07:07:524789 [DEBUG] Start to Find the Image...
+2016/06/17 10:07:07:524814 [DEBUG] 0rig File Path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0
+2016/06/17 10:07:07:524865 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg
+2016/06/17 10:07:07:524898 [DEBUG] img_size = 156422
+2016/06/17 10:07:07:524979 [DEBUG] Image [/home/d/my_project/ox/objs/img/737/388/5c3308c7a953d3a5e5750041f55a8589/0*0_p1_g0_-1*-1_r0_q75.jpg] Needn't to Storage.
+2016/06/17 10:07:07:525029 [DEBUG] Begin to Caculate MD5...
+2016/06/17 10:07:07:525964 [DEBUG] md5: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:07:07:526011 [DEBUG] If-None-Match: e61c76bb8218a28f02eb1e813c515b41
+2016/06/17 10:07:07:526041 [DEBUG] Etag Matched Return 304 EVHTP_RES_NOTMOD.
+2016/06/17 10:07:07:526067 [INFO] 0.0.0.0 succ 304 pic:5c3308c7a953d3a5e5750041f55a8589 w:0 h:0 p:1 g:0 x:-1 y:-1 r:0 q:75 f:jpg
+2016/06/17 10:07:56:414100 [DEBUG] Method: 2
+2016/06/17 10:07:56:414177 [DEBUG] evblen = 66
+2016/06/17 10:07:56:414197 [DEBUG] rmblen = 66
+2016/06/17 10:07:56:414229 [DEBUG] _doc_lock() start processing admin request...
+2016/06/17 10:07:56:414261 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:07:56:414277 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei
+2016/06/17 10:07:56:414300 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei] is Not Existed!
+2016/06/17 10:07:56:414384 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"535dd55061b777369dd70ac8b1b3128c","size":0}}
+2016/06/17 10:07:56:414424 [DEBUG] ============_doc_lock() DONE!===============
+2016/06/17 10:08:08:872502 [DEBUG] Method: 0
+2016/06/17 10:08:08:872612 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:08:08:872652 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:08:08:872687 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:08:08:872724 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:08:08:872757 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:08:08:872787 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:08:08:872821 [DEBUG] doc_size = 19
+2016/06/17 10:08:08:872855 [DEBUG] get buffer length: 19
+2016/06/17 10:08:08:872884 [DEBUG] Got the File!
+2016/06/17 10:08:08:872915 [DEBUG] headers: 1
+2016/06/17 10:08:08:872969 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:14:01:769487 [DEBUG] Method: 2
+2016/06/17 10:14:01:769575 [DEBUG] evblen = 66
+2016/06/17 10:14:01:769597 [DEBUG] rmblen = 66
+2016/06/17 10:14:01:769619 [DEBUG] _doc_lock() start processing admin request...
+2016/06/17 10:14:01:769639 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:14:01:769656 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei
+2016/06/17 10:14:01:769673 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei] is A File.
+2016/06/17 10:14:01:769688 [DEBUG] path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei already locked!
+2016/06/17 10:14:01:769708 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"535dd55061b777369dd70ac8b1b3128c","size":0}}
+2016/06/17 10:14:01:769736 [DEBUG] ============_doc_lock() DONE!===============
+2016/06/17 10:14:27:364469 [DEBUG] Method: 0
+2016/06/17 10:14:27:364539 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:14:27:364564 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:14:27:364592 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:14:27:364624 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:14:27:364648 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:14:27:364674 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:14:27:364701 [DEBUG] doc_size = 19
+2016/06/17 10:14:27:364721 [DEBUG] get buffer length: 19
+2016/06/17 10:14:27:364736 [DEBUG] Got the File!
+2016/06/17 10:14:27:364752 [DEBUG] headers: 1
+2016/06/17 10:14:27:364776 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:21:18:084156 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/17 10:21:18:084243 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/17 10:21:18:084278 [DEBUG] Paths Init Finished.
+2016/06/17 10:21:18:084300 [DEBUG] Begin to Start Httpd Server...
+2016/06/17 10:21:18:084327 [INFO] ox started
+2016/06/17 10:21:18:084535 [DEBUG] thr_args alloc
+2016/06/17 10:21:18:084589 [DEBUG] luaL_newstate alloc
+2016/06/17 10:21:18:085156 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:21:18:089710 [DEBUG] thr_args alloc
+2016/06/17 10:21:18:089769 [DEBUG] luaL_newstate alloc
+2016/06/17 10:21:18:090330 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:21:54:592306 [DEBUG] Method: 0
+2016/06/17 10:21:54:592392 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:21:54:592421 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:21:54:592451 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:21:54:592480 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:21:54:592507 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:21:54:592531 [DEBUG] acs != OX_OK
+2016/06/17 10:21:54:592562 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is Not Existed!
+2016/06/17 10:21:54:592585 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:21:54:592614 [DEBUG] doc_size = 19
+2016/06/17 10:21:54:592644 [DEBUG] get buffer length: 19
+2016/06/17 10:21:54:592665 [DEBUG] Got the File!
+2016/06/17 10:21:54:592692 [DEBUG] headers: 1
+2016/06/17 10:21:54:592727 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:22:18:746005 [DEBUG] Method: 0
+2016/06/17 10:22:18:746092 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:22:18:746119 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:22:18:746143 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:22:18:746168 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:22:18:746192 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:22:18:746213 [DEBUG] acs != OX_OK
+2016/06/17 10:22:18:746236 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is Not Existed!
+2016/06/17 10:22:18:746258 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:22:18:746282 [DEBUG] doc_size = 19
+2016/06/17 10:22:18:746306 [DEBUG] get buffer length: 19
+2016/06/17 10:22:18:746328 [DEBUG] Got the File!
+2016/06/17 10:22:18:746349 [DEBUG] headers: 1
+2016/06/17 10:22:18:746381 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:22:39:048564 [DEBUG] Method: 2
+2016/06/17 10:22:39:048631 [DEBUG] evblen = 66
+2016/06/17 10:22:39:048653 [DEBUG] rmblen = 66
+2016/06/17 10:22:39:048678 [DEBUG] _doc_lock() start processing admin request...
+2016/06/17 10:22:39:048699 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:22:39:048716 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei
+2016/06/17 10:22:39:048732 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei] is A File.
+2016/06/17 10:22:39:048747 [DEBUG] path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei already locked!
+2016/06/17 10:22:39:048769 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"535dd55061b777369dd70ac8b1b3128c","size":0}}
+2016/06/17 10:22:39:048799 [DEBUG] ============_doc_lock() DONE!===============
+2016/06/17 10:22:47:223882 [DEBUG] Method: 0
+2016/06/17 10:22:47:223970 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:22:47:224015 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:22:47:224042 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:22:47:224075 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:22:47:224101 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:22:47:224128 [DEBUG] acs != OX_OK
+2016/06/17 10:22:47:224150 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is Not Existed!
+2016/06/17 10:22:47:224178 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:22:47:224202 [DEBUG] doc_size = 19
+2016/06/17 10:22:47:224232 [DEBUG] get buffer length: 19
+2016/06/17 10:22:47:224252 [DEBUG] Got the File!
+2016/06/17 10:22:47:224279 [DEBUG] headers: 1
+2016/06/17 10:22:47:224311 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:25:15:020286 [DEBUG] Method: 2
+2016/06/17 10:25:15:020345 [DEBUG] evblen = 25827
+2016/06/17 10:25:15:020371 [DEBUG] rmblen = 25827
+2016/06/17 10:25:15:020947 [DEBUG] fileType[] is Not Supported!
+2016/06/17 10:25:15:020971 [ERROR] 0.0.0.0 fail post type
+2016/06/17 10:25:15:020989 [DEBUG] post_error_list[1]: File type not support.
+2016/06/17 10:25:15:021011 [DEBUG] ret_str_unformat: {"ret":false,"error":{"code":1,"message":"File type not support."}}
+2016/06/17 10:25:15:021037 [DEBUG] ============ox_cbs_post() ERROR!===============
+2016/06/17 10:29:29:089897 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/17 10:29:29:089993 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/17 10:29:29:090024 [DEBUG] Paths Init Finished.
+2016/06/17 10:29:29:090043 [DEBUG] Begin to Start Httpd Server...
+2016/06/17 10:29:29:090059 [INFO] ox started
+2016/06/17 10:29:29:090288 [DEBUG] thr_args alloc
+2016/06/17 10:29:29:090351 [DEBUG] luaL_newstate alloc
+2016/06/17 10:29:29:090928 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:29:29:095727 [DEBUG] thr_args alloc
+2016/06/17 10:29:29:095813 [DEBUG] luaL_newstate alloc
+2016/06/17 10:29:29:096543 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:29:38:286442 [DEBUG] Method: 2
+2016/06/17 10:29:38:286524 [DEBUG] evblen = 66
+2016/06/17 10:29:38:286546 [DEBUG] rmblen = 66
+2016/06/17 10:29:38:286574 [DEBUG] _doc_lock() start processing admin request...
+2016/06/17 10:29:38:286595 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:29:38:286613 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock
+2016/06/17 10:29:38:286629 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is Not Existed!
+2016/06/17 10:29:38:286698 [DEBUG] ret_str_unformat: {"ret":true,"info":{"md5":"535dd55061b777369dd70ac8b1b3128c","size":0}}
+2016/06/17 10:29:38:286731 [DEBUG] ============_doc_lock() DONE!===============
+2016/06/17 10:29:47:087966 [DEBUG] Method: 0
+2016/06/17 10:29:47:088071 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:29:47:088112 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:29:47:088155 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:29:47:088200 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:29:47:088233 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:29:47:088271 [DEBUG] acs != OX_OK
+2016/06/17 10:29:47:088300 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is A File.
+2016/06/17 10:29:47:088347 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.(null)] is Not Existed!
+2016/06/17 10:29:47:088379 [DEBUG] lock exist and lock.passwd is not exist.
+2016/06/17 10:29:47:088427 [DEBUG] OX Requset Get Doc[MD5: 535dd55061b777369dd70ac8b1b3128c] Failed!
+2016/06/17 10:29:47:088476 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/17 10:30:06:779830 [DEBUG] Method: 0
+2016/06/17 10:30:06:779917 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:30:06:779960 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:30:06:779993 [DEBUG] fname = (null)
+2016/06/17 10:30:06:780021 [DEBUG] passwd = liweiliwei
+2016/06/17 10:30:06:780049 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:30:06:780079 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:30:06:780110 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:30:06:780136 [DEBUG] acs != OX_OK
+2016/06/17 10:30:06:780164 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is A File.
+2016/06/17 10:30:06:780193 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.(null)] is Not Existed!
+2016/06/17 10:30:06:780218 [DEBUG] lock exist and lock.passwd is not exist.
+2016/06/17 10:30:06:780244 [DEBUG] OX Requset Get Doc[MD5: 535dd55061b777369dd70ac8b1b3128c] Failed!
+2016/06/17 10:30:06:780283 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/17 10:30:58:466449 [DEBUG] Method: 0
+2016/06/17 10:30:58:466543 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:30:58:466579 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:30:58:466608 [DEBUG] fname = (null)
+2016/06/17 10:30:58:466635 [DEBUG] passwd = liweiliwei
+2016/06/17 10:30:58:466662 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:30:58:466692 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:30:58:466722 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:30:58:466748 [DEBUG] acs != OX_OK
+2016/06/17 10:30:58:466776 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is A File.
+2016/06/17 10:30:58:466804 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.(null)] is Not Existed!
+2016/06/17 10:30:58:466829 [DEBUG] lock exist and lock.passwd is not exist.
+2016/06/17 10:30:58:466855 [DEBUG] OX Requset Get Doc[MD5: 535dd55061b777369dd70ac8b1b3128c] Failed!
+2016/06/17 10:30:58:466896 [DEBUG] ============ox_cbs_get() ERROR!===============
+2016/06/17 10:32:50:747454 [DEBUG] File[/home/d/my_project/ox/objs/process.lua] is A File.
+2016/06/17 10:32:50:747532 [DEBUG] Path[/home/d/my_project/ox/objs/img] is A Dir.
+2016/06/17 10:32:50:747553 [DEBUG] Paths Init Finished.
+2016/06/17 10:32:50:747570 [DEBUG] Begin to Start Httpd Server...
+2016/06/17 10:32:50:747586 [INFO] ox started
+2016/06/17 10:32:50:747763 [DEBUG] thr_args alloc
+2016/06/17 10:32:50:747831 [DEBUG] luaL_newstate alloc
+2016/06/17 10:32:50:748293 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:32:50:752806 [DEBUG] thr_args alloc
+2016/06/17 10:32:50:752861 [DEBUG] luaL_newstate alloc
+2016/06/17 10:32:50:753387 [DEBUG] ox_lua: ox using lua script.
+2016/06/17 10:32:59:577108 [DEBUG] Method: 0
+2016/06/17 10:32:59:577235 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:32:59:577285 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:32:59:577332 [DEBUG] fname = (null)
+2016/06/17 10:32:59:577370 [DEBUG] passwd = liweiliwei
+2016/06/17 10:32:59:577416 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:32:59:577464 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:32:59:577506 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:32:59:577542 [DEBUG] acs != OX_OK
+2016/06/17 10:32:59:577578 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is A File.
+2016/06/17 10:32:59:577627 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.liweiliwei] is A File.
+2016/06/17 10:32:59:577664 [DEBUG] Got the rsp_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:32:59:577707 [DEBUG] doc_size = 19
+2016/06/17 10:32:59:577753 [DEBUG] get buffer length: 19
+2016/06/17 10:32:59:577787 [DEBUG] Got the File!
+2016/06/17 10:32:59:577826 [DEBUG] headers: 1
+2016/06/17 10:32:59:577880 [DEBUG] ============ox_cbs_get() DONE!===============
+2016/06/17 10:33:03:453575 [DEBUG] Method: 0
+2016/06/17 10:33:03:454284 [DEBUG] Got a GET request for </doc/535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:33:03:454326 [DEBUG] md5 of request is <535dd55061b777369dd70ac8b1b3128c>
+2016/06/17 10:33:03:454356 [DEBUG] ox_doc_get() start processing ox request...
+2016/06/17 10:33:03:454388 [DEBUG] whole_path: /home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c
+2016/06/17 10:33:03:454419 [DEBUG] Path[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c] is A Dir.
+2016/06/17 10:33:03:454445 [DEBUG] acs != OX_OK
+2016/06/17 10:33:03:454474 [DEBUG] File[/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock] is A File.
+2016/06/17 10:33:03:454504 [DEBUG] File [/home/d/my_project/ox/objs/doc/666/1770/535dd55061b777369dd70ac8b1b3128c/lock.(null)] is Not Existed!
+2016/06/17 10:33:03:454530 [DEBUG] lock exist and lock.passwd is not exist.
+2016/06/17 10:33:03:454557 [DEBUG] OX Requset Get Doc[MD5: 535dd55061b777369dd70ac8b1b3128c] Failed!
+2016/06/17 10:33:03:454604 [DEBUG] ============ox_cbs_get() ERROR!===============

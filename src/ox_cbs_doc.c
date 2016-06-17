@@ -352,8 +352,10 @@ void ox_cbs_doc_get(evhtp_request_t *req, void *arg)
 
   ox_req = (ox_req_doc_t *)calloc(1, sizeof(ox_req_doc_t));
   ox_req->md5 = md5;
+  ox_req->acs = acs;
   ox_req->thr_arg = thr_arg;
   ox_req->fname = fname;
+  ox_req->passwd = passwd;
 
   int get_doc_rst = -1;
 
