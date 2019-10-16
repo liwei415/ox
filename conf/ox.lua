@@ -26,7 +26,7 @@ etag = 1
 --support mask rules like 'allow 10.1.121.138/24'
 --NOTE: remove rule can improve performance
 --上传接口的IP控制权限，将权限规则注释掉可以提升服务器处理能力，下同
-upload_rule   = 'allow 0.0.0.0; 192.168.11.0/24; 192.168.1.111'
+upload_rule = 'allow 0.0.0.0; 192.168.11.0/24; 192.168.1.111'
 --下载接口的IP控制权限(此ip可绕开锁)
 download_rule = 'allow 192.168.1.111'
 --删除接口的IP控制权限
@@ -43,14 +43,14 @@ memc_port = 11211
 --log config
 --log_level output specified level of log to logfile
 --[[
-LOG_FATAL 0     System is unusable
-LOG_ALERT 1     Action must be taken immediately
-LOG_CRIT 2      Critical conditions
-LOG_ERROR 3     Error conditions
-LOG_WARNING 4   Warning conditions
-LOG_NOTICE 5    Normal, but significant
-LOG_INFO 6      Information
-LOG_DEBUG 7     DEBUG message
+LOG_FATAL 0 System is unusable
+LOG_ALERT 1 Action must be taken immediately
+LOG_CRIT 2 Critical conditions
+LOG_ERROR 3 Error conditions
+LOG_WARNING 4 Warning conditions
+LOG_NOTICE 5 Normal, but significant
+LOG_INFO 6 Information
+LOG_DEBUG 7 DEBUG message
 ]]
 --输出log级别
 log_level = 7
