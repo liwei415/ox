@@ -5,6 +5,7 @@ OX is an image/file/video server, written by pure C.
 * [libevhtp](https://github.com/ellzey/libevhtp/)
 * Centos 7, install ImageMagick with: yum install GraphicsMagick-devel(epel)
 * Centos 7, install libmagic with: yum install file-devel(base)
+* More: yum install gcc lua-devel GraphicsMagick-devel file-devel gcc-c++ libmemcached-devel hiredis-devel ImageMagick-devel
 
 ## Building
 * cd ox

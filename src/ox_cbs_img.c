@@ -472,7 +472,18 @@ void ox_cbs_img_get(evhtp_request_t *req, void *arg)
 
   LOG_PRINT(LOG_DEBUG, "Got the File!");
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
-  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpeg", 0, 0));
+
+  if (strcmp(type, "jpg") == 0) {
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpg", 0, 0));
+  } else if (strcmp(type, "jpeg") == 0) {
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpeg", 0, 0));
+  } else if (strcmp(type, "png") == 0) {
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/png", 0, 0));
+  } else if (strcmp(type, "gif") == 0) {
+    evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/gif", 0, 0));
+  }
+
+//  evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpeg", 0, 0));
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Access-Control-Allow-Origin", "*", 0, 0));
   ox_cbs_headers_add(req, vars.headers);
   evhtp_send_reply(req, EVHTP_RES_OK);
