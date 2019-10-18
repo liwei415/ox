@@ -473,13 +473,13 @@ void ox_cbs_img_get(evhtp_request_t *req, void *arg)
   LOG_PRINT(LOG_DEBUG, "Got the File!");
   evhtp_headers_add_header(req->headers_out, evhtp_header_new("Server", vars.server_name, 0, 1));
 
-  if (strcmp(type, "jpg") == 0) {
+  if (strcmp(ox_req->fmt, "jpg") == 0) {
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpg", 0, 0));
-  } else if (strcmp(type, "jpeg") == 0) {
+  } else if (strcmp(ox_req->fmt, "jpeg") == 0) {
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/jpeg", 0, 0));
-  } else if (strcmp(type, "png") == 0) {
+  } else if (strcmp(ox_req->fmt, "png") == 0) {
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/png", 0, 0));
-  } else if (strcmp(type, "gif") == 0) {
+  } else if (strcmp(ox_req->fmt, "gif") == 0) {
     evhtp_headers_add_header(req->headers_out, evhtp_header_new("Content-Type", "image/gif", 0, 0));
   }
 
